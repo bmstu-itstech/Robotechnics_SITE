@@ -20,7 +20,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r Django/requirements.txt
+        pip install -r Django/ci_requirements.txt
     - name: Run Tests
       run: |
         python Django/robotechnics/manage.py test
@@ -36,7 +36,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r Django/requirements.txt
+        pip install -r Django/ci_requirements.txt
     - name: Run flake8
       run: flake8 Django/
       
