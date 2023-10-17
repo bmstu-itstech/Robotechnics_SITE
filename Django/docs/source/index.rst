@@ -10,7 +10,8 @@ Welcome to Robotechnics's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   code.rst
+   user.rst
 
 Indices and tables
 ==================
