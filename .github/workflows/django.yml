@@ -23,7 +23,7 @@ jobs:
         pip install -r Django/requirements.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python Django/robotechnics/manage.py test
 
   codestyle:
     runs-on: ubuntu-latest
