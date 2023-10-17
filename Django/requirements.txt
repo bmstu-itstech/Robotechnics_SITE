@@ -1,3 +1,4 @@
+# Engine
 asgiref==3.7.2
 Django==4.2.6
 django-cors-headers==4.3.0
@@ -8,3 +9,9 @@ drf-spectacular==0.26.5
 pillow==10.1.0
 sqlparse==0.4.4
 uritemplate==4.1.1
+
+# Documentation
+Sphinx==7.2.6
+
+# Codestyle
+flake8==6.1.0
