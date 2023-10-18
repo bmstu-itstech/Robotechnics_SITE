@@ -4,29 +4,15 @@ from django_cleanup.signals import cleanup_pre_delete
 from sorl.thumbnail import delete, get_thumbnail
 
 
-class EventBaseModel(models.Model):
-    name = models.CharField(
-        'название',
-        max_length=150,
-        help_text='Максимум 150 символов',
-    )
-    description = models.TextField(
-        'описание',
-    )
-    link_to_photo_album = models.URLField(
-        'ссылка на фото-фльбом',
-    )
-    link_to_the_docs = models.URLField(
-        'ссылка на документы',
-    )
-    venue = models.URLField(
-        'место проведения',
-    )
+class ImageBaseModel(models.Model):
     image = models.ImageField(
         'изображение к мероприятию',
         upload_to='images/%Y/%m/%d',
         blank=True,
     )
+
+    class Meta:
+        abstract = True
 
     @property
     def get_img(self):
@@ -47,8 +33,25 @@ class EventBaseModel(models.Model):
 
     cleanup_pre_delete.connect(sorl_delete)
 
+
+class EventBaseModel(ImageBaseModel):
+    name = models.CharField(
+        'название',
+        max_length=150,
+        help_text='Максимум 150 символов',
+    )
+    description = models.TextField(
+        'описание',
+    )
+    link_to_photo_album = models.URLField(
+        'ссылка на фото-фльбом',
+    )
+    link_to_the_docs = models.URLField(
+        'ссылка на документы',
+    )
+    venue = models.URLField(
+        'место проведения',
+    )
+
     class Meta:
         abstract = True
-
-    def __str__(self):
-        return self.name
