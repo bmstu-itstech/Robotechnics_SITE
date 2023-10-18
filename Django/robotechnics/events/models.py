@@ -1,11 +1,16 @@
 from core.models import EventBaseModel
 from django.db import models
 from events.validators import ValidateFullName, ValidateGroup
+from partners.models import Partner
 
 
 class ClassicEvent(EventBaseModel):
     link_to_the_registr = models.URLField(
         'ссылка на регистрацию',
+    )
+    partner = models.ManyToManyField(
+        Partner,
+        verbose_name='партнёры классического мероприятия',
     )
 
     class Meta:

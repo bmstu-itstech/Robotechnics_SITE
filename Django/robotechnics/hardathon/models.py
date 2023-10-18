@@ -1,6 +1,7 @@
 from core.models import EventBaseModel, ImageBaseModel
 from django.db import models
 from django.utils.safestring import mark_safe
+from partners.models import Partner
 from sorl.thumbnail import get_thumbnail
 
 
@@ -21,6 +22,10 @@ class Hardathon(EventBaseModel):
     )
     link_to_competition_task = models.URLField(
         'ссылка на конкурсное задание',
+    )
+    partner = models.ManyToManyField(
+        Partner,
+        verbose_name='партнёры хардатона',
     )
 
     class Meta:
