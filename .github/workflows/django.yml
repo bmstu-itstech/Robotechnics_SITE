@@ -38,5 +38,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r Django/ci_requirements.txt
     - name: Run flake8
-      run: flake8 Django/
+      run: |
+        cd Django/
+        flake8 robotechnics/
       
