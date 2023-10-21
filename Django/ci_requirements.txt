@@ -5,6 +5,7 @@ django-cors-headers==4.1.0
 django-filter==23.3
 python-dotenv==1.0.0
 djangorestframework==3.14.0
+django-cleanup==8.0.0
 drf-spectacular==0.26.5
 pillow==10.1.0
 sqlparse==0.4.4
