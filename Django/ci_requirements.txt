@@ -10,6 +10,7 @@ drf-spectacular==0.26.5
 pillow==10.1.0
 sqlparse==0.4.4
 uritemplate==4.1.1
+sorl-thumbnail==12.10.0
 
 # Codestyle
 flake8==6.1.0
