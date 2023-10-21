@@ -20,6 +20,8 @@ referencing==0.30.2
 rpds-py==0.10.6
 sqlparse==0.4.4
 typing_extensions==4.8.0
+django-cleanup==8.0.0
+sorl-thumbnail==12.10.0
 
 # Documentation
 Sphinx==7.1.2

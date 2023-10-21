@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'robotechnics',
     'events.apps.EventsConfig',
     'partners.apps.PartnersConfig',
     'hardathon.apps.HardathonConfig',

@@ -1,7 +1,7 @@
-from core.models import EventBaseModel
+from core.models import EventBaseModel  # noqa: F401
 from django.db import models
-from events.validators import ValidateFullName, ValidateGroup
-from partners.models import Partner
+from events.validators import ValidateFullName, ValidateGroup  # noqa: F401
+from partners.models import Partner  # noqa: F401
 
 
 class ClassicEvent(EventBaseModel):
