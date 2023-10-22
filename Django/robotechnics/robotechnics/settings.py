@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'debug_toolbar',
     'achievement.apps.AchievementConfig',
+    'news.apps.NewsConfig',
 ]
 
 MIDDLEWARE = [
