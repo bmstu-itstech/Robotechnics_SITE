@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
     'sorl.thumbnail',
     'debug_toolbar',
+    'achievement.apps.AchievementConfig',
 ]
 
 MIDDLEWARE = [
