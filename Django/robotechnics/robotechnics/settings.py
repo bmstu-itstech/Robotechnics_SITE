@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'achievement.apps.AchievementConfig',
     'news.apps.NewsConfig',
+    'director.apps.DirectorConfig',
 ]
 
 MIDDLEWARE = [
