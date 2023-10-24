@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'achievement.apps.AchievementConfig',
     'news.apps.NewsConfig',
     'director.apps.DirectorConfig',
+    'static_data.apps.StaticDataConfig',
 ]
 
 MIDDLEWARE = [
