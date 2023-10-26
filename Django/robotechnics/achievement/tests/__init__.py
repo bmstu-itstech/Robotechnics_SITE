@@ -50,4 +50,3 @@ class AchievementTestCase(TestCase):
         except ValidationError:
             item.delete()
         self.assertEqual(Achievement.objects.count(), 1)
-
