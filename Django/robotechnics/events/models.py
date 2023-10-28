@@ -50,3 +50,6 @@ class Questionnaire(models.Model):
     class Meta:
         verbose_name = 'анкета'
         verbose_name_plural = 'анкеты'
+
+    def __str__(self):
+        return self.name
