@@ -27,3 +27,4 @@ class HardathonAdmin(admin.ModelAdmin):
     )
     list_display_links = ('name',)
     filter_horizontal = ('partners',)
+    readonly_fields = ('image_tmb', 'image_tmb_org')

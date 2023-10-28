@@ -44,8 +44,8 @@ class Hardathon(EventBaseModel):
             )
         return 'Нет изображения'
 
-    organizers_photo.short_description = 'фотография главного организатора'
-    organizers_photo.allow_tags = True
+    image_tmb_org.short_description = 'фотография главного организатора'
+    image_tmb_org.allow_tags = True
 
     @property
     def get_small_img_org(self):
