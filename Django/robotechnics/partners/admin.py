@@ -9,4 +9,5 @@ class PartnerAdmin(admin.ModelAdmin):
         'name',
         'link_to_the_site',
     )
+    list_display_links = ('name',)
     readonly_fields = ('image_tmb',)

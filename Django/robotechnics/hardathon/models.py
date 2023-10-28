@@ -23,7 +23,7 @@ class Hardathon(EventBaseModel):
     link_to_competition_task = models.URLField(
         'ссылка на конкурсное задание',
     )
-    partner = models.ManyToManyField(
+    partners = models.ManyToManyField(
         Partner,
         verbose_name='партнёры хардатона',
     )
@@ -44,7 +44,7 @@ class Hardathon(EventBaseModel):
             )
         return 'Нет изображения'
 
-    organizers_photo.short_description = 'главное изображение'
+    organizers_photo.short_description = 'фотография главного организатора'
     organizers_photo.allow_tags = True
 
     @property
@@ -59,7 +59,7 @@ class Hardathon(EventBaseModel):
             )
         return 'Нет изображения'
 
-    small_image_tmb_org.short_description = 'главное изображение'
+    small_image_tmb_org.short_description = 'фотография главного организатора'
     small_image_tmb_org.allow_tags = True
 
 
