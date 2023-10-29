@@ -8,7 +8,7 @@ class ClassicEvent(EventBaseModel):
     link_to_the_registr = models.URLField(
         'ссылка на регистрацию',
     )
-    partner = models.ManyToManyField(
+    partners = models.ManyToManyField(
         Partner,
         verbose_name='партнёры классического мероприятия',
     )
@@ -50,3 +50,6 @@ class Questionnaire(models.Model):
     class Meta:
         verbose_name = 'анкета'
         verbose_name_plural = 'анкеты'
+
+    def __str__(self):
+        return self.full_name

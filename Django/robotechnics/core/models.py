@@ -28,10 +28,27 @@ class ImageBaseModel(models.Model):
     image_tmb.short_description = 'главное изображение'
     image_tmb.allow_tags = True
 
+    @property
+    def get_small_img(self):
+        return get_thumbnail(self.image, '50x50', crop='center', quality=51)
+
+    def small_image_tmb(self):
+        if self.image:
+            return mark_safe(
+                f'<img src="{self.get_small_img.url}" ',
+            )
+        return 'Нет изображения'
+
+    small_image_tmb.short_description = 'главное изображение'
+    small_image_tmb.allow_tags = True
+
     def sorl_delete(**kwargs):
         delete(kwargs['file'])
 
     cleanup_pre_delete.connect(sorl_delete)
+
+    def __str__(self):
+        return self.name
 
 
 class EventBaseModel(ImageBaseModel):
