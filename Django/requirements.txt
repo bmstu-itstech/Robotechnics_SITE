@@ -22,6 +22,8 @@ sqlparse==0.4.4
 typing_extensions==4.8.0
 django-cleanup==8.0.0
 sorl-thumbnail==12.10.0
+django-phonenumber-field==7.2.0
+phonenumbers==8.13.23
 
 # Documentation
 Sphinx==7.1.2
