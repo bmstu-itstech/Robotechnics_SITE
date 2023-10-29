@@ -118,6 +118,7 @@ class ModelTests(TestCase):
             'Иванов',
             'Буб-Лев-Антонович',
             'БубЛевАнтонович',
+            'Иванов Иван Алексей Иванович Сергеевич',
         ]
         for full_name in full_name_endpoints:
             Questionnaire.objects.all().delete()

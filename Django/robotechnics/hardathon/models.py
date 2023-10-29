@@ -23,7 +23,7 @@ class Hardathon(EventBaseModel):
     link_to_competition_task = models.URLField(
         'ссылка на конкурсное задание',
     )
-    partner = models.ManyToManyField(
+    partners = models.ManyToManyField(
         Partner,
         verbose_name='партнёры хардатона',
     )
@@ -44,8 +44,23 @@ class Hardathon(EventBaseModel):
             )
         return 'Нет изображения'
 
-    organizers_photo.short_description = 'главное изображение'
-    organizers_photo.allow_tags = True
+    image_tmb_org.short_description = 'фотография главного организатора'
+    image_tmb_org.allow_tags = True
+
+    @property
+    def get_small_img_org(self):
+        return get_thumbnail(self.organizers_photo, '50x50', crop='center',
+                             quality=51)
+
+    def small_image_tmb_org(self):
+        if self.image:
+            return mark_safe(
+                f'<img src="{self.get_small_img_org.url}" ',
+            )
+        return 'Нет изображения'
+
+    small_image_tmb_org.short_description = 'фотография главного организатора'
+    small_image_tmb_org.allow_tags = True
 
 
 class Project(ImageBaseModel):
