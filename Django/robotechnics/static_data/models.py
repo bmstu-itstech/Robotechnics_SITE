@@ -5,7 +5,6 @@ from phonenumber_field.modelfields import PhoneNumberField
 class StaticData(models.Model):
     """!
     @brief Модель для хранения относительно статических данных
-    @details Класс наследуется от django.db.models.Model
     @param address Адрес организации
     @param phone Телефон организации
     @param email Почта организации

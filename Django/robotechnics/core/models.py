@@ -7,7 +7,7 @@ from sorl.thumbnail import delete, get_thumbnail
 class ImageBaseModel(models.Model):
     """!
     @brief Базовая модель с изображением
-    @details Класс наследуется от django.db.models.Model и является абстрактным
+    @details Класс является абстрактным
     @param image Файл изображения, может быть пустым, загружается по пути *images/%Y/%m/%d*
     @param image_tmb Поле изображения
     @param small_image_tmb Поле маленького изображения

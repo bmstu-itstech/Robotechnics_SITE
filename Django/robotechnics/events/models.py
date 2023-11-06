@@ -7,30 +7,6 @@ from partners.models import Partner  # noqa: F401
 class ClassicEvent(EventBaseModel):
     """!
     @brief Модель классического мероприятия
-    @details Класс наследуется от EventBaseModel
-    @code
-    class EventBaseModel(ImageBaseModel):
-        name = models.CharField(
-            'название',
-            max_length=150,
-            help_text='Максимум 150 символов',
-        )
-        description = models.TextField(
-            'описание',
-        )
-        link_to_photo_album = models.URLField(
-            'ссылка на фото-альбом',
-        )
-        link_to_the_docs = models.URLField(
-            'ссылка на документы',
-        )
-        venue = models.URLField(
-            'место проведения',
-        )
-
-        class Meta:
-            abstract = True
-    @endcode
     @param link_to_the_registr Ссылка на регистрацию
     @param partners ManyToMany связь с моделью Partner
     """
@@ -50,7 +26,6 @@ class ClassicEvent(EventBaseModel):
 class Questionnaire(models.Model):
     """!
     @brief Модель анкеты
-    @details Класс наследуется от django.db.models.Model
     @param full_name ФИО соискателя, максимальная длина - 150 символов, валидатор - ValidateFullName
     @param group Учебная группа соискателя, максимальная длина - 15 символов, валидатор - ValidateGroup
     @param number_of_people Количество людей в команде

@@ -6,7 +6,7 @@ from director.models import Director  # noqa: F401
 class DirectorAdmin(admin.ModelAdmin):
     """!
     @brief Админ панель для руководителя
-    @param list_display Паля модели, отображаемые на сайте: маленькое изображение, ФИО, email, должность
+    @param list_display Поля модели, отображаемые на сайте: маленькое изображение, ФИО, email, должность
     @param list_display_links Поля, являющиеся ссылками на страницу редактирования: маленькое изображение, ФИО
     @param readonly_fields Readonly поля: изображение
     """
