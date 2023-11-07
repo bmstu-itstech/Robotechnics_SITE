@@ -5,8 +5,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('news.urls')),
-    path('', include('achievement.urls')),
+    path('api/v0/', include('news.urls')),
+    path('api/v0/', include('achievement.urls')),
 ]
 
 if settings.DEBUG:
