@@ -10,7 +10,7 @@ class NewsViewSet(viewsets.ModelViewSet):
     @param queryset Список всех объектов из базы данных
     @param serializer_class Сериализатор
     """
-    queryset = News.get_all_objects_by_date()
+    queryset = News.get_all_objects_by_id()
     serializer_class = NewsSerializer
 
 

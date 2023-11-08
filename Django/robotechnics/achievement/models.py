@@ -27,3 +27,7 @@ class Achievement(ImageBaseModel):
     class Meta:
         verbose_name = 'достижение'
         verbose_name_plural = 'достижения'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Achievement.objects.order_by('-id')

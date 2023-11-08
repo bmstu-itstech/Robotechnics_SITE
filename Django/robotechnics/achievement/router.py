@@ -10,7 +10,7 @@ class AchievementViewSet(viewsets.ModelViewSet):
     @param queryset Список всех объектов из базы данных
     @param serializer_class Сериализатор
     """
-    queryset = Achievement.objects.all()
+    queryset = Achievement.get_all_objects_by_id()
     serializer_class = AchievementSerializer
 
 

@@ -25,5 +25,5 @@ class News(ImageBaseModel):
         verbose_name_plural = 'новости'
 
     @staticmethod
-    def get_all_objects_by_date():
+    def get_all_objects_by_id():
         return News.objects.order_by('-id')
