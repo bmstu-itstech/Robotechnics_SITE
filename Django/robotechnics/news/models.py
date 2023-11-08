@@ -23,3 +23,7 @@ class News(ImageBaseModel):
     class Meta:
         verbose_name = 'новость'
         verbose_name_plural = 'новости'
+
+    @staticmethod
+    def get_all_objects_by_date():
+        return News.objects.order_by('-id')
