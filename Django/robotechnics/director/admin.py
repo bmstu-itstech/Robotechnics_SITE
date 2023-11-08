@@ -1,5 +1,6 @@
 from django.contrib import admin
 from director.models import Director  # noqa: F401
+from director.forms import DirectorForm  # noqa: F401
 
 
 @admin.register(Director)
@@ -18,3 +19,4 @@ class DirectorAdmin(admin.ModelAdmin):
     ]
     list_display_links = ('small_image_tmb', 'name',)
     readonly_fields = ('image_tmb',)
+    form = DirectorForm

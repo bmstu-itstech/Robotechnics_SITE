@@ -1,4 +1,5 @@
 from django.contrib import admin
+from news.forms import NewsForm  # noqa: F401
 from news.models import News  # noqa: F401
 
 
@@ -17,3 +18,4 @@ class DirectorAdmin(admin.ModelAdmin):
     ]
     list_display_links = ('small_image_tmb', 'name',)
     readonly_fields = ('image_tmb',)
+    form = NewsForm
