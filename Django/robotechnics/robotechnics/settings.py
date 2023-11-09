@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'director.apps.DirectorConfig',
     'static_data.apps.StaticDataConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'core.pagination.CustomPagination',
+}

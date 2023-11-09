@@ -5,6 +5,11 @@ from partners.models import Partner  # noqa: F401
 
 
 class ClassicEvent(EventBaseModel):
+    """!
+    @brief Модель классического мероприятия
+    @param link_to_the_registr Ссылка на регистрацию
+    @param partners ManyToMany связь с моделью Partner
+    """
     link_to_the_registr = models.URLField(
         'ссылка на регистрацию',
     )
@@ -19,6 +24,16 @@ class ClassicEvent(EventBaseModel):
 
 
 class Questionnaire(models.Model):
+    """!
+    @brief Модель анкеты
+    @param full_name ФИО соискателя, максимальная длина - 150 символов, валидатор - ValidateFullName
+    @param group Учебная группа соискателя, максимальная длина - 15 символов, валидатор - ValidateGroup
+    @param number_of_people Количество людей в команде
+    @param required_competencies Необходимые компетенции
+    @param link_to_vk Ссылка на ВКонтакте соискателя
+    @param additional_information Дополнительная информация
+    @param classic_event ManyToOne связь с моделью ClassicEvent
+    """
     full_name = models.CharField(
         'фио участника',
         max_length=150,
