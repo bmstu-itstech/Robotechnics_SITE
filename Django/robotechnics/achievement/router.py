@@ -1,6 +1,7 @@
 from rest_framework import routers, viewsets
 from achievement.models import Achievement  # noqa: F401
 from achievement.serializers import AchievementSerializer  # noqa: F401
+from achievement.pagination import AchievementPagination  # noqa: F401
 
 
 class AchievementViewSet(viewsets.ModelViewSet):
@@ -12,6 +13,7 @@ class AchievementViewSet(viewsets.ModelViewSet):
     """
     queryset = Achievement.get_all_objects_by_id()
     serializer_class = AchievementSerializer
+    pagination_class = AchievementPagination
 
 
 router = routers.DefaultRouter()
