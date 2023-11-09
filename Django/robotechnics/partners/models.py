@@ -20,3 +20,7 @@ class Partner(ImageBaseModel):
     class Meta:
         verbose_name = 'партнёр'
         verbose_name_plural = 'партнёры'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Partner.objects.order_by('-id')
