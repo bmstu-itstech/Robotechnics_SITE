@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 from events.models import ClassicEvent, Questionnaire
@@ -14,6 +16,8 @@ class ModelTests(TestCase):
             link_to_photo_album='https://test-link',
             link_to_the_docs='https://test-link',
             venue='place',
+            date_of_the_event=datetime.now(),
+            mention_in_the_media='https://test-link',
         )
 
     def tearDown(self):
