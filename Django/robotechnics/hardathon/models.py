@@ -9,6 +9,9 @@ class Hardathon(EventBaseModel):
     application_start_date = models.DateField(
         'дата начала приёма заявок',
     )
+    application_end_date = models.DateField(
+        'дата окончания приёма заявок',
+    )
     date_of_summing_up = models.DateField(
         'дата подведения итогов',
     )
