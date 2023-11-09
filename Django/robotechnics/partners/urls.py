@@ -3,5 +3,5 @@ from partners.router import router  # noqa: F401
 
 
 urlpatterns = [
-    path('partners', include(router.urls))
+    path('', include(router.urls))
 ]

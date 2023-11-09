@@ -3,5 +3,5 @@ from news.router import router  # noqa: F401
 
 
 urlpatterns = [
-    path('news', include(router.urls))
+    path('', include(router.urls))
 ]
