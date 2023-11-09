@@ -8,6 +8,7 @@ urlpatterns = [
     path('api/v0/', include('news.urls')),
     path('api/v0/', include('achievement.urls')),
     path('api/v0/', include('partners.urls')),
+    path('api/v0/', include('director.urls')),
 ]
 
 if settings.DEBUG:

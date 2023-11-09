@@ -25,3 +25,7 @@ class Director(ImageBaseModel):
     class Meta:
         verbose_name = 'руководитель'
         verbose_name_plural = 'руководители'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Director.objects.order_by('-id')
