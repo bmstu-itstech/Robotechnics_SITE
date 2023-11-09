@@ -69,6 +69,12 @@ class EventBaseModel(ImageBaseModel):
     venue = models.URLField(
         'место проведения',
     )
+    date_of_the_event = models.DateField(
+        'дата проведения',
+    )
+    mention_in_the_media = models.URLField(
+        'упоминание в сми',
+    )
 
     class Meta:
         abstract = True
