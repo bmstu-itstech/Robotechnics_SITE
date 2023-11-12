@@ -5,7 +5,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v0/classic_events/', include('events.urls')),
+    path('api/v0/', include('robotechnics.urls.api')),
 ]
 
 if settings.DEBUG:
