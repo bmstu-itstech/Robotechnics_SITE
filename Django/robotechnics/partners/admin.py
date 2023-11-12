@@ -7,9 +7,9 @@ from partners.models import Partner
 class PartnerAdmin(admin.ModelAdmin):
     list_display = (
         'small_image_tmb',
-        'name',
+        'title',
         'link_to_the_site',
     )
-    list_display_links = ('name',)
+    list_display_links = ('title',)
     readonly_fields = ('image_tmb',)
     form = PartnerForm

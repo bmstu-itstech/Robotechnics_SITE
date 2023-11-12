@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Partner(ImageBaseModel):
-    name = models.CharField(
+    title = models.CharField(
         'название',
         max_length=150,
         help_text='Максимум 150 символов',
