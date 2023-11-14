@@ -11,6 +11,7 @@ class DirectorAdmin(admin.ModelAdmin):
     @param list_display_links Поля, являющиеся ссылками на страницу редактирования: маленькое изображение, название
     @param readonly_fields Readonly поля: изображение
     @param form Форма для редактирования/создания
+    @param search_fields Поля поиска
     """
     list_display = [
         'small_image_tmb',
