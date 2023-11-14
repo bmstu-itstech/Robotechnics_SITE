@@ -4,6 +4,10 @@ from django.forms import TextInput, FileInput, Textarea, URLInput
 
 
 class NewsForm(forms.ModelForm):
+    """!
+    @brief Форма для админ панели новостей
+    @details Нужна для того, чтобы расширить зону загрузки файлов
+    """
     class Meta:
         model = News
         fields = ('image', 'name', 'description', 'link_to_news')

@@ -4,6 +4,10 @@ from django.forms import FileInput, TextInput, EmailInput
 
 
 class DirectorForm(forms.ModelForm):
+    """!
+    @brief Форма для админ панели руководителей
+    @details Нужна для того, чтобы расширить зону загрузки файлов
+    """
     class Meta:
         model = Director
         fields = ('image', 'name', 'email', 'post')

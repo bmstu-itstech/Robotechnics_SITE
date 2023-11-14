@@ -10,6 +10,7 @@ class DirectorAdmin(admin.ModelAdmin):
     @param list_display Поля модели, отображаемые на сайте: маленькое изображение, ФИО, email, должность
     @param list_display_links Поля, являющиеся ссылками на страницу редактирования: маленькое изображение, ФИО
     @param readonly_fields Readonly поля: изображение
+    @param form Форма для редактирования/создания
     """
     list_display = [
         'small_image_tmb',

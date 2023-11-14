@@ -4,6 +4,10 @@ from django.forms import TextInput, FileInput, Textarea, URLInput
 
 
 class AchievementForm(forms.ModelForm):
+    """!
+    @brief Форма для админ панели достижений
+    @details Нужна для того, чтобы расширить зону загрузки файлов
+    """
     class Meta:
         model = Achievement
         fields = ('image', 'name', 'description', 'link_to_photo_album', 'link_to_media',)
