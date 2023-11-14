@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 from events.models import ClassicEvent, Questionnaire
@@ -8,12 +10,14 @@ class ModelTests(TestCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.classic_event = ClassicEvent.objects.create(
-            link_to_the_registr='https://test-classic-event-link',
-            name='test',
+            registration_link='https://test-classic-event-link',
+            title='test',
             description='test description',
-            link_to_photo_album='https://test-link',
-            link_to_the_docs='https://test-link',
-            venue='place',
+            photo_album_url='https://test-link',
+            documents_url='https://test-link',
+            location='place',
+            event_date=datetime.now(),
+            social_media_mention='https://test-link',
         )
 
     def tearDown(self):

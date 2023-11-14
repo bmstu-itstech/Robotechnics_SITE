@@ -10,7 +10,7 @@ class ClassicEvent(EventBaseModel):
     @param link_to_the_registr Ссылка на регистрацию
     @param partners ManyToMany связь с моделью Partner
     """
-    link_to_the_registr = models.URLField(
+    registration_link = models.URLField(
         'ссылка на регистрацию',
     )
     partners = models.ManyToManyField(
@@ -21,6 +21,10 @@ class ClassicEvent(EventBaseModel):
     class Meta:
         verbose_name = 'классическое мероприятие'
         verbose_name_plural = 'классические мероприятия'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return ClassicEvent.objects.order_by('-id')
 
 
 class Questionnaire(models.Model):
