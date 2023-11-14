@@ -1,4 +1,5 @@
 from django.contrib import admin
+from hardathon.forms import HardathonForm, ProjectForm
 from hardathon.models import Hardathon, Project
 
 
@@ -6,25 +7,27 @@ from hardathon.models import Hardathon, Project
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
         'small_image_tmb',
-        'name',
-        'hardathon_name',
+        'title',
+        'hardathon_title',
     )
-    list_display_links = ('name',)
+    list_display_links = ('title',)
     readonly_fields = ('image_tmb',)
+    form = ProjectForm
 
-    def hardathon_name(self, obj):
-        return obj.hardathon.name
-    hardathon_name.short_description = 'хардатон'
+    def hardathon_title(self, obj):
+        return obj.hardathon.title
+    hardathon_title.short_description = 'хардатон'
 
 
 @admin.register(Hardathon)
 class HardathonAdmin(admin.ModelAdmin):
     list_display = (
         'small_image_tmb',
-        'name',
+        'title',
         'link_to_competition_task',
         'small_image_tmb_org',
     )
-    list_display_links = ('name',)
+    list_display_links = ('title',)
     filter_horizontal = ('partners',)
     readonly_fields = ('image_tmb', 'image_tmb_org')
+    form = HardathonForm
