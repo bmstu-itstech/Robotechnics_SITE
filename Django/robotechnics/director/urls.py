@@ -1,5 +1,5 @@
 from django.urls import path, include
-from news.router import router  # noqa: F401
+from director.router import router  # noqa: F401
 
 
 urlpatterns = [

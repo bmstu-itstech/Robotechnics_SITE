@@ -1,5 +1,12 @@
 from django.urls import include, path
 
+
 urlpatterns = [
-    path('classic_events/', include('events.urls')),
+    path('news', include('news.urls')),
+    path('achievements', include('achievement.urls')),
+    path('partners', include('partners.urls')),
+    path('supervisors', include('director.urls')),
+    path('classic_events/', include('events.urls'))
 ]
+
+

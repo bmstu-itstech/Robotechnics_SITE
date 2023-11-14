@@ -3,5 +3,5 @@ from achievement.router import router  # noqa: F401
 
 
 urlpatterns = [
-    path('achievements', include(router.urls))
+    path('', include(router.urls))
 ]

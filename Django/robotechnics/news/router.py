@@ -1,5 +1,6 @@
 from rest_framework import viewsets, routers
 from news.models import News  # noqa: F401
+from news.pagination import NewsPagination  # noqa: F401
 from news.serializers import NewsSerializer  # noqa: F401
 
 
@@ -12,6 +13,7 @@ class NewsViewSet(viewsets.ModelViewSet):
     """
     queryset = News.get_all_objects_by_id()
     serializer_class = NewsSerializer
+    pagination_class = NewsPagination
 
 
 router = routers.DefaultRouter()
