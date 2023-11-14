@@ -20,3 +20,4 @@ class DirectorAdmin(admin.ModelAdmin):
     list_display_links = ('small_image_tmb', 'name',)
     readonly_fields = ('image_tmb',)
     form = NewsForm
+    search_fields = ('name',)

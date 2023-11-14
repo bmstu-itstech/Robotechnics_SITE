@@ -15,3 +15,4 @@ class StaticDataAdmin(admin.ModelAdmin):
         'link_to_vk',
         'link_to_telegram'
     ]
+    search_fields = ('address', 'phone', 'email',)
