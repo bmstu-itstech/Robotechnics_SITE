@@ -3,6 +3,12 @@ from core.models import ImageBaseModel  # noqa: F401
 
 
 class News(ImageBaseModel):
+    """!
+    @brief Модель новости
+    @param name Название, максимальная длина - 150 символов
+    @param description Описание
+    @param link_to_news Ссылка на новость
+    """
     name = models.CharField(
         'название',
         max_length=150
@@ -17,3 +23,7 @@ class News(ImageBaseModel):
     class Meta:
         verbose_name = 'новость'
         verbose_name_plural = 'новости'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return News.objects.order_by('-id')

@@ -3,6 +3,13 @@ from django.db import models
 
 
 class Achievement(ImageBaseModel):
+    """!
+    @brief Модель достижения
+    @param name Название достижения, максимальная длина - 150 символов
+    @param description Описание достижения
+    @param link_to_photo_album ссылка на фото-альбом
+    @param link_to_media ссылка на СМИ
+    """
     name = models.CharField(
         'название',
         max_length=150,
@@ -20,3 +27,7 @@ class Achievement(ImageBaseModel):
     class Meta:
         verbose_name = 'достижение'
         verbose_name_plural = 'достижения'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Achievement.objects.order_by('-id')

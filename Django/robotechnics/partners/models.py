@@ -3,6 +3,11 @@ from django.db import models
 
 
 class Partner(ImageBaseModel):
+    """!
+    @brief Модель партнёра
+    @param name Название, максимальная длина - 150 символов
+    @param link_to_the_site Ссылка на сайт
+    """
     title = models.CharField(
         'название',
         max_length=150,
