@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from "react-bootstrap";
 import Flickity from "react-flickity-component";
 import Carousel from "./components/utils/carousel/Carousel";
+import {NewsPage} from "./components/pages/NewsPage/NewsPage";
 
 function App() {
   const flickityOptions = {
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <div>
-        <Carousel />
+      <NewsPage />
     </div>
   );
 }
