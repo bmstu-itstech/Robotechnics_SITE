@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from partners.models import Partner  # noqa: F401
 from hardathon.models import Hardathon, Project  # noqa: F401
 
 
@@ -30,3 +31,13 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ['name',]
+
+
+class HardatonPartnersSerializer(serializers.ModelSerializer):
+    """!
+    @brief Сериализатор
+    @details Нужен для преобразовывания сложных типов данных в json
+    """
+    class Meta:
+        model = Partner
+        fields = ['name', 'link_to_the_site', 'image']
