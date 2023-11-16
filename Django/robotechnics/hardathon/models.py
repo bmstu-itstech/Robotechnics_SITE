@@ -98,6 +98,10 @@ class Hardathon(EventBaseModel):
     small_image_tmb_org.short_description = 'фотография главного организатора'
     small_image_tmb_org.allow_tags = True
 
+    @staticmethod
+    def get_all_objects_by_id():
+        return Hardathon.objects.order_by('-id')
+
 
 class Project(ImageBaseModel):
     """!
