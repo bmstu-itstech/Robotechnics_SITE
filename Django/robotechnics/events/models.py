@@ -22,6 +22,10 @@ class ClassicEvent(EventBaseModel):
         verbose_name = 'классическое мероприятие'
         verbose_name_plural = 'классические мероприятия'
 
+    @staticmethod
+    def get_all_objects_by_id():
+        return ClassicEvent.objects.order_by('-id')
+
 
 class Questionnaire(models.Model):
     """!

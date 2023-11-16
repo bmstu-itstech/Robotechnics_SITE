@@ -1,4 +1,5 @@
 from django.contrib import admin
+from partners.forms import PartnerForm
 from partners.models import Partner
 
 
@@ -11,3 +12,4 @@ class PartnerAdmin(admin.ModelAdmin):
     )
     list_display_links = ('name',)
     readonly_fields = ('image_tmb',)
+    form = PartnerForm
