@@ -20,3 +20,13 @@ class DetailProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ['name', 'description', 'competition_rules', 'implementation_scale', 'image',]
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    """!
+    @brief Сериализатор
+    @details Нужен для преобразовывания сложных типов данных в json
+    """
+    class Meta:
+        model = Project
+        fields = ['name',]

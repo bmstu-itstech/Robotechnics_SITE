@@ -135,3 +135,7 @@ class Project(ImageBaseModel):
     class Meta:
         verbose_name = 'проект'
         verbose_name_plural = 'проекты'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Project.objects.order_by('-id')
