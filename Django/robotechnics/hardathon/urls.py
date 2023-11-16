@@ -1,7 +1,8 @@
 from django.urls import path, include
-from hardathon.router import router  # noqa: F401
+from hardathon.router import router, router2  # noqa: F401
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('hardatons/', include(router.urls)),
+    path('project/', include(router2.urls)),
 ]
