@@ -50,7 +50,10 @@ class HardatonPartnersPagination(pagination.PageNumberPagination):
 
     def get_paginated_response(self, data):
         for item in data:
-            item['image'] = BASE_URL + item['image'][1:]
+            if item['image']:
+                item['image'] = BASE_URL + item['image'][1:]
+            else:
+                item['image'] = 'None'
         return Response({
             'next': self.get_next_link(),
             'count': self.page.paginator.count,
