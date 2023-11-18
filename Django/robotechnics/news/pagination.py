@@ -13,7 +13,6 @@ class NewsPagination(pagination.PageNumberPagination):
     def get_paginated_response(self, data):
         return Response({
             'next': self.get_next_link(),
-            'count': self.page.paginator.count,
-            'len': len(data),
-            'results': data
+            'count': len(data),
+            'news': data
         })
