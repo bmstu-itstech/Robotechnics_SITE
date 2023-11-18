@@ -44,9 +44,7 @@ class HardatonPartnersPagination(pagination.PageNumberPagination):
     @details Нужна, чтобы объекты в api передавались по несколько штук.
         В этом пагинаторе идёт только изменение ссылок изображений.
         Основная логика происходит в роутере.
-    @param page_size Максимальное количество объектов на одной странице
     """
-    page_size = 5
 
     def get_paginated_response(self, data):
         for item in data:
