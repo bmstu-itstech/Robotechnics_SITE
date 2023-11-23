@@ -10,7 +10,7 @@ class HardathonSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Hardathon
-        fields = ['title', 'image',]
+        fields = ['title', 'photo',]
 
 
 class DetailProjectSerializer(serializers.ModelSerializer):
@@ -20,7 +20,7 @@ class DetailProjectSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Project
-        fields = ['title', 'description', 'competition_rules', 'implementation_scale', 'image',]
+        fields = ['title', 'description', 'competition_rules', 'implementation_scale', 'photo',]
 
 
 class HardatonProjectsSerializer(serializers.ModelSerializer):
@@ -40,4 +40,4 @@ class HardatonPartnersSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Partner
-        fields = ['title', 'link', 'image']
+        fields = ['title', 'link', 'photo']

@@ -9,4 +9,4 @@ class AchievementSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Achievement
-        fields = ['title', 'description', 'link_to_photo_album', 'link_to_media', 'image']
+        fields = ['title', 'description', 'link_to_photo_album', 'link_to_media', 'photo']

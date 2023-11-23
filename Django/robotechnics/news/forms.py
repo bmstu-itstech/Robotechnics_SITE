@@ -10,9 +10,9 @@ class NewsForm(forms.ModelForm):
     """
     class Meta:
         model = News
-        fields = ('image', 'title', 'description', 'new_url')
+        fields = ('photo', 'title', 'description', 'new_url')
         widgets = {
-            'image': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
+            'photo': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
             'title': TextInput,
             'description': Textarea,
             'new_url': URLInput,

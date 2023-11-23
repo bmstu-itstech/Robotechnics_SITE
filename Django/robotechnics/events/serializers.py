@@ -9,7 +9,7 @@ class ClassicEventsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = ClassicEvent
-        fields = ('title', 'image')
+        fields = ('title', 'photo')
 
 
 class ClassicEventByIdSerializer(serializers.ModelSerializer):
@@ -21,7 +21,7 @@ class ClassicEventByIdSerializer(serializers.ModelSerializer):
         model = ClassicEvent
         fields = (
             'title', 'description',
-            'image', 'photo_album_url',
+            'photo', 'photo_album_url',
             'documents_url', 'location',
             'event_date', 'social_media_mention',
             'registration_link'

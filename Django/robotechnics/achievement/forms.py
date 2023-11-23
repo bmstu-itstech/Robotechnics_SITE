@@ -10,9 +10,9 @@ class AchievementForm(forms.ModelForm):
     """
     class Meta:
         model = Achievement
-        fields = ('image', 'title', 'description', 'link_to_photo_album', 'link_to_media',)
+        fields = ('photo', 'title', 'description', 'link_to_photo_album', 'link_to_media',)
         widgets = {
-            'image': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
+            'photo': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
             'title': TextInput,
             'description': Textarea,
             'link_to_photo_album': URLInput,

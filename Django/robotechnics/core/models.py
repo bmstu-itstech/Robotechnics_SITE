@@ -10,11 +10,11 @@ class ImageBaseModel(models.Model):
     """!
     @brief Базовая модель с изображением
     @details Класс является абстрактным
-    @param image Файл изображения, может быть пустым, загружается по пути *images/%Y/%m/%d*
+    @param photo Файл изображения, может быть пустым, загружается по пути *images/%Y/%m/%d*
     @param image_tmb Поле изображения
     @param small_image_tmb Поле маленького изображения
     """
-    image = models.ImageField(
+    photo = models.ImageField(
         'изображение к мероприятию',
         upload_to='images/%Y/%m/%d',
         blank=True,

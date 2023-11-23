@@ -10,9 +10,9 @@ class DirectorForm(forms.ModelForm):
     """
     class Meta:
         model = Director
-        fields = ('image', 'fio', 'email', 'role')
+        fields = ('photo', 'fio', 'email', 'role')
         widgets = {
-            'image': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
+            'photo': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
             'fio': TextInput,
             'email': EmailInput,
             'role': TextInput,
