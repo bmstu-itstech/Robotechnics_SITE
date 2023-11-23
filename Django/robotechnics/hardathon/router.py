@@ -3,8 +3,8 @@ from rest_framework import routers, viewsets
 from hardathon.models import Hardathon, Project  # noqa: F401
 from partners.models import Partner  # noqa: F401
 from hardathon.serializers import (HardathonSerializer, DetailProjectSerializer,  # noqa: F401
-                                   ProjectSerializer, HardatonPartnersSerializer)  # noqa: F401
-from hardathon.pagination import HardathonPagination, ProjectPagination, HardatonPartnersPagination  # noqa: F401
+                                   HardatonProjectsSerializer, HardatonPartnersSerializer)  # noqa: F401
+from hardathon.pagination import HardathonPagination, HardatonProjectsPagination, HardatonPartnersPagination  # noqa: F401
 
 
 class HardathonViewSet(viewsets.ModelViewSet):
@@ -31,16 +31,29 @@ class DetailProjectViewSet(viewsets.ModelViewSet):
     serializer_class = DetailProjectSerializer
 
 
-class ProjectViewSet(viewsets.ModelViewSet):
+class HardatonProjectsViewSet(viewsets.ModelViewSet):
     """!
-    @brief Роутер для проектов
-    @details Нужен для автоматической маршрутизации
+    @brief Роутер для проектов хардатона
+    @details Нужен для автоматической маршрутизации.
+        Логика этого роутера отличается от логики остальных.
+        Пагинация, по сути, происходит не в классе-пагинаторе, а в функции retrieve.
+        Сериализация тоже происходит в этой функции.
     @param queryset Список всех объектов из базы данных
     @param serializer_class Сериализатор
     """
-    queryset = Project.get_all_objects_by_id()
-    serializer_class = ProjectSerializer
-    pagination_class = ProjectPagination
+    queryset = Project.objects.all()
+    serializer_class = HardatonProjectsSerializer
+    pagination_class = HardatonProjectsPagination
+
+    def retrieve(self, request, *args, **kwargs):
+        projects = self.queryset.filter(hardathon=kwargs['pk'])
+        paginator = HardatonProjectsPagination()
+        paginator.page_size = 6
+        data = paginator.paginate_queryset(queryset=projects, request=request)  # !
+        serializer = HardatonProjectsSerializer(data, many=True)
+        data = serializer.data
+        data = paginator.get_paginated_response(data)
+        return data
 
 
 class HardatonPartnersViewSet(viewsets.ModelViewSet):
@@ -61,8 +74,8 @@ class HardatonPartnersViewSet(viewsets.ModelViewSet):
         hardaton = get_object_or_404(self.queryset, id=kwargs['pk'])
         paginator = HardatonPartnersPagination()
         paginator.page_size = 5
-        p = paginator.paginate_queryset(queryset=hardaton.partners.all(), request=request)
-        serializer = HardatonPartnersSerializer(p, many=True)
+        data = paginator.paginate_queryset(queryset=hardaton.partners.all(), request=request)
+        serializer = HardatonPartnersSerializer(data, many=True)
         data = serializer.data
         data = paginator.get_paginated_response(data)
         return data
@@ -75,7 +88,7 @@ router2 = routers.DefaultRouter()
 router2.register(r'', DetailProjectViewSet)
 
 router3 = routers.DefaultRouter()
-router3.register(r'', ProjectViewSet)
+router3.register(r'', HardatonProjectsViewSet)
 
 router4 = routers.DefaultRouter()
 router4.register(r'', HardatonPartnersViewSet)

@@ -21,22 +21,6 @@ class HardathonPagination(pagination.PageNumberPagination):
         })
 
 
-class ProjectPagination(pagination.PageNumberPagination):
-    """!
-    @brief Пагинация для проектов
-    @details Нужна, чтобы объекты в api передавались по несколько штук
-    @param page_size Максимальное количество объектов на одной странице
-    """
-    page_size = 6
-
-    def get_paginated_response(self, data):
-        return Response({
-            'next': self.get_next_link(),
-            'count': len(data),
-            'projects': data
-        })
-
-
 class HardatonPartnersPagination(pagination.PageNumberPagination):
     """!
     @brief Пагинация для партнёров хардатона
@@ -51,6 +35,22 @@ class HardatonPartnersPagination(pagination.PageNumberPagination):
                 item['image'] = BASE_URL + item['image'][1:]
             else:
                 item['image'] = 'None'
+        return Response({
+            'next': self.get_next_link(),
+            'count': len(data),
+            'total_count': self.page.paginator.count,
+            'partners': data,
+        })
+
+
+class HardatonProjectsPagination(pagination.PageNumberPagination):
+    """!
+    @brief Пагинация для проектов хардатона
+    @details Нужна, чтобы объекты в api передавались по несколько штук.
+        Основная логика происходит в роутере.
+    """
+
+    def get_paginated_response(self, data):
         return Response({
             'next': self.get_next_link(),
             'count': len(data),
