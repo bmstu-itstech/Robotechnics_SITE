@@ -8,7 +8,7 @@ class PartnerAdmin(admin.ModelAdmin):
     list_display = (
         'small_image_tmb',
         'title',
-        'link_to_the_site',
+        'link',
     )
     list_display_links = ('title',)
     readonly_fields = ('image_tmb',)

@@ -15,10 +15,10 @@ class AchievementAdmin(admin.ModelAdmin):
     """
     list_display = [
         'small_image_tmb',
-        'name',
+        'title',
         'link_to_media',
     ]
-    list_display_links = ('small_image_tmb', 'name',)
+    list_display_links = ('small_image_tmb', 'title',)
     readonly_fields = ('image_tmb',)
     form = AchievementForm
-    search_fields = ('name',)
+    search_fields = ('title',)

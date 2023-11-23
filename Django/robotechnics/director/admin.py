@@ -15,11 +15,11 @@ class DirectorAdmin(admin.ModelAdmin):
     """
     list_display = [
         'small_image_tmb',
-        'name',
+        'fio',
         'email',
-        'post',
+        'role',
     ]
-    list_display_links = ('small_image_tmb', 'name',)
+    list_display_links = ('small_image_tmb', 'fio',)
     readonly_fields = ('image_tmb',)
     form = DirectorForm
-    search_fields = ('name', 'email', 'post')
+    search_fields = ('fio', 'email', 'role')

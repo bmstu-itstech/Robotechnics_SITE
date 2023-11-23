@@ -9,4 +9,4 @@ class PartnerSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Partner
-        fields = ['name', 'link_to_the_site', 'image']
+        fields = ['title', 'link', 'image']

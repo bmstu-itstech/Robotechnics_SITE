@@ -92,11 +92,13 @@ class EventBaseModel(ImageBaseModel):
     """!
     @brief Базовая модель мероприятия
     @details Класс наследуется от ImageBaseModel и является абстрактным
-    @param name Название мероприятия, максимальная длина - 150 символов
+    @param title Название мероприятия, максимальная длина - 150 символов
     @param description Описание мероприятия
     @param link_to_photo_album Ссылка на фото-альбом
-    @param link_to_the_docs Ссылка на документы
-    @param venue Ссылка на место проведения
+    @param documents_url Ссылка на документы
+    @param location Ссылка на место проведения
+    @param event_date Дата проведения
+    @param social_media_mention Ссылка на упоминание в СМИ
     """
     title = models.CharField(
         'название',
