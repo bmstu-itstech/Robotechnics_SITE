@@ -8,7 +8,7 @@ class Partner(ImageBaseModel):
     @param name Название, максимальная длина - 150 символов
     @param link_to_the_site Ссылка на сайт
     """
-    name = models.CharField(
+    title = models.CharField(
         'название',
         max_length=150,
         help_text='Максимум 150 символов',

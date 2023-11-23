@@ -85,7 +85,7 @@ class ImageBaseModel(models.Model):
     cleanup_pre_delete.connect(sorl_delete)
 
     def __str__(self):
-        return self.name
+        return self.title
 
 
 class EventBaseModel(ImageBaseModel):
@@ -98,7 +98,7 @@ class EventBaseModel(ImageBaseModel):
     @param link_to_the_docs Ссылка на документы
     @param venue Ссылка на место проведения
     """
-    name = models.CharField(
+    title = models.CharField(
         'название',
         max_length=150,
         help_text='Максимум 150 символов',
@@ -109,10 +109,10 @@ class EventBaseModel(ImageBaseModel):
     link_to_photo_album = models.URLField(
         'ссылка на фото-альбом',
     )
-    link_to_the_docs = models.URLField(
+    documents_url = models.URLField(
         'ссылка на документы',
     )
-    venue = models.URLField(
+    location = models.URLField(
         'место проведения',
     )
     event_date = models.DateField(

@@ -10,7 +10,7 @@ class ClassicEvent(EventBaseModel):
     @param link_to_the_registr Ссылка на регистрацию
     @param partners ManyToMany связь с моделью Partner
     """
-    link_to_the_registr = models.URLField(
+    registration_link = models.URLField(
         'ссылка на регистрацию',
     )
     partners = models.ManyToManyField(

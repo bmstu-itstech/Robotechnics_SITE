@@ -104,15 +104,7 @@ class Hardathon(EventBaseModel):
 
 
 class Project(ImageBaseModel):
-    """!
-    @brief Модель проекта
-    @param name Название, максимальная длина - 150 символов
-    @param description Описание
-    @param competition_rules Правила соревнования
-    @param implementation_scale Масштаб реализации
-    @param hardathon ManyToOne связь с моделью Hardathon
-    """
-    name = models.CharField(
+    title = models.CharField(
         'название',
         max_length=150,
         help_text='Максимум 150 символов',
