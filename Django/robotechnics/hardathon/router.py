@@ -4,7 +4,8 @@ from hardathon.models import Hardathon, Project  # noqa: F401
 from partners.models import Partner  # noqa: F401
 from hardathon.serializers import (HardathonSerializer, DetailProjectSerializer,  # noqa: F401
                                    HardatonProjectsSerializer, HardatonPartnersSerializer)  # noqa: F401
-from hardathon.pagination import HardathonPagination, HardatonProjectsPagination, HardatonPartnersPagination  # noqa: F401
+from hardathon.pagination import (HardathonPagination, HardatonProjectsPagination,  # noqa: F401
+                                  HardatonPartnersPagination)  # noqa: F401
 
 
 class HardathonViewSet(viewsets.ModelViewSet):
