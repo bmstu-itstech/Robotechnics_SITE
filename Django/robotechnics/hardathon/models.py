@@ -89,7 +89,7 @@ class Hardathon(EventBaseModel):
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.image:
+        if self.organizers_photo:
             return mark_safe(
                 f'<img src="{self.get_small_img_org.url}" ',
             )

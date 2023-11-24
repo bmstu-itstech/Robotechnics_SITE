@@ -32,7 +32,7 @@ class ImageBaseModel(models.Model):
         get_thumbnail(self.image, '300x300', crop='center', quality=51)
         @endcode
         """
-        return get_thumbnail(self.image, '300x300', crop='center', quality=51)
+        return get_thumbnail(self.photo, '300x300', crop='center', quality=51)
 
     def image_tmb(self):
         """!
@@ -40,7 +40,7 @@ class ImageBaseModel(models.Model):
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.image:
+        if self.photo:
             return mark_safe(
                 f'<img src="{self.get_img.url}"',
             )
@@ -58,7 +58,7 @@ class ImageBaseModel(models.Model):
         get_thumbnail(self.image, '50x50', crop='center', quality=51)
         @endcode
         """
-        return get_thumbnail(self.image, '50x50', crop='center', quality=51)
+        return get_thumbnail(self.photo, '50x50', crop='center', quality=51)
 
     def small_image_tmb(self):
         """!
@@ -66,7 +66,7 @@ class ImageBaseModel(models.Model):
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.image:
+        if self.photo:
             return mark_safe(
                 f'<img src="{self.get_small_img.url}" ',
             )

@@ -49,7 +49,7 @@ class HardatonProjectsViewSet(viewsets.ModelViewSet):
         projects = self.queryset.filter(hardathon=kwargs['pk'])
         paginator = HardatonProjectsPagination()
         paginator.page_size = 6
-        data = paginator.paginate_queryset(queryset=projects, request=request)  # !
+        data = paginator.paginate_queryset(queryset=projects, request=request)
         serializer = HardatonProjectsSerializer(data, many=True)
         data = serializer.data
         data = paginator.get_paginated_response(data)
