@@ -1,6 +1,5 @@
 from django.urls import include, path
 
-
 urlpatterns = [
     path('news', include('news.urls')),
     path('achievements', include('achievement.urls')),
@@ -8,5 +7,3 @@ urlpatterns = [
     path('supervisors', include('director.urls')),
     path('classic_events/', include('events.urls'))
 ]
-
-
