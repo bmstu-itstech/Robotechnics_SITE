@@ -1,5 +1,5 @@
-from rest_framework import serializers
 from partners.models import Partner  # noqa: F401
+from rest_framework import serializers
 
 
 class PartnerSerializer(serializers.ModelSerializer):
@@ -9,4 +9,4 @@ class PartnerSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Partner
-        fields = ['name', 'link_to_the_site', 'image']
+        fields = ['name', 'link_to_the_site', 'photo']
