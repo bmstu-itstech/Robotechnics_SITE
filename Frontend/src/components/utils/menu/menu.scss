@@ -1,0 +1,125 @@
+input[type=checkbox]{
+  display: none;
+  position: absolute;
+}
+
+input[type=checkbox]:checked ~ .cropper {
+  right: 0;
+  top: -500px;
+}
+
+input[type=checkbox]:checked ~ .circle {
+  //display: none;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  background-color: rgba(255, 92, 0, 1);
+  border-radius: 50%;
+  height: 915px;
+  width: 915px;
+  right: -25%;
+  top: -65%;
+}
+
+.corner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 40%;
+}
+
+.menu-button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.menu-icon {
+  width: 80px;
+  color: white;
+}
+
+.ellipse {
+  position: absolute;
+  background-color: rgba(255, 92, 0, 1);
+  border-radius: 50%;
+  height: 1900px;
+  width: 1400px;
+}
+
+
+.cropper {
+  position: absolute;
+  overflow: hidden;
+  width: 900px;
+  height: 1900px;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: -1900px;
+  transition: 300ms ease-in;
+}
+
+
+.navigation {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: right;
+}
+
+.close-button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.list {
+  margin-top: 100px;
+  display: inline-block;
+  height: 100%;
+  width: 500px;
+  vertical-align: top;
+}
+
+.list-item {
+  margin-bottom: 55px;
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+  justify-content: right;
+}
+
+.text-item {
+  display: inline-block;
+  font-size: 50px;
+  margin: 0 50px 0 0;
+}
+
+.horizontal-line {
+  display: inline-block;
+  height: 7px;
+  width: 50px;
+  background-color: white;
+  border-radius: 3px 0 0 3px;
+}
+
+.vertical-line {
+  display: inline-block;
+  margin-top: 122px;
+  height: calc(100% - 163px);
+  width: 7px;
+  background-color: white;
+  border-radius: 0 3px 3px 0;
+}
