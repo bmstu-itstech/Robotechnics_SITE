@@ -41,12 +41,12 @@ class ModelTests(TestCase):
                  ):
                 with self.assertRaises(ValidationError):
                     self.questionnaire = Questionnaire(
-                        full_name='Иванов Иван Иванович',
-                        group=group,
-                        number_of_people=5,
+                        searcher_fio='Иванов Иван Иванович',
+                        searcher_bmstu_group=group,
+                        participants_count=5,
                         required_competencies='test',
-                        link_to_vk='https://vk.com',
-                        additional_information='test',
+                        seacher_VK='https://vk.com',
+                        additional='test',
                         classic_event=self.classic_event,
                     )
                     self.questionnaire.full_clean()
@@ -72,12 +72,12 @@ class ModelTests(TestCase):
                  ):
 
                 self.questionnaire = Questionnaire(
-                    full_name='Иванов Иван Иванович',
-                    group=group,
-                    number_of_people=5,
+                    searcher_fio='Иванов Иван Иванович',
+                    searcher_bmstu_group=group,
+                    participants_count=5,
                     required_competencies='test',
-                    link_to_vk='https://vk.com',
-                    additional_information='test',
+                    seacher_VK='https://vk.com',
+                    additional='test',
                     classic_event=self.classic_event,
                 )
                 self.questionnaire.full_clean()
@@ -102,12 +102,12 @@ class ModelTests(TestCase):
                  ):
 
                 self.questionnaire = Questionnaire(
-                    full_name=full_name,
-                    group='ИУ9-12Б',
-                    number_of_people=5,
+                    searcher_fio=full_name,
+                    searcher_bmstu_group='ИУ9-12Б',
+                    participants_count=5,
                     required_competencies='test',
-                    link_to_vk='https://vk.com',
-                    additional_information='test',
+                    seacher_VK='https://vk.com',
+                    additional='test',
                     classic_event=self.classic_event,
                 )
                 self.questionnaire.full_clean()
@@ -132,12 +132,12 @@ class ModelTests(TestCase):
                  ):
                 with self.assertRaises(ValidationError):
                     self.questionnaire = Questionnaire(
-                        full_name=full_name,
-                        group='ИУ9-12Б',
-                        number_of_people=5,
+                        searcher_fio=full_name,
+                        searcher_bmstu_group='ИУ9-12Б',
+                        participants_count=5,
                         required_competencies='test',
-                        link_to_vk='https://vk.com',
-                        additional_information='test',
+                        seacher_VK='https://vk.com',
+                        additional='test',
                         classic_event=self.classic_event,
                     )
                     self.questionnaire.full_clean()

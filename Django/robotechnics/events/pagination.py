@@ -14,5 +14,6 @@ class ClassicEventPagination(pagination.PageNumberPagination):
         return Response({
             'next': self.get_next_link(),
             'count': len(data),
+            'total_count': self.page.paginator.count,
             'results': data
         })

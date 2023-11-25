@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('photo', models.ImageField(blank=True, upload_to='photos/%Y/%m/%d', verbose_name='изображение к мероприятию')),
                 ('name', models.CharField(max_length=150, verbose_name='название')),
                 ('description', models.TextField(verbose_name='описание')),
-                ('link_to_photo_album', models.URLField(verbose_name='ссылка на фото-альбом')),
+                ('photo_album_url', models.URLField(verbose_name='ссылка на фото-альбом')),
                 ('link_to_media', models.URLField(verbose_name='ссылка на СМИ')),
             ],
             options={

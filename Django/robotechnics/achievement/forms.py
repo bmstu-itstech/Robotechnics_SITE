@@ -7,13 +7,13 @@ class AchievementForm(forms.ModelForm):
     class Meta:
         model = Achievement
         fields = ('photo', 'name', 'description',
-                  'link_to_photo_album', 'link_to_media',)
+                  'photo_album_url', 'link_to_media',)
         widgets = {
             'photo': FileInput(attrs={'style':
                                       'border: 1px solid #353535;'
                                       'padding: 5em; border-radius: 4px'}),
             'name': TextInput,
             'description': Textarea,
-            'link_to_photo_album': URLInput,
+            'photo_album_url': URLInput,
             'link_to_media': URLInput,
         }

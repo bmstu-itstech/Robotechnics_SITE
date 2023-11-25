@@ -40,26 +40,26 @@ class Questionnaire(models.Model):
     @param additional_information Дополнительная информация
     @param classic_event ManyToOne связь с моделью ClassicEvent
     """
-    full_name = models.CharField(
+    searcher_fio = models.CharField(
         'фио участника',
         max_length=150,
         validators=[ValidateFullName()],
     )
-    group = models.CharField(
+    searcher_bmstu_group = models.CharField(
         'учебная группа',
         max_length=15,
         validators=[ValidateGroup()],
     )
-    number_of_people = models.IntegerField(
+    participants_count = models.IntegerField(
         'количество людей в команде',
     )
     required_competencies = models.TextField(
         'необходимые компетенции',
     )
-    link_to_vk = models.URLField(
+    seacher_VK = models.URLField(
         'ссылка на ВКонтакте соискателя',
     )
-    additional_information = models.TextField(
+    additional = models.TextField(
         'дополнительная информация',
     )
     classic_event = models.ForeignKey(
@@ -73,4 +73,4 @@ class Questionnaire(models.Model):
         verbose_name_plural = 'анкеты'
 
     def __str__(self):
-        return self.full_name
+        return self.searcher_fio

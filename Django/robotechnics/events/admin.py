@@ -15,12 +15,12 @@ class ClassicEventAdmin(admin.ModelAdmin):
 @admin.register(Questionnaire)
 class QuestionnaireAdmin(admin.ModelAdmin):
     list_display = (
-        'full_name',
-        'group',
+        'searcher_fio',
+        'searcher_bmstu_group',
         'classic_event_title',
-        'link_to_vk',
+        'seacher_VK',
     )
-    list_display_links = ('full_name',)
+    list_display_links = ('searcher_fio',)
 
     def classic_event_title(self, obj):
         return obj.classic_event.title
