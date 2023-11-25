@@ -10,7 +10,8 @@ class Hardathon(EventBaseModel):
     @brief Модель хардатона
     @param application_start_date Дата начала приёма заявок
     @param date_of_summing_up Дата подведения итогов
-    @param organizers_photo Фото главного организатора, может быть пустым, загружается в *organizers_images/%Y/%m/%d*
+    @param organizers_photo Фото главного организатора, может быть пустым,
+                            загружается в *organizers_photos/%Y/%m/%d*
     @param organizers_word Ссылка на слово главного организатора
     @param link_to_competition_task Ссылка на конкурсное задание
     @param partners ManyToMany связь с моделью Partner
@@ -26,7 +27,7 @@ class Hardathon(EventBaseModel):
     )
     organizers_photo = models.ImageField(
         'фотография главного организатора',
-        upload_to='organizers_images/%Y/%m/%d',
+        upload_to='organizers_photos/%Y/%m/%d',
         blank=True,
     )
     organizers_word = models.URLField(
@@ -45,18 +46,19 @@ class Hardathon(EventBaseModel):
         verbose_name_plural = 'хардатоны'
 
     @property
-    def get_img_org(self):
+    def get_photo_org(self):
         """!
         @brief Метод получения изображения организатора
         @return Возвращает
         @code
-        get_thumbnail(self.organizers_photo, '300x300', crop='center', quality=51)
+        get_thumbnail(
+            self.organizers_photo, '300x300', crop='center', quality=51)
         @endcode
         """
         return get_thumbnail(self.organizers_photo, '300x300', crop='center',
                              quality=51)
 
-    def image_tmb_org(self):
+    def photo_tmb_org(self):
         """!
         @brief Метод получения тега изображения организатора со ссылкой
         @return Если изображения нет, то возвращает строку *Нет изображения*.
@@ -64,39 +66,41 @@ class Hardathon(EventBaseModel):
         """
         if self.organizers_photo:
             return mark_safe(
-                f'<img src="{self.get_img_org.url}"',
+                f'<img src="{self.get_photo_org.url}"',
             )
         return 'Нет изображения'
 
-    image_tmb_org.short_description = 'фотография главного организатора'
-    image_tmb_org.allow_tags = True
+    photo_tmb_org.short_description = 'фотография главного организатора'
+    photo_tmb_org.allow_tags = True
 
     @property
-    def get_small_img_org(self):
+    def get_small_photo_org(self):
         """!
         @brief Метод получения изображения организатора маленького размера
         @return Возвращает
         @code
-        get_thumbnail(self.organizers_photo, '50x50', crop='center', quality=51)
+        get_thumbnail(
+            self.organizers_photo, '50x50', crop='center', quality=51)
         @endcode
         """
         return get_thumbnail(self.organizers_photo, '50x50', crop='center',
                              quality=51)
 
-    def small_image_tmb_org(self):
+    def small_photo_tmb_org(self):
         """!
-        @brief Метод получения тега маленького изображения организатора со ссылкой
+        @brief Метод получения тега маленького изображения организатора
+               со ссылкой
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.image:
+        if self.organizers_photo:
             return mark_safe(
-                f'<img src="{self.get_small_img_org.url}" ',
+                f'<img src="{self.get_small_photo_org.url}" ',
             )
         return 'Нет изображения'
 
-    small_image_tmb_org.short_description = 'фотография главного организатора'
-    small_image_tmb_org.allow_tags = True
+    small_photo_tmb_org.short_description = 'фотография главного организатора'
+    small_photo_tmb_org.allow_tags = True
 
 
 class Project(ImageBaseModel):

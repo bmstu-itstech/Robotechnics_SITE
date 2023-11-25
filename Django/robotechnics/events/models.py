@@ -30,8 +30,10 @@ class ClassicEvent(EventBaseModel):
 class Questionnaire(models.Model):
     """!
     @brief Модель анкеты
-    @param full_name ФИО соискателя, максимальная длина - 150 символов, валидатор - ValidateFullName
-    @param group Учебная группа соискателя, максимальная длина - 15 символов, валидатор - ValidateGroup
+    @param full_name ФИО соискателя, максимальная длина - 150 символов,
+                     валидатор - ValidateFullName
+    @param group Учебная группа соискателя, максимальная длина - 15 символов,
+                 валидатор - ValidateGroup
     @param number_of_people Количество людей в команде
     @param required_competencies Необходимые компетенции
     @param link_to_vk Ссылка на ВКонтакте соискателя
