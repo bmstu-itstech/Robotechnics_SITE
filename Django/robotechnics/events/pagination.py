@@ -2,9 +2,9 @@ from rest_framework import pagination
 from rest_framework.response import Response
 
 
-class ClassicEventPagination(pagination.PageNumberPagination):
+class EventsPagination(pagination.PageNumberPagination):
     """!
-    @brief Пагинация для классического мероприятия
+    @brief Пагинация для классического мероприятия/анкеты
     @details Нужна, чтобы объекты в api передавались по несколько штук
     @param page_size Максимальное количество объектов на одной странице
     """
