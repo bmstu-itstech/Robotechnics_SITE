@@ -1,22 +1,36 @@
-input[type=checkbox]{
+input[type=checkbox] {
   display: none;
   position: absolute;
 }
 
-input[type=checkbox]:checked ~ .cropper {
-  right: 0;
-  top: -500px;
+input[type=checkbox]:checked ~ .menu-opened {
+  opacity: 1;
+  visibility: visible;
+  transition: 500ms ease-in;
 }
 
-input[type=checkbox]:checked ~ .circle {
-  //display: none;
+input[type=checkbox]:checked ~ .menu-closed {
+  width: 2000px;
+  height: 2000px;
+  right: -60%;
+  top: -55%;
 }
 
 label:hover {
   cursor: pointer;
 }
 
-.circle {
+
+.menu {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+.menu-closed {
   position: absolute;
   background-color: rgba(255, 92, 0, 1);
   border-radius: 50%;
@@ -24,17 +38,7 @@ label:hover {
   width: 915px;
   right: -25%;
   top: -65%;
-}
-
-.corner {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  height: 40%;
+  transition: 300ms linear;
 }
 
 .menu-button {
@@ -43,21 +47,18 @@ label:hover {
   padding: 0;
 }
 
-.menu-icon {
-  width: 80px;
+.change-button {
   color: white;
-}
-
-.ellipse {
   position: absolute;
-  background-color: rgba(255, 92, 0, 1);
-  border-radius: 50%;
-  height: 1900px;
-  width: 1400px;
+  right: 100px;
+  top: 100px;
+  z-index: 1000;
 }
 
 
-.cropper {
+.menu-opened {
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   overflow: hidden;
   width: 900px;
@@ -65,8 +66,8 @@ label:hover {
   display: flex;
   align-items: center;
   right: 0;
-  top: -1900px;
-  transition: 300ms ease-in;
+  top: -500px;
+  transition: none;
 }
 
 
@@ -78,18 +79,11 @@ label:hover {
   justify-content: right;
 }
 
-.close-button {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  margin-top: 20px;
-}
-
 .list {
-  margin-top: 100px;
+  margin-top: 150px;
   display: inline-block;
   height: 100%;
-  width: 500px;
+  width: 800px;
   vertical-align: top;
 }
 
@@ -105,6 +99,27 @@ label:hover {
   display: inline-block;
   font-size: 50px;
   margin: 0 50px 0 0;
+  transition: .3s ease-out;
+
+  &:hover + .dot {
+    width: 30px;
+    height: 30px;
+    margin-right: -10px;
+    transition: .2s ease-out;
+  }
+  &:hover {
+    font-size: 52px;
+    transition: .2s ease-out;
+  }
+}
+
+.dot {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transition: .3s ease-out;
 }
 
 .horizontal-line {
@@ -117,7 +132,7 @@ label:hover {
 
 .vertical-line {
   display: inline-block;
-  margin-top: 122px;
+  margin-top: 172px;
   height: calc(100% - 163px);
   width: 7px;
   background-color: white;

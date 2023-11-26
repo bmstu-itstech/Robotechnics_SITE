@@ -14,6 +14,8 @@ function App() {
 
   return (
     <div>
+
+      <NewsPage />
       <Menu />
     </div>
   );
