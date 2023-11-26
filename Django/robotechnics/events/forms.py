@@ -8,7 +8,7 @@ class ClassicEventForm(forms.ModelForm):
         model = ClassicEvent
         fields = '__all__'
         widgets = {
-            'image': FileInput(
+            'photo': FileInput(
                 attrs={'style':
                        'border: 1px solid #353535; '
                        'padding: 5em; border-radius: 4px'}),

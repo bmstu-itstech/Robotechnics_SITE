@@ -89,7 +89,7 @@ class Hardathon(EventBaseModel):
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.image:
+        if self.organizers_photo:
             return mark_safe(
                 f'<img src="{self.get_small_img_org.url}" ',
             )
@@ -97,6 +97,10 @@ class Hardathon(EventBaseModel):
 
     small_image_tmb_org.short_description = 'фотография главного организатора'
     small_image_tmb_org.allow_tags = True
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Hardathon.objects.order_by('-id')
 
 
 class Project(ImageBaseModel):
@@ -123,3 +127,7 @@ class Project(ImageBaseModel):
     class Meta:
         verbose_name = 'проект'
         verbose_name_plural = 'проекты'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Project.objects.order_by('-id')

@@ -9,4 +9,4 @@ class DirectorSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Director
-        fields = ['name', 'email', 'post', 'image']
+        fields = ['fio', 'email', 'role', 'photo']
