@@ -32,10 +32,10 @@ if settings.DEBUG:
         path('api/swagger/', TemplateView.as_view(
             template_name='swagger/swagger.html',
             extra_context={'schema_url': 'openapi-schema'}
-        ), name='swagger'),
-        re_path(
-            r'^swagger(?P<format>\.json|\.yaml)$',
-            schema_view.without_ui(cache_timeout=0),
+            ), name='swagger'
+        ),
+        path(
+            'api/swagger<format>/', schema_view.without_ui(cache_timeout=0),
             name='schema-json'
         ),
     ]
