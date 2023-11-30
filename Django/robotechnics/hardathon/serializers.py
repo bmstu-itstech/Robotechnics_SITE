@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from partners.models import Partner  # noqa: F401
-from hardathon.models import Hardathon, Project  # noqa: F401
+from partners.models import Partner
+from hardathon.models import Hardathon, Project
 
 
 class HardathonSerializer(serializers.ModelSerializer):
@@ -10,7 +10,7 @@ class HardathonSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Hardathon
-        fields = ['title', 'photo',]
+        fields = ('title', 'photo',)
 
 
 class DetailProjectSerializer(serializers.ModelSerializer):
@@ -20,7 +20,7 @@ class DetailProjectSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Project
-        fields = ['title', 'description', 'competition_rules', 'implementation_scale', 'photo',]
+        fields = ('title', 'description', 'competition_rules', 'implementation_scale', 'photo',)
 
 
 class HardatonProjectsSerializer(serializers.ModelSerializer):
@@ -30,7 +30,7 @@ class HardatonProjectsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Project
-        fields = ['title',]
+        fields = ('title',)
 
 
 class HardatonPartnersSerializer(serializers.ModelSerializer):
@@ -40,4 +40,4 @@ class HardatonPartnersSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Partner
-        fields = ['title', 'link', 'photo']
+        fields = ('title', 'link', 'photo')

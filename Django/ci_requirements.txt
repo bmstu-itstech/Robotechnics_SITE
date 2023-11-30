@@ -1,4 +1,4 @@
-# Engine
+# Engine + Django
 asgiref==3.7.2
 Django
 django-cors-headers==4.1.0

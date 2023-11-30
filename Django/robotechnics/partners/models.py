@@ -1,4 +1,4 @@
-from core.models import ImageBaseModel  # noqa: F401
+from core.models import ImageBaseModel
 from django.db import models
 
 
