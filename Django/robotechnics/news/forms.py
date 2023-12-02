@@ -1,5 +1,5 @@
 from django import forms
-from news.models import News  # noqa: F401
+from news.models import News
 from django.forms import TextInput, FileInput, Textarea, URLInput
 
 

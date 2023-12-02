@@ -1,5 +1,5 @@
 from django import forms
-from director.models import Director  # noqa: F401
+from director.models import Director
 from django.forms import FileInput, TextInput, EmailInput
 
 

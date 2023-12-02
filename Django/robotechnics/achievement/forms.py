@@ -1,5 +1,5 @@
 from django import forms
-from achievement.models import Achievement  # noqa: F401
+from achievement.models import Achievement
 from django.forms import TextInput, FileInput, Textarea, URLInput
 
 

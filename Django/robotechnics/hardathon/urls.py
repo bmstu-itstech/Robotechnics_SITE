@@ -1,5 +1,5 @@
 from django.urls import path, include
-from hardathon.router import router, router2, router3, router4  # noqa: F401
+from hardathon.router import router, router2, router3, router4
 
 
 urlpatterns = [

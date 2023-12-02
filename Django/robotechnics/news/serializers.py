@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from news.models import News  # noqa: F401
+from news.models import News
 
 
 class NewsSerializer(serializers.ModelSerializer):
@@ -9,4 +9,4 @@ class NewsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = News
-        fields = ['title', 'description', 'new_url', 'photo']
+        fields = ('title', 'description', 'new_url', 'photo')

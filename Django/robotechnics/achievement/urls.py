@@ -1,5 +1,5 @@
 from django.urls import path, include
-from achievement.router import router  # noqa: F401
+from achievement.router import router
 
 
 urlpatterns = [

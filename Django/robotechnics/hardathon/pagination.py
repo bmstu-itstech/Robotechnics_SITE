@@ -1,7 +1,7 @@
 from rest_framework import pagination
-from partners.models import Partner  # noqa: F401
+from partners.models import Partner
 from rest_framework.response import Response
-from robotechnics.settings import BASE_URL  # noqa: F401
+from robotechnics.settings import BASE_URL
 
 
 class HardathonPagination(pagination.PageNumberPagination):

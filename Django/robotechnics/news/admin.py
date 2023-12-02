@@ -1,6 +1,6 @@
 from django.contrib import admin
-from news.forms import NewsForm  # noqa: F401
-from news.models import News  # noqa: F401
+from news.forms import NewsForm
+from news.models import News
 
 
 @admin.register(News)
@@ -13,11 +13,11 @@ class NewsAdmin(admin.ModelAdmin):
     @param form Форма для редактирования/создания
     @param search_fields Поля поиска
     """
-    list_display = [
+    list_display = (
         'small_image_tmb',
         'title',
         'new_url',
-    ]
+    )
     list_display_links = ('small_image_tmb', 'title',)
     readonly_fields = ('image_tmb',)
     form = NewsForm

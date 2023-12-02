@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from achievement.models import Achievement  # noqa: F401
+from achievement.models import Achievement
 
 
 class AchievementSerializer(serializers.ModelSerializer):
@@ -9,4 +9,4 @@ class AchievementSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Achievement
-        fields = ['title', 'description', 'link_to_photo_album', 'link_to_media', 'photo']
+        fields = ('title', 'description', 'link_to_photo_album', 'link_to_media', 'photo')

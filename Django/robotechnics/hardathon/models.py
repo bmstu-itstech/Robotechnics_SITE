@@ -1,7 +1,7 @@
-from core.models import EventBaseModel, ImageBaseModel  # noqa: F401
+from core.models import EventBaseModel, ImageBaseModel
 from django.db import models
 from django.utils.safestring import mark_safe
-from partners.models import Partner  # noqa: F401
+from partners.models import Partner
 from sorl.thumbnail import get_thumbnail
 
 

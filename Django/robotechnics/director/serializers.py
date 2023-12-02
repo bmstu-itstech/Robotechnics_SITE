@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from director.models import Director  # noqa: F401
+from director.models import Director
 
 
 class DirectorSerializer(serializers.ModelSerializer):
@@ -9,4 +9,4 @@ class DirectorSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Director
-        fields = ['fio', 'email', 'role', 'photo']
+        fields = ('fio', 'email', 'role', 'photo')

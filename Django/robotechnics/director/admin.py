@@ -1,6 +1,6 @@
 from django.contrib import admin
-from director.models import Director  # noqa: F401
-from director.forms import DirectorForm  # noqa: F401
+from director.models import Director
+from director.forms import DirectorForm
 
 
 @admin.register(Director)
@@ -13,12 +13,12 @@ class DirectorAdmin(admin.ModelAdmin):
     @param form Форма для редактирования/создания
     @param search_fields Поля поиска
     """
-    list_display = [
+    list_display = (
         'small_image_tmb',
         'fio',
         'email',
         'role',
-    ]
+    )
     list_display_links = ('small_image_tmb', 'fio',)
     readonly_fields = ('image_tmb',)
     form = DirectorForm
