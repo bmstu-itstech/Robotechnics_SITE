@@ -15,7 +15,7 @@ class ClassicEventPagination(pagination.PageNumberPagination):
             'next': self.get_next_link(),
             'count': len(data),
             'total_count': self.page.paginator.count,
-            'results': data
+            'classic_events': data
         })
 
 
@@ -32,5 +32,5 @@ class QuestionnairePagination(pagination.PageNumberPagination):
             'next': self.get_next_link(),
             'count': len(data),
             'total_count': self.page.paginator.count,
-            'results': data
+            'questionnaires': data
         })

@@ -1,6 +1,5 @@
-from django.urls import path, include
-from partners.router import router  # noqa: F401
-
+from django.urls import include, path
+from partners.router import router
 
 urlpatterns = [
     path('', include(router.urls))

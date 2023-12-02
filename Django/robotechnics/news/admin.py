@@ -1,10 +1,10 @@
 from django.contrib import admin
-from news.forms import NewsForm  # noqa: F401
-from news.models import News  # noqa: F401
+from news.forms import NewsForm
+from news.models import News
 
 
 @admin.register(News)
-class DirectorAdmin(admin.ModelAdmin):
+class NewsAdmin(admin.ModelAdmin):
     """!
     @brief Админ панель для новости
     @param list_display Поля модели, отображаемые на сайте:
@@ -13,12 +13,15 @@ class DirectorAdmin(admin.ModelAdmin):
                               на страницу редактирования:
                               маленькое изображение, название
     @param readonly_fields Readonly поля: изображение
+    @param form Форма для редактирования/создания
+    @param search_fields Поля поиска
     """
-    list_display = [
+    list_display = (
         'small_photo_tmb',
-        'name',
-        'link_to_news',
-    ]
-    list_display_links = ('small_photo_tmb', 'name',)
+        'title',
+        'new_url',
+    )
+    list_display_links = ('small_photo_tmb', 'title',)
     readonly_fields = ('photo_tmb',)
     form = NewsForm
+    search_fields = ('title',)

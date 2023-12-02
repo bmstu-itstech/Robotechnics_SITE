@@ -13,13 +13,16 @@ class DirectorAdmin(admin.ModelAdmin):
                               на страницу редактирования:
                               маленькое изображение, ФИО
     @param readonly_fields Readonly поля: изображение
+    @param form Форма для редактирования/создания
+    @param search_fields Поля поиска
     """
-    list_display = [
+    list_display = (
         'small_photo_tmb',
-        'name',
+        'fio',
         'email',
-        'post',
-    ]
-    list_display_links = ('small_photo_tmb', 'name',)
+        'role',
+    )
+    list_display_links = ('small_photo_tmb', 'fio',)
     readonly_fields = ('photo_tmb',)
     form = DirectorForm
+    search_fields = ('fio', 'email', 'role')

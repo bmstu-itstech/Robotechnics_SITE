@@ -1,16 +1,16 @@
-from core.models import ImageBaseModel  # noqa: F401
+from core.models import ImageBaseModel
 from django.db import models
 
 
 class Achievement(ImageBaseModel):
     """!
     @brief Модель достижения
-    @param name Название достижения, максимальная длина - 150 символов
+    @param title Название достижения, максимальная длина - 150 символов
     @param description Описание достижения
     @param photo_album_url ссылка на фото-альбом
     @param link_to_media ссылка на СМИ
     """
-    name = models.CharField(
+    title = models.CharField(
         'название',
         max_length=150,
     )

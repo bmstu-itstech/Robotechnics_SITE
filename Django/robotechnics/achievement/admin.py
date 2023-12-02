@@ -13,12 +13,15 @@ class AchievementAdmin(admin.ModelAdmin):
                               на страницу редактирования:
                               маленькое изображение, название
     @param readonly_fields Readonly поля: изображение
+    @param form Форма для редактирования/создания
+    @param search_fields Поля поиска
     """
-    list_display = [
+    list_display = (
         'small_photo_tmb',
-        'name',
+        'title',
         'link_to_media',
-    ]
-    list_display_links = ('small_photo_tmb', 'name',)
+    )
+    list_display_links = ('small_photo_tmb', 'title',)
     readonly_fields = ('photo_tmb',)
     form = AchievementForm
+    search_fields = ('title',)

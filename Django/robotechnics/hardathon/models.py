@@ -1,7 +1,7 @@
-from core.models import EventBaseModel, ImageBaseModel  # noqa: F401
+from core.models import EventBaseModel, ImageBaseModel
 from django.db import models
 from django.utils.safestring import mark_safe
-from partners.models import Partner  # noqa: F401
+from partners.models import Partner
 from sorl.thumbnail import get_thumbnail
 
 
@@ -102,6 +102,10 @@ class Hardathon(EventBaseModel):
     small_photo_tmb_org.short_description = 'фотография главного организатора'
     small_photo_tmb_org.allow_tags = True
 
+    @staticmethod
+    def get_all_objects_by_id():
+        return Hardathon.objects.order_by('-id')
+
 
 class Project(ImageBaseModel):
     title = models.CharField(
@@ -127,3 +131,7 @@ class Project(ImageBaseModel):
     class Meta:
         verbose_name = 'проект'
         verbose_name_plural = 'проекты'
+
+    @staticmethod
+    def get_all_objects_by_id():
+        return Project.objects.order_by('-id')

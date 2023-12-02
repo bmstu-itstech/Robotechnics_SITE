@@ -5,18 +5,18 @@ from django.db import models
 class News(ImageBaseModel):
     """!
     @brief Модель новости
-    @param name Название, максимальная длина - 150 символов
+    @param title Название, максимальная длина - 150 символов
     @param description Описание
-    @param link_to_news Ссылка на новость
+    @param new_url Ссылка на новость
     """
-    name = models.CharField(
+    title = models.CharField(
         'название',
         max_length=150
     )
     description = models.TextField(
         'описание',
     )
-    link_to_news = models.URLField(
+    new_url = models.URLField(
         'ссылка на новость',
     )
 

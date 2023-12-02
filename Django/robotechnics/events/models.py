@@ -1,13 +1,13 @@
-from core.models import EventBaseModel  # noqa: F401
+from core.models import EventBaseModel
 from django.db import models
-from events.validators import ValidateFullName, ValidateGroup  # noqa: F401
-from partners.models import Partner  # noqa: F401
+from events.validators import ValidateFullName, ValidateGroup
+from partners.models import Partner
 
 
 class ClassicEvent(EventBaseModel):
     """!
     @brief Модель классического мероприятия
-    @param link_to_the_registr Ссылка на регистрацию
+    @param registration_link Ссылка на регистрацию
     @param partners ManyToMany связь с моделью Partner
     """
     registration_link = models.URLField(
