@@ -1,7 +1,7 @@
-from rest_framework import viewsets, routers
 from news.models import News  # noqa: F401
 from news.pagination import NewsPagination  # noqa: F401
 from news.serializers import NewsSerializer  # noqa: F401
+from rest_framework import routers, viewsets
 
 
 class NewsViewSet(viewsets.ModelViewSet):
