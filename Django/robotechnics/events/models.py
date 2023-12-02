@@ -71,6 +71,7 @@ class Questionnaire(models.Model):
     class Meta:
         verbose_name = 'анкета'
         verbose_name_plural = 'анкеты'
+        ordering = ['-id']
 
     def __str__(self):
         return self.searcher_fio
