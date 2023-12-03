@@ -16,24 +16,24 @@ class Hardathon(EventBaseModel):
     @param link_to_competition_task Ссылка на конкурсное задание
     @param partners ManyToMany связь с моделью Partner
     """
-    application_start_date = models.DateField(
+    date_for_accepting_applications = models.DateField(
         'дата начала приёма заявок',
     )
-    application_end_date = models.DateField(
+    closing_date_for_applications = models.DateField(
         'дата окончания приёма заявок',
     )
-    date_of_summing_up = models.DateField(
+    summing_up_date = models.DateField(
         'дата подведения итогов',
     )
-    organizers_photo = models.ImageField(
+    main_organizer_photo = models.ImageField(
         'фотография главного организатора',
         upload_to='organizers_photos/%Y/%m/%d',
         blank=True,
     )
-    organizers_word = models.URLField(
+    main_organizer_word = models.URLField(
         'слово главного организатора',
     )
-    link_to_competition_task = models.URLField(
+    competition_task = models.URLField(
         'ссылка на конкурсное задание',
     )
     partners = models.ManyToManyField(

@@ -13,6 +13,21 @@ class HardathonSerializer(serializers.ModelSerializer):
         fields = ('title', 'photo',)
 
 
+class HardathonByIdSerializer(serializers.ModelSerializer):
+    """!
+    @brief Сериализатор для одной записи
+    @details Нужен для преобразовывания сложных типов данных в json
+    """
+    class Meta:
+        model = Hardathon
+        fields = ('title', 'photo', 'photo_album_url',
+                  'photo_album_url', 'photo_album_url',
+                  'date_for_accepting_applications',
+                  'closing_date_for_applications',
+                  'summing_up_date', 'main_organizer_photo',
+                  'main_organizer_word', 'competition_task',)
+
+
 class DetailProjectSerializer(serializers.ModelSerializer):
     """!
     @brief Сериализатор

@@ -30,7 +30,7 @@ class ClassicEventByIdSerializer(serializers.ModelSerializer):
 
 class QuestionnaireByIdSerializer(serializers.ModelSerializer):
     """!
-    @brief Сериализатор для всех записей
+    @brief Сериализатор для одной записи
     @details Нужен для преобразовывания сложных типов данных в json
     """
     class Meta:

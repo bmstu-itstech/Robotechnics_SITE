@@ -4,10 +4,12 @@ from hardathon.pagination import (HardathonPagination,
                                   HardatonPartnersPagination,
                                   HardatonProjectsPagination)
 from hardathon.serializers import (DetailProjectSerializer,
+                                   HardathonByIdSerializer,
                                    HardathonSerializer,
                                    HardatonPartnersSerializer,
                                    HardatonProjectsSerializer)
 from rest_framework import routers, viewsets
+from rest_framework.response import Response
 
 
 class HardathonViewSet(viewsets.ModelViewSet):
@@ -21,6 +23,11 @@ class HardathonViewSet(viewsets.ModelViewSet):
     queryset = Hardathon.get_all_objects_by_id()
     serializer_class = HardathonSerializer
     pagination_class = HardathonPagination
+
+    def retrieve(self, request, pk=None):
+        hardathon = get_object_or_404(self.queryset, pk=pk)
+        serializer = HardathonByIdSerializer(hardathon)
+        return Response(serializer.data)
 
 
 class DetailProjectViewSet(viewsets.ModelViewSet):
@@ -87,14 +94,14 @@ class HardatonPartnersViewSet(viewsets.ModelViewSet):
         return data
 
 
-router = routers.DefaultRouter()
-router.register(r'', HardathonViewSet)
+router_hardathon = routers.DefaultRouter()
+router_hardathon.register(r'', HardathonViewSet)
 
-router2 = routers.DefaultRouter()
-router2.register(r'', DetailProjectViewSet)
+router_detail_project = routers.DefaultRouter()
+router_detail_project.register(r'', DetailProjectViewSet)
 
-router3 = routers.DefaultRouter()
-router3.register(r'', HardatonProjectsViewSet)
+router_hardathon_projects = routers.DefaultRouter()
+router_hardathon_projects.register(r'', HardatonProjectsViewSet)
 
-router4 = routers.DefaultRouter()
-router4.register(r'', HardatonPartnersViewSet)
+router_hardathon_partners = routers.DefaultRouter()
+router_hardathon_partners.register(r'', HardatonPartnersViewSet)

@@ -24,7 +24,7 @@ class HardathonAdmin(admin.ModelAdmin):
     list_display = (
         'small_photo_tmb',
         'title',
-        'link_to_competition_task',
+        'competition_task',
         'small_photo_tmb_org',
     )
     list_display_links = ('title', 'small_photo_tmb')
