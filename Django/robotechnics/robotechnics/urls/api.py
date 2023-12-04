@@ -7,4 +7,5 @@ urlpatterns = [
     path('supervisors/', include('director.urls')),
     path('', include('hardathon.urls')),
     path('', include('events.urls')),
+
 ]

@@ -3,6 +3,7 @@ from hardathon.router import (router_detail_project, router_hardathon,
                               router_hardathon_partners,
                               router_hardathon_projects)
 
+app_name = 'hardathon'
 urlpatterns = [
     path('hardathon/', include(router_hardathon.urls)),
     path('project/', include(router_detail_project.urls)),
