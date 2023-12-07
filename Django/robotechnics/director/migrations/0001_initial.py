@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Director',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(blank=True, upload_to='images/%Y/%m/%d', verbose_name='изображение к мероприятию')),
+                ('image', models.ImageField(blank=True, upload_to='photos/%Y/%m/%d', verbose_name='изображение к мероприятию')),
                 ('name', models.CharField(max_length=150, verbose_name='ФИО')),
                 ('email', models.EmailField(max_length=150, verbose_name='email')),
                 ('post', models.CharField(max_length=150, verbose_name='должность')),

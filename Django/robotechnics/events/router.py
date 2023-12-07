@@ -1,8 +1,10 @@
 from django.shortcuts import get_object_or_404
-from events.models import ClassicEvent
-from events.pagination import ClassicEventPagination
+from events.models import ClassicEvent, Questionnaire
+from events.pagination import ClassicEventPagination, QuestionnairePagination
 from events.serializers import (ClassicEventByIdSerializer,
-                                ClassicEventsSerializer)
+                                ClassicEventsSerializer,
+                                QuestionnaireByIdSerializer,
+                                QuestionnairesSerializer)
 from rest_framework import routers, viewsets
 from rest_framework.response import Response
 
@@ -24,5 +26,25 @@ class ClassicEventViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
-router = routers.DefaultRouter()
-router.register(r'', ClassicEventViewSet)
+class QuestionnaireViewSet(viewsets.ModelViewSet):
+    """!
+    @brief Роутер для всех анкет
+    @details Нужен для автоматической маршрутизации
+    @param queryset Список всех объектов из базы данных
+    @param serializer_class Сериализатор
+    """
+    queryset = Questionnaire.objects.all()
+    serializer_class = QuestionnairesSerializer
+    pagination_class = QuestionnairePagination
+
+    def retrieve(self, request, pk=None):
+        questionnaire = get_object_or_404(self.queryset, pk=pk)
+        serializer = QuestionnaireByIdSerializer(questionnaire)
+        return Response(serializer.data)
+
+
+router_classic_events = routers.DefaultRouter()
+router_classic_events.register(r'', ClassicEventViewSet)
+
+router_questionnaires = routers.DefaultRouter()
+router_questionnaires.register(r'', QuestionnaireViewSet)

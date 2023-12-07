@@ -6,7 +6,8 @@ from static_data.models import StaticData
 class StaticDataAdmin(admin.ModelAdmin):
     """!
     @brief Админ панель для статических данных
-    @param list_display Паля модели, отображаемые на сайте: адрес, телефон, email, ссылка на вк, ссылка на телеграм
+    @param list_display Поля модели, отображаемые на сайте:
+                        адрес, телефон, email, ссылка на вк, ссылка на телеграм
     """
     list_display = (
         'address',

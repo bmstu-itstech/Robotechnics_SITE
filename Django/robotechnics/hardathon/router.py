@@ -1,10 +1,16 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import routers, viewsets
 from hardathon.models import Hardathon, Project
-from hardathon.serializers import (HardathonSerializer, DetailProjectSerializer,
-                                   HardatonProjectsSerializer, HardatonPartnersSerializer)
-from hardathon.pagination import (HardathonPagination, HardatonProjectsPagination,
-                                  HardatonPartnersPagination)
+from hardathon.pagination import (HardathonPagination,
+                                  HardatonPartnersPagination,
+                                  HardatonProjectsPagination)
+from hardathon.serializers import (DetailProjectSerializer,
+                                   HardathonByIdSerializer,
+                                   HardathonSerializer,
+                                   HardatonPartnersSerializer,
+                                   HardatonProjectsSerializer)
+from rest_framework import routers, viewsets
+from rest_framework.response import Response
 from robotechnics.settings import Paginator_Size_Constants
 
 
@@ -19,6 +25,11 @@ class HardathonViewSet(viewsets.ModelViewSet):
     queryset = Hardathon.get_all_objects_by_id()
     serializer_class = HardathonSerializer
     pagination_class = HardathonPagination
+
+    def retrieve(self, request, pk=None):
+        hardathon = get_object_or_404(self.queryset, pk=pk)
+        serializer = HardathonByIdSerializer(hardathon)
+        return Response(serializer.data)
 
 
 class DetailProjectViewSet(viewsets.ModelViewSet):
@@ -37,7 +48,8 @@ class HardatonProjectsViewSet(viewsets.ModelViewSet):
     @brief Роутер для проектов хардатона
     @details Нужен для автоматической маршрутизации.
         Логика этого роутера отличается от логики остальных.
-        Пагинация, по сути, происходит не в классе-пагинаторе, а в функции retrieve.
+        Пагинация, по сути, происходит не в классе-пагинаторе,
+        а в функции retrieve.
         Сериализация тоже происходит в этой функции.
     @param queryset Список всех объектов из базы данных
     @param serializer_class Сериализатор
@@ -62,7 +74,8 @@ class HardatonPartnersViewSet(viewsets.ModelViewSet):
     @brief Роутер для партнёров хардатона
     @details Нужен для автоматической маршрутизации.
         Логика этого роутера отличается от логики остальных.
-        Пагинация, по сути, происходит не в классе-пагинаторе, а в функции retrieve.
+        Пагинация, по сути, происходит не в классе-пагинаторе,
+        а в функции retrieve.
         Сериализация тоже происходит в этой функции.
     @param queryset Список всех объектов из базы данных
     @param serializer_class Сериализатор

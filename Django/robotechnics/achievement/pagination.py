@@ -15,5 +15,5 @@ class AchievementPagination(pagination.PageNumberPagination):
             'next': self.get_next_link(),
             'count': self.page.paginator.count,
             'len': len(data),
-            'results': data
+            'achievements': data
         })

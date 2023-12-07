@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='News',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(blank=True, upload_to='images/%Y/%m/%d', verbose_name='изображение к мероприятию')),
+                ('image', models.ImageField(blank=True, upload_to='photos/%Y/%m/%d', verbose_name='изображение к мероприятию')),
                 ('name', models.CharField(max_length=150, verbose_name='название')),
                 ('description', models.TextField(verbose_name='описание')),
                 ('link_to_news', models.URLField(verbose_name='ссылка на новость')),

@@ -7,7 +7,7 @@ class Achievement(ImageBaseModel):
     @brief Модель достижения
     @param title Название достижения, максимальная длина - 150 символов
     @param description Описание достижения
-    @param link_to_photo_album ссылка на фото-альбом
+    @param photo_album_url ссылка на фото-альбом
     @param link_to_media ссылка на СМИ
     """
     title = models.CharField(
@@ -17,7 +17,7 @@ class Achievement(ImageBaseModel):
     description = models.TextField(
         'описание',
     )
-    link_to_photo_album = models.URLField(
+    photo_album_url = models.URLField(
         'ссылка на фото-альбом',
     )
     link_to_media = models.URLField(

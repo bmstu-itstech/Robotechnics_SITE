@@ -6,12 +6,12 @@ from hardathon.models import Hardathon, Project
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
-        'small_image_tmb',
+        'small_photo_tmb',
         'title',
         'hardathon_title',
     )
-    list_display_links = ('title',)
-    readonly_fields = ('image_tmb',)
+    list_display_links = ('title', 'small_photo_tmb')
+    readonly_fields = ('photo_tmb',)
     form = ProjectForm
 
     def hardathon_title(self, obj):
@@ -22,12 +22,12 @@ class ProjectAdmin(admin.ModelAdmin):
 @admin.register(Hardathon)
 class HardathonAdmin(admin.ModelAdmin):
     list_display = (
-        'small_image_tmb',
+        'small_photo_tmb',
         'title',
-        'link_to_competition_task',
-        'small_image_tmb_org',
+        'competition_task',
+        'small_photo_tmb_org',
     )
-    list_display_links = ('title',)
+    list_display_links = ('title', 'small_photo_tmb')
     filter_horizontal = ('partners',)
-    readonly_fields = ('image_tmb', 'image_tmb_org')
+    readonly_fields = ('photo_tmb', 'photo_tmb_org')
     form = HardathonForm

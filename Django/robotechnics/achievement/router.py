@@ -1,7 +1,7 @@
+from achievement.models import Achievement  # noqa: F401
+from achievement.pagination import AchievementPagination  # noqa: F401
+from achievement.serializers import AchievementSerializer  # noqa: F401
 from rest_framework import routers, viewsets
-from achievement.models import Achievement
-from achievement.serializers import AchievementSerializer
-from achievement.pagination import AchievementPagination
 
 
 class AchievementViewSet(viewsets.ModelViewSet):
