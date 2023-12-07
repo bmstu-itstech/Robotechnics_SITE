@@ -94,7 +94,7 @@ class EventBaseModel(ImageBaseModel):
     @details Класс наследуется от ImageBaseModel и является абстрактным
     @param title Название мероприятия, максимальная длина - 150 символов
     @param description Описание мероприятия
-    @param link_to_photo_album Ссылка на фото-альбом
+    @param photo_album_url Ссылка на фото-альбом
     @param documents_url Ссылка на документы
     @param location Ссылка на место проведения
     @param event_date Дата проведения
@@ -108,7 +108,7 @@ class EventBaseModel(ImageBaseModel):
     description = models.TextField(
         'описание',
     )
-    link_to_photo_album = models.URLField(
+    photo_album_url = models.URLField(
         'ссылка на фото-альбом',
     )
     documents_url = models.URLField(

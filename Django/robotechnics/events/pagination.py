@@ -1,5 +1,6 @@
 from rest_framework import pagination
 from rest_framework.response import Response
+from robotechnics.settings import Paginator_Size_Constants
 
 
 class ClassicEventPagination(pagination.PageNumberPagination):
@@ -8,7 +9,7 @@ class ClassicEventPagination(pagination.PageNumberPagination):
     @details Нужна, чтобы объекты в api передавались по несколько штук
     @param page_size Максимальное количество объектов на одной странице
     """
-    page_size = 6
+    page_size = Paginator_Size_Constants['classic_events']
 
     def get_paginated_response(self, data):
         return Response({

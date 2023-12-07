@@ -129,3 +129,14 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True
+
+Paginator_Size_Constants = {
+    'questionnaires': 8,
+    'hardaton_projects': 6,
+    'news': 6,
+    'partners': 4,
+    'supervisors': 4,
+    'classic_events': 6,
+    'hardatons': 2,
+    'hardaton_partners': 5,
+}

@@ -5,6 +5,7 @@ from hardathon.serializers import (HardathonSerializer, DetailProjectSerializer,
                                    HardatonProjectsSerializer, HardatonPartnersSerializer)
 from hardathon.pagination import (HardathonPagination, HardatonProjectsPagination,
                                   HardatonPartnersPagination)
+from robotechnics.settings import Paginator_Size_Constants
 
 
 class HardathonViewSet(viewsets.ModelViewSet):
@@ -48,7 +49,7 @@ class HardatonProjectsViewSet(viewsets.ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         projects = self.queryset.filter(hardathon=kwargs['pk'])
         paginator = HardatonProjectsPagination()
-        paginator.page_size = 6
+        paginator.page_size = Paginator_Size_Constants['hardaton_projects']
         data = paginator.paginate_queryset(queryset=projects, request=request)
         serializer = HardatonProjectsSerializer(data, many=True)
         data = serializer.data
@@ -73,7 +74,7 @@ class HardatonPartnersViewSet(viewsets.ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         hardaton = get_object_or_404(self.queryset, id=kwargs['pk'])
         paginator = HardatonPartnersPagination()
-        paginator.page_size = 5
+        paginator.page_size = Paginator_Size_Constants['hardaton_partners']
         data = paginator.paginate_queryset(queryset=hardaton.partners.all(), request=request)
         serializer = HardatonPartnersSerializer(data, many=True)
         data = serializer.data
@@ -81,14 +82,14 @@ class HardatonPartnersViewSet(viewsets.ModelViewSet):
         return data
 
 
-router = routers.DefaultRouter()
-router.register(r'', HardathonViewSet)
+hardatons_router = routers.DefaultRouter()
+hardatons_router.register(r'', HardathonViewSet)
 
-router2 = routers.DefaultRouter()
-router2.register(r'', DetailProjectViewSet)
+detail_project_router = routers.DefaultRouter()
+detail_project_router.register(r'', DetailProjectViewSet)
 
-router3 = routers.DefaultRouter()
-router3.register(r'', HardatonProjectsViewSet)
+projects_router = routers.DefaultRouter()
+projects_router.register(r'', HardatonProjectsViewSet)
 
-router4 = routers.DefaultRouter()
-router4.register(r'', HardatonPartnersViewSet)
+partners_router = routers.DefaultRouter()
+partners_router.register(r'', HardatonPartnersViewSet)
