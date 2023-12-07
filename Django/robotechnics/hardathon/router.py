@@ -26,6 +26,19 @@ class HardathonViewSet(viewsets.ModelViewSet):
     serializer_class = HardathonSerializer
     pagination_class = HardathonPagination
 
+
+class DetailHardatonViewSet(viewsets.ModelViewSet):
+    """!
+    @brief Роутер для детальной информации хардатона
+    @details Нужен для автоматической маршрутизации
+    @param queryset Список всех объектов из базы данных
+    @param serializer_class Сериализатор
+    @param pagination_class Пагинация
+    """
+    queryset = Hardathon.get_all_objects_by_id()
+    serializer_class = HardathonSerializer
+    pagination_class = HardathonPagination
+
     def retrieve(self, request, pk=None):
         hardathon = get_object_or_404(self.queryset, pk=pk)
         serializer = HardathonByIdSerializer(hardathon)
@@ -106,3 +119,6 @@ projects_router.register(r'', HardatonProjectsViewSet)
 
 partners_router = routers.DefaultRouter()
 partners_router.register(r'', HardatonPartnersViewSet)
+
+detail_hardaton_router = routers.DefaultRouter()
+detail_hardaton_router.register(r'', DetailHardatonViewSet)

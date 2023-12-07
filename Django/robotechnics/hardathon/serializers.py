@@ -21,7 +21,7 @@ class HardathonByIdSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hardathon
         fields = ('title', 'photo', 'photo_album_url',
-                  'photo_album_url', 'photo_album_url',
+                  'documents_url', 'location',
                   'date_for_accepting_applications',
                   'closing_date_for_applications',
                   'summing_up_date', 'main_organizer_photo',

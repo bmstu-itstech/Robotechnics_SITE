@@ -55,7 +55,7 @@ class Hardathon(EventBaseModel):
             self.organizers_photo, '300x300', crop='center', quality=51)
         @endcode
         """
-        return get_thumbnail(self.organizers_photo, '300x300', crop='center',
+        return get_thumbnail(self.main_organizer_photo, '300x300', crop='center',
                              quality=51)
 
     def photo_tmb_org(self):
@@ -64,7 +64,7 @@ class Hardathon(EventBaseModel):
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.organizers_photo:
+        if self.main_organizer_photo:
             return mark_safe(
                 f'<img src="{self.get_photo_org.url}"',
             )
@@ -83,7 +83,7 @@ class Hardathon(EventBaseModel):
             self.organizers_photo, '50x50', crop='center', quality=51)
         @endcode
         """
-        return get_thumbnail(self.organizers_photo, '50x50', crop='center',
+        return get_thumbnail(self.main_organizer_photo, '50x50', crop='center',
                              quality=51)
 
     def small_photo_tmb_org(self):
@@ -93,7 +93,7 @@ class Hardathon(EventBaseModel):
         @return Если изображения нет, то возвращает строку *Нет изображения*.
         Если изображение есть, то возвращает тег *<img src="...">*
         """
-        if self.organizers_photo:
+        if self.main_organizer_photo:
             return mark_safe(
                 f'<img src="{self.get_small_photo_org.url}" ',
             )
