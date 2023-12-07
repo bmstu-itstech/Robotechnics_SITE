@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import routers, viewsets
 from hardathon.models import Hardathon, Project
 from hardathon.pagination import (HardathonPagination,
                                   HardatonPartnersPagination,
