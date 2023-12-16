@@ -27,6 +27,7 @@ label:hover {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  z-index: 1;
 }
 
 
@@ -39,6 +40,7 @@ label:hover {
   right: -25%;
   top: -65%;
   transition: 300ms linear;
+  //z-index: 1;
 }
 
 .menu-button {
