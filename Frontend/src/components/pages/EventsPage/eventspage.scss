@@ -6,7 +6,7 @@
 }
 
 .line {
-    margin-top: 90px;
+    margin: 90px 0 50px 0;
     height: 140px;
 }
 
@@ -26,10 +26,14 @@
     border-radius: 50%;
 }
 
+.board {
+    width: 90%
+}
+
 .box {
     position: relative;
-    height: 310px;
-    width: 280px;
+    height: 280px;
+    width: 260px;
     overflow: hidden;
     border-radius: 50px;
     display: flex;
@@ -48,7 +52,7 @@
 }
 
 .wide {
-    width: 610px;
+    width: 560px;
 }
 
 .text {
@@ -67,7 +71,7 @@
 
 .arrow-right {
     position: absolute;
-    margin-top: 80px;
+    margin-top: 100px;
     top: 50%;
     right: 50px;
     cursor: pointer;
@@ -75,7 +79,7 @@
 
 .arrow-left {
     position: absolute;
-    margin-top: 80px;
+    margin-top: 100px;
     top: 50%;
     left: 50px;
     cursor: pointer;

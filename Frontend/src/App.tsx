@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-
+      <Menu />
       <EventsPage />
     </div>
   );
