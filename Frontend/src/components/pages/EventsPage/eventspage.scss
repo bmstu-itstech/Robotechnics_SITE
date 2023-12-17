@@ -1,6 +1,7 @@
 .page-section {
     position: absolute;
     background: url("../../../../src/components/assets/images/background.svg") no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100vw;
 }
@@ -41,13 +42,15 @@
     flex-shrink: 0;
     margin: 20px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.92) 0px -110px 40px -30px inset;
-    background: center / cover no-repeat url("../../../../src/components/assets/images/pic1.jpeg");
-    transition: ease-in .3s;
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+            center / cover no-repeat url("../../../../src/components/assets/images/pic1.jpeg");
+    transition: ease-in .1s;
+
 
     &:hover {
-        box-shadow: rgba(145, 49, 12, 0.78) 0px -110px 40px -30px inset;
-        transition: ease-in .3s;
+        box-shadow: 0px 0px 25px 3px rgba(255, 92, 0, 0.6);
+        transition: ease-in .2s;
     }
 }
 

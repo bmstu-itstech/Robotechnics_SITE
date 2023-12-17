@@ -41,9 +41,12 @@ export const EventSection = () => {
             </div>
 
             <div className={"container"}>
+                <button className={"event-btn prev-btn"}>
+                    <p className="fw-bolder fs-4 text-uppercase text-light m-0">предыдущее мероприятие</p>
+                </button>
                 <div className={"my-5 row"}>
                     <div className={"col-7"}>
-                    <p className="fw-bold title-1 text-uppercase text-light">инженерный вызов</p>
+                        <p className="fw-bold title-1 text-uppercase text-light">инженерный вызов</p>
                         <div className={"my-5 text-light fs-4"}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

@@ -19,7 +19,7 @@ const Menu = () => {
           <div className={"menu-closed"}></div>
 
           <label htmlFor="checkbox-toggle">
-              <img className={"change-button"} src={isChecked ? close : menu} alt="" />
+              <div className={"change-button"}><img src={isChecked ? close : menu} alt=""/></div>
           </label>
 
           <div className={"menu-opened"}>
