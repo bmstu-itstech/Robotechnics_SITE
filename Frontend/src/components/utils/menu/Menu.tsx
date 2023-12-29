@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import "./menu.scss"
 
 // @ts-ignore
-import menu from "./menu.svg"
+import menu from "../../assets/icons/menu.svg"
 // @ts-ignore
-import close from "./close.svg"
+import close from "../../assets/icons/close.svg"
 
 const Menu = () => {
     const [isChecked, setChecked] = useState(false);

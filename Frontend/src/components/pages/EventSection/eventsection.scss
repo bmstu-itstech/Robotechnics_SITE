@@ -111,3 +111,98 @@
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
+
+.dark-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  z-index: 100;
+}
+
+.sidebar {
+  position: absolute;
+  right: -800px;
+  top: 0;
+  width: 800px;
+  height: 100%;
+  background-color: #ff5c00;
+  z-index: 100000;
+  transition: ease-in-out .5s;
+
+  & img {
+    cursor: pointer;
+  }
+}
+
+.sidebar-closed {
+  right: 0;
+  transition: ease-in-out .7s;
+}
+
+.team-board {
+  display: flex;
+  margin-top: 50px;
+  height: 600px;
+  width: 600px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.form {
+  flex-shrink: 0;
+  width: 450px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  text-align: left;
+  font-size: 25px;
+  padding-left: 30px;
+  margin: 0 0 70px 50px;
+}
+
+.about-form {
+  flex-shrink: 0;
+  width: 600px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  text-align: left;
+  font-size: 25px;
+  padding-left: 30px;
+  margin: 60px 0 0 50px;
+}
+
+.add-form {
+  align-content: center;
+  background: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  border: none;
+  margin: 50px 0 0 200px;
+}
+
+/* Works on Firefox */
+* {
+  //scrollbar-width: thin;
+  scrollbar-color: white #ff5c00;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 30px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 50px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff5c00;
+  border-radius: 20px;
+  border: 5px solid white;
+}

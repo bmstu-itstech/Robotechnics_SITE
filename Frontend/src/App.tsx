@@ -18,6 +18,7 @@ function App() {
     <div>
         <Menu />
         <EventSection />
+
     </div>
   );
 }
