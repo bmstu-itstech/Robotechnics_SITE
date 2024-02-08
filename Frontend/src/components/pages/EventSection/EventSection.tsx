@@ -4,26 +4,9 @@ import close from "../../assets/icons/close.svg"
 import add from "../../assets/icons/add.png"
 
 export const EventSection = () => {
-    const [isFinderVisible, setFinderVisible] = useState(false);
-    const [isAboutVisible, setAboutVisible] = useState(false);
-
-    const closeFinder = () => {
-        setFinderVisible(false);
-    };
-    const openFinder = () => {
-        setFinderVisible(true);
-    };
-
-    const closeAbout = () => {
-        setAboutVisible(false);
-    };
-    const openAbout = () => {
-        setAboutVisible(true);
-    };
-
-
     const [finderState, changeFinder] = useState(false);
     const [aboutState, changeAbout] = useState(false);
+    const [formState, changeForm] = useState(false);
 
     const finderBtn = () => {
         changeFinder(!finderState);
@@ -33,23 +16,28 @@ export const EventSection = () => {
         changeAbout(!aboutState);
     };
 
+    const formBtn = () => {
+        changeForm(!formState);
+    };
+
     return (
         <section className={"page-section"}>
+
             <div className={`${finderState ? 'dark-back' : ''}`}></div>
             <div className={`sidebar ${finderState ? 'sidebar-closed' : ''}`}>
                 <div className={"d-flex align-items-center justify-content-around mt-5"}>
                     <p className={"m-0 fw-bold fs-1 text-uppercase text-light"}>Поиск команды</p>
                     <img src={close} onClick={finderBtn} alt=""/>
                 </div>
-                <div className={"team-board d-flex flex-column"}>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
-                    <button className={"form"}>Анкета от Иванова И.И.</button>
+                <div className={"team-board team-scrollbar d-flex flex-column"}>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
+                    <button className={"form"} onClick={formBtn}>Анкета от Иванова И.И.</button>
                 </div>
                 <button className={"add-form"}><img src={add} alt=""/></button>
             </div>
@@ -67,38 +55,66 @@ export const EventSection = () => {
                 <button className={"about-form"}>Документы</button>
             </div>
 
-            <div className={"circle me-auto"}></div>
 
+            <div className={`sidebar ${formState ? 'sidebar-closed' : ''}`}>
+                <div className={"d-flex align-items-center justify-content-around mt-5"}>
+                    <p className={"m-0 fw-bold fs-1 text-light"}>Анкета от: Иванов И.И.</p>
+                    <img src={close} onClick={formBtn} alt=""/>
+                </div>
+                <button className={"about-form member"}>группа</button>
+                <button className={"about-form member"}>Вконтакте</button>
+                <button className={"about-form member"}>Количество людей: N</button>
+                <div className={"outer-box"}>
+                    <div className={"team-board member-scrollbar member-board d-flex flex-column"}>
+                        Компетенции
+                        <p>Текст</p>
+                        <p>Текст</p>
+                        <p>Текст</p>
+                        <p>Текст</p>
+                    </div>
+                </div>
+                <div className={"outer-box"}>
+                    <div className={"team-board member-scrollbar member-board d-flex flex-column"}>
+                        Дополнительная информация
+                        <p>Текст</p>
+                        <p>Текст</p>
+                        <p>Текст</p>
+                        <p>Текст</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className={"circle me-auto"}></div>
             <div className={"navigation-bar"}>
                 <div className={"v-line"}></div>
                 <div className={"list-bar"}>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v1"} className={"pointer"}></div>
                     </div>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v2"} className={"pointer"}></div>
                     </div>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v3"} className={"pointer"}></div>
                     </div>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v4"} className={"pointer"}></div>
                     </div>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v5"} className={"pointer"}></div>
                     </div>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v6"} className={"pointer"}></div>
                     </div>
                     <div className={"elem"}>
                         <div className={"h-line"}></div>
-                        <div className={"pointer"}></div>
+                        <div id={"v7"} className={"pointer"}></div>
                     </div>
                 </div>
             </div>

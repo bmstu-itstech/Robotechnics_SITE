@@ -175,6 +175,35 @@
   margin: 60px 0 0 50px;
 }
 
+.member {
+  margin: 40px 0 0 50px;
+}
+
+.outer-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 600px;
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.member-board {
+  margin: 0;
+  height: 160px;
+  font-size: 25px;
+  text-align: center;
+  width: 560px;
+
+  & p {
+    color: #6C6C6C;
+  }
+}
+
 .add-form {
   align-content: center;
   background: white;
@@ -186,23 +215,41 @@
 }
 
 /* Works on Firefox */
-* {
-  //scrollbar-width: thin;
+.team-scrollbar {
+  scrollbar-color: white #ff5c00;
+}
+.member-scrollbar {
   scrollbar-color: white #ff5c00;
 }
 
 /* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+.team-scrollbar::-webkit-scrollbar {
   width: 30px;
 }
+.member-scrollbar::-webkit-scrollbar {
+  width: 15px;
+}
 
-*::-webkit-scrollbar-track {
+.team-scrollbar::-webkit-scrollbar-track {
   background: white;
   border-radius: 50px;
 }
+.member-scrollbar::-webkit-scrollbar-track {
+  background: #ff5c00;
+  border-radius: 50px;
+}
 
-*::-webkit-scrollbar-thumb {
+.team-scrollbar::-webkit-scrollbar-thumb {
   background-color: #ff5c00;
   border-radius: 20px;
   border: 5px solid white;
+}
+.member-scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid #ff5c00;
+}
+
+#v2, #v3, #v4, #v5, #v6, #v7 {
+  display: none;
 }

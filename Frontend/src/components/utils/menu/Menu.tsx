@@ -42,7 +42,7 @@ const Menu = () => {
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>МЕРОПРИЯТИЯ</button>
+                              <button className={"menu-button text-white"} >МЕРОПРИЯТИЯ</button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
