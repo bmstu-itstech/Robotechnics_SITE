@@ -1,0 +1,40 @@
+.page-section {
+    position: absolute;
+    background: url("../../../../src/components/assets/images/background.svg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.line {
+    margin: 90px 0 50px 0;
+    height: 140px;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+    user-select: text;
+}
+
+.circle {
+    margin-left: 230px;
+    width: 140px;
+    height: 140px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+}
+
+.partner-img {
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}

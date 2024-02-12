@@ -8,6 +8,8 @@ import Menu from "./components/utils/menu/Menu";
 import {NewsPage} from "./components/pages/NewsPage/NewsPage";
 import {EventsPage} from "./components/pages/EventsPage/EventsPage";
 import {EventSection} from "./components/pages/EventSection/EventSection";
+import {Partners} from "./components/pages/Partners/Partners";
+import {Contacts} from "./components/pages/Contacts/Contacts";
 
 function App() {
   const flickityOptions = {
@@ -17,7 +19,7 @@ function App() {
   return (
     <div>
         <Menu />
-        <EventSection />
+        <Contacts />
     </div>
   );
 }
