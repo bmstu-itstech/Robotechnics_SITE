@@ -1,15 +1,8 @@
 import React, {useState} from "react";
 import "./menu.scss"
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
-} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-// @ts-ignore
 import menu from "../../assets/icons/menu.svg"
-// @ts-ignore
 import close from "../../assets/icons/close.svg"
 
 const Menu = () => {
