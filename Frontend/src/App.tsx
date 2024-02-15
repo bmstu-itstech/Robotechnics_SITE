@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from "react-bootstrap";
 
@@ -18,10 +24,19 @@ function App() {
   }
 
   return (
-    <div>
+    <Router>
         <Menu />
-        <MainPage />
-    </div>
+        <main>
+            <Routes>
+                <Route path="/" element={<MainPage/>} />
+                <Route path="/news_page" element={<NewsPage/>} />
+                <Route path="/events_page" element={<EventsPage/>} />
+                <Route path="/event_section" element={<EventSection/>} />
+                <Route path="/partners" element={<Partners/>} />
+                <Route path="/contacts" element={<Contacts/>} />
+            </Routes>
+        </main>
+    </Router>
   );
 }
 

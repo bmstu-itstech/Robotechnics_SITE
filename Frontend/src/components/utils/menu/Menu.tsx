@@ -1,5 +1,11 @@
 import React, {useState} from "react";
 import "./menu.scss"
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+} from 'react-router-dom';
 
 // @ts-ignore
 import menu from "../../assets/icons/menu.svg"
@@ -28,49 +34,49 @@ const Menu = () => {
                   <div className={"list"}>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>ГЛАВНАЯ</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/">главная</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>НОВОСТИ</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/news_page">новости</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"} >МЕРОПРИЯТИЯ</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/events_page">мероприятия</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>ХАРДАТОН</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/">ХАРДАТОН</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>ДОСТИЖЕНИЯ</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/">ДОСТИЖЕНИЯ</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>ПАРТНЁРЫ</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/partners">ПАРТНЁРЫ</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-white"}>КОНТАКТЫ</button>
+                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/contacts">КОНТАКТЫ</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>

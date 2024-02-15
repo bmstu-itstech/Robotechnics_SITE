@@ -66,6 +66,10 @@ label:hover {
   padding: 0;
 }
 
+.link {
+  color: #FFF;
+}
+
 .change-button {
   width: 110px;
   height: 110px;
@@ -170,6 +174,14 @@ label:hover {
     right: 60px;
     top: 60px;
   }
+
+  .text-item:hover {
+    font-size: 50px;
+  }
+  .text-item:hover + .dot {
+    width: 0;
+    height: 0;
+  }
 }
 
 @media (max-width: 850px) {
@@ -211,10 +223,18 @@ label:hover {
     margin-right: 10px;
     font-size: 45px;
   }
+
+  .text-item:hover {
+    font-size: 45px;
+  }
 }
 
 @media (max-width: 430px) {
   .text-item {
+    font-size: 35px;
+  }
+
+  .text-item:hover {
     font-size: 35px;
   }
 }

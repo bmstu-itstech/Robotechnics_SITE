@@ -1,12 +1,14 @@
 section {
-  background: url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat;
+  background: url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat center;
   background-size: cover;
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
 }
 
 .container-fluid {
+  height: fit-content;
   width: 85%;
   margin-top: 50px;
 }
@@ -16,7 +18,7 @@ section {
   width: 80%;
 }
 
-.circle {
+.ico-circle {
   margin-top: 90px;
   width: 140px;
   height: 140px;
@@ -35,7 +37,7 @@ section {
 
 .button-main {
   margin-top: 50px;
-  //margin-bottom: 50px;
+  margin-bottom: 50px;
   border: solid 2px #e43603;
   background: none;
   width: 360px;
@@ -56,7 +58,7 @@ section {
 }
 
 @media (max-width: 730px) {
-  .circle {
+  .ico-circle {
     margin-top: 60px;
     width: 108px;
     height: 108px;
@@ -73,7 +75,7 @@ section {
 }
 
 @media (max-width: 530px) {
-  .circle {
+  .ico-circle {
     margin-top: 50px;
     width: 45px;
     height: 45px;
