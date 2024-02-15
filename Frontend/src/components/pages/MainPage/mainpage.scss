@@ -1,0 +1,93 @@
+section {
+  background: url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  width: 85%;
+  margin-top: 50px;
+}
+
+.circle-row {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.circle {
+  margin-top: 90px;
+  width: 140px;
+  height: 140px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.title-main {
+  font-size: 90px;
+}
+
+.text-main {
+  margin-top: 50px;
+  width: 60%;
+}
+
+.button-main {
+  margin-top: 50px;
+  //margin-bottom: 50px;
+  border: solid 2px #e43603;
+  background: none;
+  width: 360px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+@media (max-width: 1200px) {
+  .text-main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 950px) {
+  .title-main {
+    font-size: 69px;
+  }
+}
+
+@media (max-width: 730px) {
+  .circle {
+    margin-top: 60px;
+    width: 108px;
+    height: 108px;
+  }
+  .title-main {
+    font-size: 50px;
+  }
+  .text-main {
+    width: 90%;
+  }
+  .button-main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 530px) {
+  .circle {
+    margin-top: 50px;
+    width: 45px;
+    height: 45px;
+  }
+  .title-main {
+    font-size: 40px;
+  }
+  .text-main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .title-main {
+    font-size: 30px;
+  }
+}

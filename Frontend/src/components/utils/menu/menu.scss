@@ -156,3 +156,65 @@ label:hover {
   background-color: white;
   border-radius: 0 3px 3px 0;
 }
+
+@media (max-width: 950px) {
+  .menu-closed {
+    height: 515px;
+    width: 515px;
+    right: -240px;
+    top: -280px;
+  }
+  .change-button {
+    width: 110px;
+    height: 110px;
+    right: 60px;
+    top: 60px;
+  }
+}
+
+@media (max-width: 850px) {
+  .navigation {
+    right: 50px;
+  }
+  input[type=checkbox]:checked ~ .menu-closed {
+    margin-right: 200px;
+  }
+}
+
+@media (max-width: 530px) {
+  .menu-closed {
+    height: 330px;
+    width: 330px;
+    right: -160px;
+    top: -180px;
+  }
+  .change-button img {
+    width: 60px;
+  }
+  .change-button {
+    right: 10px;
+    top: 10px;
+  }
+  .navigation {
+    right: 30px;
+  }
+  .list {
+    margin-top: 80px;
+  }
+  .vertical-line {
+    margin-top: 102px;
+  }
+  .horizontal-line {
+    width: 30px;
+  }
+  .text-item {
+    margin-right: 10px;
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 430px) {
+  .text-item {
+    font-size: 35px;
+  }
+}
