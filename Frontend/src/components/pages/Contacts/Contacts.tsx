@@ -1,18 +1,13 @@
 import "./contacts.scss"
-
-// @ts-ignore
+import Circle from "../../utils/circle/Circle"
 import photo1 from "../../assets/images/contacts/photo1.png"
-// @ts-ignore
 import arrow from "../../assets/icons/arrow.svg"
 import React from "react";
 
 export const Contacts = () => {
     return (
         <section className={"page-section"}>
-            <div className={"line d-flex justify-content-center align-items-center"}>
-                <div className={"circle me-auto"}></div>
-                <div className={"title text-uppercase"}>контакты</div>
-            </div>
+            <Circle title="контакты" />
             <div className="container">
                 <div className={"row justify-content-center m-5"}>
                     <div className="card text-light row align-items-center">

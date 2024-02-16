@@ -1,15 +1,12 @@
 import "./mainpage.scss"
-
-import pic1 from "../../assets/images/pic1.jpeg"
+import Circle from "../../utils/circle/Circle"
 
 export const MainPage = () => {
     return (
         <section>
-            <div className={"circle-row"}>
-                <div className={"ico-circle"}></div>
-            </div>
+            <Circle />
             <div className={"container-fluid"}>
-                <p className={"col-11 text-uppercase text-light fw-bold lh-1 title-main"}>Центр молодежной
+                <p className={"title-main col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
                     робототехники</p>
                 <p className={"text-main h3 fw-light text-light"}>Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

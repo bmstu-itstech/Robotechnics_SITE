@@ -13,19 +13,6 @@ section {
   margin-top: 50px;
 }
 
-.circle-row {
-  margin: 0 auto;
-  width: 80%;
-}
-
-.ico-circle {
-  margin-top: 90px;
-  width: 140px;
-  height: 140px;
-  border: 5px solid #ffffff;
-  border-radius: 50%;
-}
-
 .title-main {
   font-size: 90px;
 }
@@ -45,24 +32,22 @@ section {
   border-radius: 50px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+  .container-fluid {
+    margin-top: 0;
+  }
   .text-main {
     width: 90%;
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .title-main {
     font-size: 69px;
   }
 }
 
 @media (max-width: 730px) {
-  .ico-circle {
-    margin-top: 60px;
-    width: 108px;
-    height: 108px;
-  }
   .title-main {
     font-size: 50px;
   }
@@ -75,11 +60,6 @@ section {
 }
 
 @media (max-width: 530px) {
-  .ico-circle {
-    margin-top: 50px;
-    width: 45px;
-    height: 45px;
-  }
   .title-main {
     font-size: 40px;
   }
@@ -90,6 +70,6 @@ section {
 
 @media (max-width: 430px) {
   .title-main {
-    font-size: 30px;
+    font-size: 35px;
   }
 }

@@ -1,17 +1,11 @@
 import "./eventspage.scss"
-
-// @ts-ignore
-import pic1 from "../../assets/images/pic1.jpeg"
-// @ts-ignore
+import Circle from "../../utils/circle/Circle"
 import arrow from "../../assets/icons/arrow.svg"
 
 export const EventsPage = () => {
     return (
         <section className={"page-section"}>
-            <div className={"line d-flex justify-content-center align-items-center"}>
-                <div className={"circle me-auto"}></div>
-                <div className={"title text-uppercase"}>мероприятия</div>
-            </div>
+            <Circle title="мероприятия"/>
             <div className={"d-flex justify-content-center"}>
                 <div className="board d-flex flex-wrap justify-content-center">
                     <img className={"arrow-right"} src={arrow} alt=""/>

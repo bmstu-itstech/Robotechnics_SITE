@@ -6,7 +6,7 @@
     width: 100vw;
 }
 
-.box {
+.partner-card {
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -23,14 +23,6 @@
     font-weight: 900;
     color: white;
     user-select: text;
-}
-
-.circle {
-    margin-left: 230px;
-    width: 140px;
-    height: 140px;
-    border: 5px solid #ffffff;
-    border-radius: 50%;
 }
 
 .partner-img {

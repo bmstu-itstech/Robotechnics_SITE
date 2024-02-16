@@ -8,13 +8,13 @@ import close from "../../assets/icons/close.svg"
 const Menu = () => {
     const [isChecked, setChecked] = useState(false);
 
-    const handleCheckboxChange = () => {
+    const changeMenu = () => {
         setChecked(!isChecked);
     };
 
     return (
       <div className={"menu"}>
-          <input type="checkbox" id="checkbox-toggle" onChange={handleCheckboxChange} checked={isChecked} />
+          <input type="checkbox" id="checkbox-toggle" onChange={changeMenu} checked={isChecked} />
           <div className={"menu-closed"}></div>
 
           <label htmlFor="checkbox-toggle">
@@ -27,49 +27,49 @@ const Menu = () => {
                   <div className={"list"}>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/">главная</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/">главная</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/news_page">новости</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/news_page">новости</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/events_page">мероприятия</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/events_page">мероприятия</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/">ХАРДАТОН</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/">ХАРДАТОН</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/">ДОСТИЖЕНИЯ</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/">ДОСТИЖЕНИЯ</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/partners">ПАРТНЁРЫ</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/partners">ПАРТНЁРЫ</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link className="link" to="/contacts">КОНТАКТЫ</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/contacts">КОНТАКТЫ</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>

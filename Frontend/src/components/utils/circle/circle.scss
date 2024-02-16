@@ -1,0 +1,74 @@
+.circle-row {
+  margin: 90px auto 0;
+  width: 80%;
+  height: 140px;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ico-circle {
+  position: absolute;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.title-text {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 900;
+  color: white;
+  line-height: 100%;
+}
+
+@media (max-width: 1300px) {
+  .title-text {
+    font-size: 69px;
+  }
+  .ico-circle {
+    width: 108px;
+    height: 108px;
+  }
+  .circle-row {
+    margin: 60px auto 0;
+    justify-content: start;
+    align-items: end;
+    height: 250px;
+  }
+  .ico-circle {
+    top: 0;
+  }
+}
+
+@media (max-width: 730px) {
+  .circle-row {
+    height: 230px;
+  }
+  .title-text {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  .circle-row {
+    margin: 50px auto 0;
+    height: 160px;
+  }
+  .title-text {
+    margin-top: 200px;
+  }
+  .ico-circle {
+    width: 45px;
+    height: 45px;
+  }
+  .title-text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+}
