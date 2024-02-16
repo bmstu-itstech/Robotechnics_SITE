@@ -212,20 +212,20 @@ label:hover {
   .text-item {
     margin-right: 10px;
     font-size: 45px;
-  }
-  .text-item:hover {
-    font-size: 100%;
+    &:hover {
+      font-size: 45px;
+    }
   }
 }
 
 @media (max-width: 430px) {
-  .text-item {
+  .text-item, .text-item:hover {
     font-size: 35px;
   }
 }
 
 @media (max-width: 360px) {
-  .text-item {
+  .text-item, .text-item:hover {
     font-size: 30px;
   }
 }
