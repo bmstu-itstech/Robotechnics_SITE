@@ -1,3 +1,5 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
 .news-page {
     background: url("../../../../src/components/assets/images/background.svg") no-repeat center;
     background-size: cover;
@@ -7,10 +9,27 @@
     overflow: auto;
 }
 
+
+
+.alice-carousel__stage-item.__active,
+.alice-carousel__stage-item.__cloned,
+.alice-carousel__stage-item.__target {
+    text-align:center;
+}
+
 .news-carousel {
-    //height: 610px;
-    width: 80%;
-    margin: 150px auto 0;
-    overflow-x: auto;
-    white-space: nowrap;
+    margin-top: 120px;
+}
+
+.mobile-carousel {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .desktop-carousel {
+        display: none;
+    }
+    .mobile-carousel {
+        display: block;
+    }
 }

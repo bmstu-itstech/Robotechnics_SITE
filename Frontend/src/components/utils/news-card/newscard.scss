@@ -36,6 +36,7 @@
   width: 90%;
   margin: 20px auto 0;
   overflow: auto;
+  text-align: left;
 }
 
 .card-about {
@@ -61,4 +62,10 @@
 .card-about:hover p {
   color: #FF5C00;
   transition: .1s linear;
+}
+
+@media (max-width: 540px) {
+  .news-card {
+    width: 90%;
+  }
 }
