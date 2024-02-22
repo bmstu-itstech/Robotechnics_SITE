@@ -12,36 +12,49 @@ export const EventsPage = () => {
                 <div className="board">
                     <div className={"event-card wide"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>инженерный вызов 2022</div>
+                        <div className={"text"}>
+                            <p>инженерный вызов 2022</p>
+                        </div>
                     </div>
                     <div className={"event-card"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>транспорт будущего</div>
+                        <div className={"text"}>
+                            <p>транспорт будущего</p>
+                        </div>
                     </div>
                     <div className={"event-card wide"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>инженерный вызов 2022</div>
+                        <div className={"text"}>
+                            <p>инженерный вызов 2022</p>
+                        </div>
                     </div>
                     <div className={"event-card"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>транспорт будущего</div>
+                        <div className={"text"}>
+                            <p>транспорт будущего</p>
+                        </div>
                     </div>
                     <div className={"event-card"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>транспорт будущего</div>
+                        <div className={"text"}>
+                            <p>транспорт будущего</p>
+                        </div>
                     </div>
                     <div className={"event-card wide"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>инженерный вызов 2022</div>
+                        <div className={"text"}>
+                            <p>инженерный вызов 2022</p>
+                        </div>
                     </div>
                     <div className={"event-card"}>
                         <img src={pic1} alt=""/>
-                        <div className={"text"}>транспорт будущего</div>
+                        <div className={"text"}>
+                            <p>транспорт будущего</p>
+                        </div>
                     </div>
                 </div>
                 <img className={"arrow-right"} src={arrow} alt=""/>
             </div>
-
         </section>
     )
 }
