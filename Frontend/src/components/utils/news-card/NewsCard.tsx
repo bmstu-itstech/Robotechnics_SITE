@@ -2,7 +2,7 @@ import React from 'react';
 import './newscard.scss';
 import arrow from "../../assets/icons/arrow.svg";
 
-const NewsCard = ({ img = "news1.png" }) => {
+const NewsCard = ({ img = "news1.png", txt = "Событие" }) => {
     const imagePath = require(`../../assets/images/news/${img}`);
 
     return (
@@ -10,7 +10,7 @@ const NewsCard = ({ img = "news1.png" }) => {
             <div className="news-photo">
                 <img src={imagePath} alt=""/>
             </div>
-            <div className="card-title"><p className="m-0 fw-bold text-white">День программиста</p></div>
+            <div className="card-title"><p className="m-0 fw-bold text-white">{txt}</p></div>
             <div className="card-text">
                 <p className="m-0 text-black lh-sm fw-light">День программиста – настоящая точка притяжения
                     программистов и топовых российских IT-компаний. В течение дня бауманцы смогут узнать всю

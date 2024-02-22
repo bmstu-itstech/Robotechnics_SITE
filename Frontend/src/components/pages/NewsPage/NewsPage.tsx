@@ -13,10 +13,9 @@ const responsive = {
 };
 
 const items = [
-    <NewsCard img="news1.png"/>,
-    <NewsCard img="news2.png"/>,
-    <NewsCard img="news3.png"/>,
-    <NewsCard img="news3.png"/>
+    <NewsCard img="news1.png" txt="День программиста" />,
+    <NewsCard img="news2.png" txt="Транспорт будущего" />,
+    <NewsCard img="news3.png" txt="Регистрация на Инженерный вызов 2023"/>
 ];
 
 const Carousel = () => (
@@ -39,13 +38,9 @@ export const NewsPage = () => {
                     <Carousel/>
                 </div>
                 <div className="mobile-carousel">
-                    <NewsCard img="news1.png"/>
-                    <NewsCard img="news2.png"/>
-                    <NewsCard img="news3.png"/>
-                    <NewsCard img="news3.png"/>
+                    {items}
                 </div>
             </div>
-
         </section>
     )
 }
