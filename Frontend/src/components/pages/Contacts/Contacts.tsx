@@ -6,11 +6,11 @@ import React from "react";
 
 export const Contacts = () => {
     return (
-        <section className={"page-section"}>
+        <section className={"contacts-section"}>
             <Circle title="контакты" />
             <div className="container">
                 <div className={"row justify-content-center m-5"}>
-                    <div className="card text-light row align-items-center">
+                    <div className="contacts-card text-light row align-items-center">
                         <div className="col-md-3">
                             <img className={"card-photo"} src={photo1} alt=""/>
                         </div>

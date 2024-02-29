@@ -1,4 +1,4 @@
-.page-section {
+.contacts-section {
     position: absolute;
     background: url("../../../../src/components/assets/images/background.svg") no-repeat;
     background-size: cover;
@@ -29,7 +29,7 @@ a {
     color: white;
 }
 
-.card {
+.contacts-card {
     width: 400px;
     height: 120px;
     border: solid 1px #FF5C00;
@@ -39,7 +39,7 @@ a {
     justify-content: center;
 }
 
-.card-photo {
+.contacts-card .card-photo {
     width: 100%
 }
 
@@ -58,4 +58,16 @@ footer {
 
 .footer-text {
     margin: auto auto;
+}
+
+@media (max-width: 770px) {
+    .contacts-card {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+     .contacts-section a {
+        font-size: 16px;
+    }
 }
