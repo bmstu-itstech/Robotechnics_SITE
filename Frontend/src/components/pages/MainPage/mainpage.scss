@@ -1,0 +1,75 @@
+.main-page {
+  background: url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
+}
+
+.container-fluid {
+  height: fit-content;
+  width: 85%;
+  margin-top: 50px;
+}
+
+.title-main {
+  font-size: 90px;
+}
+
+.text-main {
+  margin-top: 50px;
+  width: 60%;
+}
+
+.button-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: solid 2px #e43603;
+  background: none;
+  width: 360px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+@media (max-width: 1300px) {
+  .container-fluid {
+    margin-top: 0;
+  }
+  .text-main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .title-main {
+    font-size: 69px;
+  }
+}
+
+@media (max-width: 730px) {
+  .title-main {
+    font-size: 50px;
+  }
+  .text-main {
+    width: 90%;
+  }
+  .button-main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 530px) {
+  .title-main {
+    font-size: 40px;
+  }
+  .text-main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .title-main {
+    font-size: 35px;
+  }
+}

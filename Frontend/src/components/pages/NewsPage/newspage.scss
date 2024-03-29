@@ -1,27 +1,39 @@
-.page-section {
-    position: absolute;
-    background-image: url("../../../../src/components/assets/images/background.svg");
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+.news-page {
+    background: url("../../../../src/components/assets/images/background.svg") no-repeat center;
+    background-size: cover;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
+    position: relative;
+    overflow: auto;
 }
 
-.line {
-    margin-top: 90px;
-    height: 140px;
+.alice-carousel__stage-item.__active,
+.alice-carousel__stage-item.__cloned,
+.alice-carousel__stage-item.__target {
+    text-align:center;
 }
 
-.title {
-    position: absolute;
-    text-align: center;
-    font-size: 80px;
-    font-weight: 900;
-    color: white;
+.alice-carousel__dots {
+    margin: 0 !important;
 }
 
-.circle {
-    margin-left: 230px;
-    width: 140px;
-    height: 140px;
-    border: 5px solid #ffffff;
-    border-radius: 50%;
+.news-carousel {
+    margin-top: 30px;
+}
+
+.mobile-carousel {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .desktop-carousel {
+        display: none;
+    }
+    .mobile-carousel {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

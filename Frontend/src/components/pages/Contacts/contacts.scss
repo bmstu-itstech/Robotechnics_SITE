@@ -1,0 +1,73 @@
+.contacts-section {
+    position: absolute;
+    background: url("../../../../src/components/assets/images/background.svg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+p {
+    text-decoration: none;
+    color: #FFFFFFB2;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.line {
+    margin: 90px 0 50px 0;
+    height: 140px;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+}
+
+.contacts-card {
+    width: 400px;
+    height: 120px;
+    border: solid 1px #FF5C00;
+    background: none;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-card .card-photo {
+    width: 100%
+}
+
+.card-content {
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    background-color: #FF5C00;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.footer-text {
+    margin: auto auto;
+}
+
+@media (max-width: 770px) {
+    .contacts-card {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+     .contacts-section a {
+        font-size: 16px;
+    }
+}
