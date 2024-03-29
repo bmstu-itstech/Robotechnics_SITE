@@ -1,7 +1,7 @@
+from partners.models import Partner  # noqa: F401
+from partners.pagination import PartnersPagination  # noqa: F401
+from partners.serializers import PartnerSerializer  # noqa: F401
 from rest_framework import routers, viewsets
-from partners.pagination import PartnersPagination
-from partners.serializers import PartnerSerializer
-from partners.models import Partner
 
 
 class PartnerViewSet(viewsets.ModelViewSet):

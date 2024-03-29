@@ -1,7 +1,6 @@
 from rest_framework import pagination
-from partners.models import Partner
 from rest_framework.response import Response
-from robotechnics.settings import BASE_URL
+from robotechnics.settings import BASE_URL, Paginator_Size_Constants
 
 
 class HardathonPagination(pagination.PageNumberPagination):
@@ -10,7 +9,7 @@ class HardathonPagination(pagination.PageNumberPagination):
     @details Нужна, чтобы объекты в api передавались по несколько штук
     @param page_size Максимальное количество объектов на одной странице
     """
-    page_size = 2
+    page_size = Paginator_Size_Constants['hardatons']
 
     def get_paginated_response(self, data):
         return Response({
@@ -55,5 +54,5 @@ class HardatonProjectsPagination(pagination.PageNumberPagination):
             'next': self.get_next_link(),
             'count': len(data),
             'total_count': self.page.paginator.count,
-            'partners': data,
+            'projects': data,
         })

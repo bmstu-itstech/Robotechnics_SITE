@@ -1,6 +1,6 @@
 from django import forms
-from news.models import News
-from django.forms import TextInput, FileInput, Textarea, URLInput
+from django.forms import FileInput, Textarea, TextInput, URLInput
+from news.models import News  # noqa: F401
 
 
 class NewsForm(forms.ModelForm):
@@ -12,7 +12,9 @@ class NewsForm(forms.ModelForm):
         model = News
         fields = ('photo', 'title', 'description', 'new_url')
         widgets = {
-            'photo': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
+            'photo': FileInput(attrs={'style': 'border: 1px solid #353535;'
+                                               'padding: 5em;'
+                                               'border-radius: 4px'}),
             'title': TextInput,
             'description': Textarea,
             'new_url': URLInput,

@@ -1,7 +1,7 @@
+from director.models import Director  # noqa: F401
+from director.pagination import DirectorPagination  # noqa: F401
+from director.serializers import DirectorSerializer  # noqa: F401
 from rest_framework import routers, viewsets
-from director.models import Director
-from director.serializers import DirectorSerializer
-from director.pagination import DirectorPagination
 
 
 class DirectorViewSet(viewsets.ModelViewSet):

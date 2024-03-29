@@ -1,6 +1,6 @@
+from director.models import Director  # noqa: F401
 from django import forms
-from director.models import Director
-from django.forms import FileInput, TextInput, EmailInput
+from django.forms import EmailInput, FileInput, TextInput
 
 
 class DirectorForm(forms.ModelForm):
@@ -12,7 +12,9 @@ class DirectorForm(forms.ModelForm):
         model = Director
         fields = ('photo', 'fio', 'email', 'role')
         widgets = {
-            'photo': FileInput(attrs={'style': 'border: 1px solid #353535; padding: 5em; border-radius: 4px'}),
+            'photo': FileInput(attrs={'style': 'border: 1px solid #353535;'
+                                               'padding: 5em;'
+                                               'border-radius: 4px'}),
             'fio': TextInput,
             'email': EmailInput,
             'role': TextInput,

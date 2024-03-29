@@ -1,5 +1,5 @@
+from partners.models import Partner  # noqa: F401
 from rest_framework import serializers
-from partners.models import Partner
 
 
 class PartnerSerializer(serializers.ModelSerializer):
