@@ -10,10 +10,6 @@ p {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 .links {
     text-decoration: none;
     color: #FFFFFFB2;
@@ -44,6 +40,7 @@ a {
     border-radius: 35px;
     color: #FFFFFF;
     justify-content: center;
+    height: 100%;
 }
 
 .card-photo {
@@ -73,8 +70,7 @@ footer {
     height: 5vw;
     min-height: 50px;
     display: flex;
-}
-
-.footer-text {
-    margin: auto auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }

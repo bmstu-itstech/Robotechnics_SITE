@@ -11,10 +11,10 @@ export const Contacts = () => {
             <div className="container">
                 <div className="row justify-content-center m-5 cards">
                     <div className="row card h-100">
-                        <div className="col-4 card-photo">
-                            <img src={photo1} className="img-fluid rounded-start" alt="..."/>
+                        <div className="col-4 h-100 d-flex align-items-center">
+                            <img src={photo1} className="img-fluid rounded-start card-photo" alt="..."/>
                         </div>
-                        <div className="col-8">
+                        <div className="col-8 h-100 d-flex align-items-center">
                             <div className="card-body">
                                 <h5 className="card-title">Бизиков Валерий</h5>
                                 <p>Руководитель ЦМР</p>
@@ -23,12 +23,12 @@ export const Contacts = () => {
                     </div>
                 </div>
 
-                <div className="row row-cols-md-3 links m-5 justify-content-center text-center">
-                    <div className="col-md justify-content-center">
+                <div className="row row-cols-md-3 links m-5 text-center">
+                    <div className="col-md mb-2">
                         <p>Телефон: <a className="text-light" href="tel:+78005553535">8(800)555-35-35</a></p>
                         <p>Email: <a className="text-light" href="mailto:cmr@bmstu.ru">cmr@bmstu.ru</a></p>
                     </div>
-                    <div className="col-md">
+                    <div className="col-md mb-2">
                         <div>
                             <span>Адрес: </span>
                             <span className="text-light">105005, г. Москва, 2-ая Бауманская, д.5, стр.1</span>
@@ -38,7 +38,7 @@ export const Contacts = () => {
                             <img src={diagonal_arrow} className="diagonal-arrow" alt="..."/>
                         </div>
                     </div>
-                    <div className="col-md">
+                    <div className="col-md mb-2">
                         <p className="text-white opacity-75">Соцсети:</p>
                         <div>
                             <a className="text-light" href="">ВКонтакте</a>
