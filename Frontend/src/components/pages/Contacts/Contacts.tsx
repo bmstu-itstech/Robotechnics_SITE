@@ -41,11 +41,11 @@ export const Contacts = () => {
                     <div className="col-md mb-2">
                         <p className="text-white opacity-75">Соцсети:</p>
                         <div>
-                            <a className="text-light" href="">ВКонтакте</a>
+                            <a className="text-light" href="https://vk.com/robotics_bmstu">ВКонтакте</a>
                             <img src={diagonal_arrow} className="diagonal-arrow" alt="..."/>
                         </div>
                         <div>
-                            <a className="text-light" href="">Телеграм</a>
+                            <a className="text-light" href="https://t.me/robotics_bmstu">Телеграм</a>
                             <img src={diagonal_arrow} className="diagonal-arrow" alt="..."/>
                         </div>
                     </div>

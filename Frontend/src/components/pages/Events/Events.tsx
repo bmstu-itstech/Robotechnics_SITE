@@ -1,9 +1,9 @@
-import "./eventspage.scss"
+import "./events.scss"
 import Logo from "../../utils/logo/Logo"
 import arrow from "../../assets/icons/arrow.svg"
 import pic1 from "../../assets/images/events/event1.png"
 
-export const EventsPage = () => {
+export const Events = () => {
     return (
         <section className={"events-page"}>
             <Logo title="мероприятия"/>

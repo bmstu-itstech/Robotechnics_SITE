@@ -1,9 +1,9 @@
-import "./mainpage.scss"
+import "./home.scss"
 import Logo from "../../utils/logo/Logo"
 import {Link} from "react-router-dom";
 import React from "react";
 
-export const MainPage = () => {
+export const Home = () => {
     return (
         <section className="main-page">
             <Logo />

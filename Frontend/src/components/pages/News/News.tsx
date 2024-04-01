@@ -1,5 +1,5 @@
 import React from 'react';
-import "./newspage.scss"
+import "./news.scss"
 import Logo from "../../utils/logo/Logo"
 import NewsCard from "../../utils/news-card/NewsCard";
 import AliceCarousel from 'react-alice-carousel';
@@ -29,7 +29,7 @@ const Carousel = () => (
     />
 );
 
-export const NewsPage = () => {
+export const News = () => {
     return (
         <section className={"news-page"}>
             <Logo title="новости"/>
