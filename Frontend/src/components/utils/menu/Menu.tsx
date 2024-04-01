@@ -64,7 +64,7 @@ const Menu = () => {
                       <div className={"list-item"}>
                           <p className={"text-item"}>
                               <button className={"menu-button text-uppercase text-white"}>
-                                  <Link onClick={changeMenu} className="link" to="/">достижения</Link>
+                                  <Link onClick={changeMenu} className="link" to="/achievements">достижения</Link>
                               </button>
                           </p>
                           <div className={"dot"}></div>
