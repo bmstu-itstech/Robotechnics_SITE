@@ -13,9 +13,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'summy-dummy key')
 
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = [
-    'http://localhost:3000'
-]
+ALLOWED_HOSTS = []
 
 INTERNAL_IPS = [
     '127.0.0.1',

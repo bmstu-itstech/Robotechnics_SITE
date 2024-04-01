@@ -1,9 +1,4 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from "./components/utils/menu/Menu";
 import {NewsPage} from "./components/pages/NewsPage/NewsPage";
@@ -12,6 +7,7 @@ import {EventSection} from "./components/pages/EventSection/EventSection";
 import {Partners} from "./components/pages/Partners/Partners";
 import {Contacts} from "./components/pages/Contacts/Contacts";
 import {MainPage} from "./components/pages/MainPage/MainPage";
+import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
 
 function App() {
     return (

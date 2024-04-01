@@ -48,7 +48,7 @@ const Menu = () => {
                       </div>
                       <div className={"list-item"}>
                           <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/">ХАРДАТОН</Link></button>
+                              <button className={"menu-button text-uppercase text-white"}><Link onClick={changeMenu} className="link" to="/event_section">ХАРДАТОН</Link></button>
                           </p>
                           <div className={"dot"}></div>
                           <div className={"horizontal-line"}></div>

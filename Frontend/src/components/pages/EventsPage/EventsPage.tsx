@@ -2,8 +2,15 @@ import "./eventspage.scss"
 import Circle from "../../utils/circle/Circle"
 import arrow from "../../assets/icons/arrow.svg"
 import pic1 from "../../assets/images/events/event1.png"
+import {useEffect} from "react";
+import axios from "axios";
 
 export const EventsPage = () => {
+
+    useEffect( () => {
+       // axios.get('')
+    },[]);
+
     return (
         <section className={"events-page"}>
             <Circle title="мероприятия"/>

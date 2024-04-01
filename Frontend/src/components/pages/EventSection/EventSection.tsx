@@ -145,7 +145,7 @@ export const EventSection = () => {
                             <p className="fw-bolder fs-4 text-uppercase text-light m-0">подробнее</p>
                         </button>
                         <button className={"event-btn"}>
-                            <p className="fw-bolder fs-4 text-uppercase text-light m-0">зарегестрироваться</p>
+                            <p className="fw-bolder fs-4 text-uppercase text-light m-0">зарегистрироваться</p>
                         </button>
                         <button id={"team-find"} className={"event-btn"} onClick={finderBtn}>
                             <p className="fw-bolder fs-4 text-uppercase text-light m-0">поиск команды</p>
