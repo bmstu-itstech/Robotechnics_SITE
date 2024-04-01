@@ -29,27 +29,20 @@ p {
     color: white;
 }
 
-.cards {
+.contacts {
     height: 169px;
 }
 
-.card {
+.contact {
     width: 488px;
     border: solid 1px #FF5C00;
     background: #000000;
     border-radius: 35px;
-    color: #FFFFFF;
-    justify-content: center;
-    height: 100%;
+    font-size: 20px;
 }
 
-.card-title {
-    justify-content: left;
-    background: none;
-    text-transform: none;
-    text-align: left;
-    font-size: 25px;
-    height: 100%;
+.contact-title {
+    font-size: 30px;
 }
 
 .diagonal-arrow {

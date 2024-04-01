@@ -9,14 +9,14 @@ export const Contacts = () => {
         <section className="contacts-section">
             <Logo title="контакты" />
             <div className="container">
-                <div className="row justify-content-center m-5 cards">
-                    <div className="row card h-100">
+                <div className="row justify-content-center m-5 text-white contacts">
+                    <div className="row contact h-100">
                         <div className="col-4 h-100 d-flex align-items-center">
-                            <img src={photo1} className="img-fluid rounded-start card-photo" alt="..."/>
+                            <img src={photo1} className="img-fluid rounded-start" alt="..."/>
                         </div>
                         <div className="col-8 h-100 d-flex align-items-center">
-                            <div className="card-body">
-                                <h5 className="card-title">Бизиков Валерий</h5>
+                            <div>
+                                <h5 className="contact-title">Бизиков Валерий</h5>
                                 <p>Руководитель ЦМР</p>
                             </div>
                         </div>
