@@ -1,6 +1,6 @@
 import React from 'react';
 import "./newspage.scss"
-import Circle from "../../utils/circle/Circle"
+import Logo from "../../utils/logo/Logo"
 import NewsCard from "../../utils/news-card/NewsCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -32,7 +32,7 @@ const Carousel = () => (
 export const NewsPage = () => {
     return (
         <section className={"news-page"}>
-            <Circle title="новости"/>
+            <Logo title="новости"/>
             <div className="news-carousel">
                 <div className="desktop-carousel">
                     <Carousel/>

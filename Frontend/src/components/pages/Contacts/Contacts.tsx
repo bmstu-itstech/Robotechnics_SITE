@@ -1,5 +1,5 @@
 import "./contacts.scss"
-import Circle from "../../utils/circle/Circle"
+import Logo from "../../utils/logo/Logo"
 import photo1 from "../../assets/images/contacts/photo1.png"
 import diagonal_arrow from "../../assets/icons/diagonal_arrow.svg"
 import React from "react";
@@ -7,7 +7,7 @@ import React from "react";
 export const Contacts = () => {
     return (
         <section className="contacts-section">
-            <Circle title="контакты" />
+            <Logo title="контакты" />
             <div className="container">
                 <div className="row justify-content-center m-5 cards">
                     <div className="row card h-100">

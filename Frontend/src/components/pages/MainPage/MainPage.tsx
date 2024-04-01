@@ -1,12 +1,12 @@
 import "./mainpage.scss"
-import Circle from "../../utils/circle/Circle"
+import Logo from "../../utils/logo/Logo"
 import {Link} from "react-router-dom";
 import React from "react";
 
 export const MainPage = () => {
     return (
         <section className="main-page">
-            <Circle />
+            <Logo />
             <div className={"container-fluid"}>
                 <p className={"title-main col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
                     робототехники</p>

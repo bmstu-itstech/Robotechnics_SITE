@@ -1,12 +1,12 @@
 import "./eventspage.scss"
-import Circle from "../../utils/circle/Circle"
+import Logo from "../../utils/logo/Logo"
 import arrow from "../../assets/icons/arrow.svg"
 import pic1 from "../../assets/images/events/event1.png"
 
 export const EventsPage = () => {
     return (
         <section className={"events-page"}>
-            <Circle title="мероприятия"/>
+            <Logo title="мероприятия"/>
             <div className={"board-outer d-flex justify-content-center"}>
                 <img className={"arrow-left"} src={arrow} alt=""/>
                 <div className="board">
