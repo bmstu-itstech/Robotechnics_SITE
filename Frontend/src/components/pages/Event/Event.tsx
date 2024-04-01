@@ -1,9 +1,9 @@
-import "./eventsection.scss"
+import "./event.scss"
 import React, { useState } from 'react';
 import close from "../../assets/icons/close.svg"
 import add from "../../assets/icons/add.png"
 
-export const EventSection = () => {
+export const Event = () => {
     const [finderState, changeFinder] = useState(false);
     const [aboutState, changeAbout] = useState(false);
     const [formState, changeForm] = useState(false);
