@@ -1,4 +1,4 @@
-.circle-row {
+.logo-row {
   margin: 90px auto 0;
   width: 80%;
   height: 140px;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.ico-circle {
+.logo-img {
   position: absolute;
   left: 0;
   width: 140px;
@@ -28,23 +28,23 @@
   .title-text {
     font-size: 69px;
   }
-  .ico-circle {
+  .logo-img {
     width: 108px;
     height: 108px;
   }
-  .circle-row {
+  .logo-row {
     margin: 60px auto 0;
     justify-content: start;
     align-items: end;
     height: 250px;
   }
-  .ico-circle {
+  .logo-img {
     top: 0;
   }
 }
 
 @media (max-width: 730px) {
-  .circle-row {
+  .logo-row {
     height: 230px;
   }
   .title-text {
@@ -53,14 +53,14 @@
 }
 
 @media (max-width: 530px) {
-  .circle-row {
+  .logo-row {
     margin: 50px auto 0;
     height: 140px;
   }
   .title-text {
     margin-top: 200px;
   }
-  .ico-circle {
+  .logo-img {
     width: 45px;
     height: 45px;
   }

@@ -4,8 +4,8 @@ import logo from "../../assets/icons/logo.svg";
 
 const Logo = ({ title = "" }) => {
     return (
-        <div className="circle-row">
-            <img src={logo} className="ico-circle" alt=""/>
+        <div className="logo-row">
+            <img src={logo} className="logo-img" alt=""/>
             <p className="title-text text-uppercase">{title}</p>
         </div>
     );
