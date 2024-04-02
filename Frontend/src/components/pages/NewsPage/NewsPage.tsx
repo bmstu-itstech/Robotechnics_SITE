@@ -7,7 +7,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import axios from "axios";
 import Slider from "react-slick"
 
-interface Item {
+interface News {
     title: string;
     description: string;
     new_url: string;
@@ -17,7 +17,7 @@ interface Item {
 
 export const NewsPage = () => {
 
-    const [news, setNews] = useState<Item[]>([]);
+    const [news, setNews] = useState<News[]>([]);
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/v0/news/?page=1')
@@ -35,7 +35,7 @@ export const NewsPage = () => {
         2350: { items: 4 }
     };
 
-    const Carousel = ({ items }: { items: Item[] }) => (
+    const Carousel = ({ items }: { items: News[] }) => (
         <AliceCarousel
             mouseTracking
             items={items.map((item, index) => (
