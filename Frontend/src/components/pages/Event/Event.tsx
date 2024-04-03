@@ -1,9 +1,23 @@
-import "./eventsection.scss"
-import React, { useState } from 'react';
+import "./event.scss"
+import React, {useEffect, useState} from 'react';
 import close from "../../assets/icons/close.svg"
 import add from "../../assets/icons/add.png"
+import axios from "axios";
+import {Link, useParams} from "react-router-dom";
 
-export const EventSection = () => {
+interface EventInf {
+    title: string;
+    description: string;
+    photo: string;
+    photo_album_url: string;
+    documents_url: string;
+    location: string;
+    event_date: string;
+    social_media_mention: string;
+    registration_link: string;
+}
+
+export const Event = () => {
     const [finderState, changeFinder] = useState(false);
     const [aboutState, changeAbout] = useState(false);
     const [formState, changeForm] = useState(false);
@@ -19,6 +33,19 @@ export const EventSection = () => {
     const formBtn = () => {
         changeForm(!formState);
     };
+
+    const params = useParams();
+
+    const [eventsInf, setEventsInf] = useState<EventInf>();
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/v0/classic_events/' + params.id + '/')
+            .then(res => {
+                setEventsInf(res.data);
+            }).catch(err => {
+                console.log(err);
+        })
+    }, []);
 
     return (
         <section className={"page-section"}>
@@ -50,7 +77,7 @@ export const EventSection = () => {
                 </div>
                 <button className={"about-form"}>Дата проведения: 00.00.00</button>
                 <button className={"about-form"}>Место проведения</button>
-                <button className={"about-form"}>Фото</button>
+                <button className={"about-form"}><Link to={eventsInf?.photo_album_url || ''}>Фото</Link></button>
                 <button className={"about-form"}>Упоминания в СМИ</button>
                 <button className={"about-form"}>Документы</button>
             </div>
@@ -125,16 +152,9 @@ export const EventSection = () => {
                 </button>
                 <div className={"my-5 row"}>
                     <div className={"col-7"}>
-                        <p className="fw-bold title-1 text-uppercase text-light">инженерный вызов</p>
+                        <p className="fw-bold title-1 text-uppercase text-light">{eventsInf?.title}</p>
                         <div className={"my-5 text-light fs-4"}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                        <div className={"my-4 text-light fs-4"}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            {eventsInf?.description}
                         </div>
                         <button className={"event-btn next-btn"}>
                             <p className="fw-bolder fs-4 text-uppercase text-light m-0">следующее мероприятие</p>

@@ -2,7 +2,7 @@ import "./partners.scss"
 import React, {useEffect, useState} from "react";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import Circle from "../../utils/circle/Circle"
+import Logo from "../../utils/logo/Logo"
 import pic1 from "../../assets/images/partners/pic1.png"
 import pic2 from "../../assets/images/partners/pic2.png"
 import pic3 from "../../assets/images/partners/pic3.png"
@@ -60,7 +60,7 @@ export const Partners = () => {
 
     return (
         <section className={"page-section"}>
-            <Circle title="наши партнёры"/>
+            <Logo title="наши партнёры"/>
             <Carousel/>
         </section>
     )
