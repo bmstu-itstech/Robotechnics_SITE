@@ -1,0 +1,146 @@
+.arrow-right, .arrow-left {
+    display: block;
+}
+
+.events-page {
+    position: absolute;
+    background: url("../../../../src/components/assets/images/background.svg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.line {
+    margin: 90px 0 50px 0;
+    height: 140px;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+}
+
+.board-outer {
+    margin-top: 50px;
+}
+
+.board {
+    width: fit-content;
+    position: relative;
+    max-width: 1900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-hard-card {
+    position: relative;
+    height: 550px;
+    width: 750px;
+    overflow: hidden;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 20px;
+    cursor: pointer;
+    border: 7px solid rgba(0, 0, 0, 0);
+    transition: ease-in .1s;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
+        border: 7px solid #FF5C00;
+        transition: ease-in .2s;
+    }
+    &:hover .text p {
+        color: #FF5C00;
+        font-weight: bolder;
+    }
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: 21px;
+    & p {
+        font-size: 28px;
+        margin: 0;
+        width: 90%;
+        color: white;
+    }
+}
+
+.arrow-right {
+    right: 50px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 50px;
+    cursor: pointer;
+    rotate: 180deg;
+}
+
+@media (max-width: 1650px) {
+    .board {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .board-outer {
+        margin-top: 0;
+    }
+    .board {
+        margin-top: 70px;
+        display: block;
+    }
+    .event-hard-card {
+        display: block;
+        width: 560px;
+    }
+    .arrow-right, .arrow-left {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .event-hard-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-height: 1300px) {
+    .event-hard-card {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-height: 960px) {
+    .event-hard-card  {
+        //height: 250px;
+    }
+}
