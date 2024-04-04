@@ -1,5 +1,5 @@
-import "./eventspage.scss"
-import Circle from "../../utils/circle/Circle"
+import "./events.scss"
+import Logo from "../../utils/logo/Logo"
 import arrow from "../../assets/icons/arrow.svg"
 import pic1 from "../../assets/images/events/event1.png"
 import React, {useEffect, useState} from "react";
@@ -11,7 +11,7 @@ interface Event {
     photo: string;
 }
 
-export const EventsPage = () => {
+export const Events = () => {
 
     const [events, setEvents] = useState<Event[]>([]);
 
@@ -37,7 +37,7 @@ export const EventsPage = () => {
 
     return (
         <section className={"events-page"}>
-            <Circle title="мероприятия"/>
+            <Logo title="мероприятия"/>
             <div className={"board-outer d-flex justify-content-center"}>
                 <div className={"slider-container"}>
                     <div className="board">
