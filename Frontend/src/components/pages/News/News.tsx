@@ -39,7 +39,7 @@ export const News = () => {
         <AliceCarousel
             mouseTracking
             items={items.map((item, index) => (
-                <div key={index}> {/* Обернуть каждый элемент в <div> */}
+                <div key={index}>
                     <NewsCard
                         title={item.title}
                         description={item.description}

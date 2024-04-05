@@ -5,6 +5,7 @@ import pic1 from "../../assets/images/events/event1.png"
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Slider from "react-slick";
+import {Link} from "react-router-dom";
 
 interface Event {
     title: string;
@@ -41,16 +42,16 @@ export const Events = () => {
             <div className={"board-outer d-flex justify-content-center"}>
                 <div className={"slider-container"}>
                     <div className="board">
-                        <Slider {...settings}>
-                            {events.map((event, index) => (
-                                <div className={`event-card ${index % 2 === 0 ? 'wide' : ''}`}>
+                        {events.map((event, index) => (
+                            <Link to={"/event/"+(index+1)}>
+                                <div className={`event-card ${index % 2 === 0 ? 'wide' : '' || index === events.length - 1 ? 'wide' : ''}`}>
                                     <img src={event.photo} alt={event.title}/>
                                     <div className={"text"}>
                                         <p>{event.title}</p>
                                     </div>
                                 </div>
-                            ))}
-                        </Slider>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
