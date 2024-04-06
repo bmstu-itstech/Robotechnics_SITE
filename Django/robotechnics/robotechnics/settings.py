@@ -13,7 +13,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'summy-dummy key')
 
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '**link**'
+]
+CSRF_TRUSTED_ORIGINS = ['https://**link**', 'http://127.0.0.1:8000']
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INTERNAL_IPS = [
     '127.0.0.1',
