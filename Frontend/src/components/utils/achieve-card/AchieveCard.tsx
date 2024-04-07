@@ -1,6 +1,5 @@
 import React from 'react';
 import './achievecard.scss';
-import arrow from "../../assets/icons/arrow.svg";
 
 const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo }: {
     title: string,

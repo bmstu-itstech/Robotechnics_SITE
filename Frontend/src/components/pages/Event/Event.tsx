@@ -46,7 +46,9 @@ export const Event = () => {
 
     const respBtn = async (index: number) => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/v0/questionnaire/${index+1}/`);
+            const response = await axios.get(
+                `http://darleet.com/api/v0/questionnaire/${index+1}/`
+            );
             setQuestionnaire(response.data);
             changeForm(!formState);
         } catch (err) {
@@ -65,7 +67,7 @@ export const Event = () => {
     const [questionnaire, setQuestionnaire] = useState<Questionnaire>();
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v0/questionnaire/?page=1')
+        axios.get('http://darleet.com/api/v0/questionnaire/?page=1')
             .then(res => {
                 setQuestionnaires(res.data.questionnaires);
             }).catch(err => {
@@ -74,7 +76,7 @@ export const Event = () => {
     }, []);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v0/classic_events/' + params.id + '/')
+        axios.get('http://darleet.com/api/v0/classic_events/' + params.id + '/')
             .then(res => {
                 setEventsInf(res.data);
             }).catch(err => {

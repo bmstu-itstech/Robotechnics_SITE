@@ -20,7 +20,7 @@ export const News = () => {
     const [news, setNews] = useState<News[]>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/v0/news/?page=1')
+        axios.get('http://darleet.com/api/v0/news/?page=1')
             .then(res => {
                 setNews(res.data.news);
             }).catch(err => {

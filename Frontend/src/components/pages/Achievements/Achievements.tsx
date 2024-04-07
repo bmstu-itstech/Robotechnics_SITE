@@ -19,7 +19,7 @@ export const Achievements = () => {
     const [achievements, setAchievements] = useState<Achievement[]>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/v0/achievements/?page=1')
+        axios.get('http://darleet.com/api/v0/achievements/?page=1')
             .then(res => {
                     setAchievements(res.data.achievements);
             }).catch(err => {

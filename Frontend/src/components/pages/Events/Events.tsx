@@ -17,7 +17,7 @@ export const Events = () => {
     const [events, setEvents] = useState<Event[]>([]);
 
     useEffect( () => {
-        axios.get('http://127.0.0.1:8000/api/v0/classic_events/?page=1')
+        axios.get('http://darleet.com/api/v0/classic_events/?page=1')
             .then(res => {
                 setEvents(res.data.classic_events);
             }).catch( err => {
