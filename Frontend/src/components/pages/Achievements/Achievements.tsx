@@ -1,44 +1,77 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./achievements.scss"
 import Logo from "../../utils/logo/Logo"
 import AchieveCard from "../../utils/achieve-card/AchieveCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import axios from "axios";
 
-const responsive = {
-    0: { items: 1 },
-    1100: { items: 2 },
-    1650: { items: 3 },
-    2350: { items: 4 }
-};
-
-const items = [
-    <AchieveCard img="achieve1.png" txt="День программиста" />,
-    <AchieveCard img="achieve2.png" txt="Транспорт будущего" />,
-    <AchieveCard img="achieve3.png" txt="Регистрация на Инженерный вызов 2023"/>
-];
-
-const Carousel = () => (
-    <AliceCarousel
-        mouseTracking
-        items={items}
-        responsive={responsive}
-        controlsStrategy="alternate"
-        disableButtonsControls={true}
-        infinite={true}
-    />
-);
+interface Achievement {
+    title: string,
+    description: string,
+    photo_album_url: string,
+    link_to_media: string,
+    photo: string
+}
 
 export const Achievements = () => {
+
+    const [achievements, setAchievements] = useState<Achievement[]>([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8000/api/v0/achievements/?page=1')
+            .then(res => {
+                    setAchievements(res.data.achievements);
+            }).catch(err => {
+                console.log(err);
+        })
+    }, []);
+
+    const responsive = {
+        0: { items: 1 },
+        1100: { items: 2 },
+        1650: { items: 3 },
+        2350: { items: 4 }
+    };
+
+    const Carousel = ({ items }: { items: Achievement[] }) => (
+        <AliceCarousel
+            mouseTracking
+            items={items.map((item, index) => (
+                <div key={index}>
+                    <AchieveCard
+                        title={item.title}
+                        description={item.description}
+                        photo_album_url={item.photo_album_url}
+                        link_to_media={item.link_to_media}
+                        photo={item.photo}
+                    />
+                </div>
+            ))}
+            responsive={responsive}
+            controlsStrategy="alternate"
+            disableButtonsControls={true}
+            infinite={true}
+        />
+    );
+
     return (
         <section className="achievements-page">
             <Logo title="достижения"/>
             <div className="achievements-carousel">
                 <div className="desktop-carousel">
-                    <Carousel/>
+                    <Carousel items={achievements}/>
                 </div>
                 <div className="mobile-carousel">
-                    {items}
+                    {achievements.map((achievement, index) => (
+                        <AchieveCard
+                            title={achievement.title}
+                            description={achievement.description}
+                            photo_album_url={achievement.photo_album_url}
+                            link_to_media={achievement.link_to_media}
+                            photo={achievement.photo}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
