@@ -1,5 +1,6 @@
 .arrow-right, .arrow-left {
     display: block;
+    background-color: transparent;
 }
 
 .events-page {
@@ -26,6 +27,8 @@
 
 .board-outer {
     margin-top: 50px;
+    position: relative;
+    align-items: center;
 }
 
 .board {

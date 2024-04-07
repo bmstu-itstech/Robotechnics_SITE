@@ -16,7 +16,7 @@ export const Home = () => {
                     исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к
                     нам и откройте для себя мир будущего уже сегодня!</p>
                 <button className={"button-main "}>
-                    <Link className="link" to="/news_page">
+                    <Link className="link" to="/news">
                         <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
                     </Link>
                 </button>
