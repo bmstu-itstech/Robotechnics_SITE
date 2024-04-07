@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_URL = 'http://darleet.com/'
+BASE_URL = 'http://darleet.com'
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'summy-dummy key')
 
@@ -120,7 +120,7 @@ USE_TZ = True
 
 
 MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/media/'
+MEDIA_URL = BASE_URL + '/media/'
 
 STATIC_URL = '/django-static/'
 STATICFILES_DIRS = [
