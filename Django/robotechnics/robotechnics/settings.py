@@ -8,12 +8,18 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_URL = 'http://127.0.0.1:8000/'
 
-
 SECRET_KEY = os.environ.get('SECRET_KEY', 'summy-dummy key')
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'darleet.com',
+]
+
+CSRF_TRUSTED_ORIGINS = ['https://darleet.com', 'http://darleet.com', 'http://127.0.0.1:8000']
+CSRF_COOKIE_DOMAIN = 'darleet.com'
 
 INTERNAL_IPS = [
     '127.0.0.1',
@@ -104,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -116,19 +122,22 @@ USE_TZ = True
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
-STATIC_URL = '/static_dev/'
+STATIC_URL = '/django-static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static_dev',
 ]
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'django-static'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-)
+CORS_ALLOWED_ORIGINS = [
+    'https://localhost',
+    'http://localhost',
+    'http://darleet.com',
+    'https://darleet.com',
+]
 
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True
