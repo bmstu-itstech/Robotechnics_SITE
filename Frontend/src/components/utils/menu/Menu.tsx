@@ -55,7 +55,7 @@ const Menu = () => {
                       <div className={"list-item"}>
                           <p className={"text-item"}>
                               <button className={"menu-button text-uppercase text-white"}>
-                                  <Link onClick={changeMenu} className="link" to="/">хардатон</Link>
+                                  <Link onClick={changeMenu} className="link" to="/hardathon">хардатон</Link>
                               </button>
                           </p>
                           <div className={"dot"}></div>
