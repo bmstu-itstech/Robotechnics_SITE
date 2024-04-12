@@ -1,3 +1,6 @@
+:root{
+  --list_item-margin-bottom: 55px;
+}
 input[type=checkbox] {
   display: none;
   position: absolute;
@@ -103,7 +106,7 @@ label:hover {
 }
 
 .list-item {
-  margin-bottom: 55px;
+  margin-bottom: var(--list_item-margin-bottom);
   display: flex;
   align-items: center;
   line-height: 50px;
@@ -151,7 +154,9 @@ label:hover {
 .vertical-line {
   display: inline-block;
   margin-top: 172px;
-  height: calc(100% - 163px);
+  // height: calc(100% - 163px);
+  margin-bottom: var(--list_item-margin-bottom);
+  height:calc(var(--list_item-margin-bottom)*4 + 50*5px + 6.5px);
   width: 7px;
   background-color: white;
   border-radius: 0 3px 3px 0;
@@ -232,23 +237,18 @@ label:hover {
 
 
 @media (max-height: 900px) {
-  .list-item {
-    margin-bottom: 37px;
-  }
-  .vertical-line {
-    height: 529px;
+  :root{
+    --list_item-margin-bottom: 37px;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -570px;
   }
 }
 
+
 @media (max-height: 800px) {
-  .list-item {
-    margin-bottom: 25px;
-  }
-  .vertical-line {
-    height: 457px;
+  :root{
+    --list_item-margin-bottom: 25px;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -570px;
@@ -256,11 +256,8 @@ label:hover {
 }
 
 @media (max-height: 720px) {
-  .list-item {
-    margin-bottom: 15px;
-  }
-  .vertical-line {
-    height: 397px;
+  :root{
+    --list_item-margin-bottom: 15px;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -600px;

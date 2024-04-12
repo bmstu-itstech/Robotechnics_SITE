@@ -37,15 +37,6 @@ const Menu = () => {
                       <div className={"list-item"}>
                           <p className={"text-item"}>
                               <button className={"menu-button text-uppercase text-white"}>
-                                  <Link onClick={changeMenu} className="link" to="/news">новости</Link>
-                              </button>
-                          </p>
-                          <div className={"dot"}></div>
-                          <div className={"horizontal-line"}></div>
-                      </div>
-                      <div className={"list-item"}>
-                          <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}>
                                   <Link onClick={changeMenu} className="link" to="/events">мероприятия</Link>
                               </button>
                           </p>
@@ -64,7 +55,7 @@ const Menu = () => {
                       <div className={"list-item"}>
                           <p className={"text-item"}>
                               <button className={"menu-button text-uppercase text-white"}>
-                                  <Link onClick={changeMenu} className="link" to="/achievements">достижения</Link>
+                                  <Link onClick={changeMenu} className="link" to="/contacts">политика <br></br>перс.данных</Link> {/* заменить url на нужную вкладку  */}
                               </button>
                           </p>
                           <div className={"dot"}></div>
@@ -74,15 +65,6 @@ const Menu = () => {
                           <p className={"text-item"}>
                               <button className={"menu-button text-uppercase text-white"}>
                                   <Link onClick={changeMenu} className="link" to="/partners">партнёры</Link>
-                              </button>
-                          </p>
-                          <div className={"dot"}></div>
-                          <div className={"horizontal-line"}></div>
-                      </div>
-                      <div className={"list-item"}>
-                          <p className={"text-item"}>
-                              <button className={"menu-button text-uppercase text-white"}>
-                                  <Link onClick={changeMenu} className="link" to="/contacts">контакты</Link>
                               </button>
                           </p>
                           <div className={"dot"}></div>
