@@ -1,7 +1,7 @@
-from director.router import router  # noqa: F401
-from django.urls import include, path
+from director.router import DirectorViewSet
+from django.urls import path
 
 app_name = 'director'
 urlpatterns = [
-    path('', include(router.urls))
+    path('', DirectorViewSet.as_view())
 ]
