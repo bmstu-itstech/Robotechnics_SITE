@@ -1,6 +1,6 @@
 import "./home.scss"
 import Logo from "../../utils/logo/Logo"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 
 export const Home = () => {
@@ -8,9 +8,9 @@ export const Home = () => {
         <section className="main-page">
             <Logo />
             <div className={"container-fluid"}>
-                <p className={"title-main col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
+                <p className={"title-main text-center text-md-start col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
                     робототехники</p>
-                <p className={"text-main h3 fw-light text-light"}>Центр Молодежной Робототехники - это инновационное
+                <p className={"text-main text-center text-md-start h3 fw-light text-light"}>Центр Молодежной Робототехники - это инновационное
                     пространство, предназначенное для обучения и развития молодых талантов в области робототехники,
                     искусственного интеллекта и программирования. Наша миссия - предоставить молодежи возможность
                     исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к

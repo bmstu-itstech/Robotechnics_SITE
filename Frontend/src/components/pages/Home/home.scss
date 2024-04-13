@@ -1,11 +1,14 @@
 .main-page {
-  background: url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat center;
+  background:linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)),
+            url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: auto;
 }
+
+
 
 .container-fluid {
   height: fit-content;

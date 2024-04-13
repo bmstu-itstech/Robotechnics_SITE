@@ -1,19 +1,28 @@
 .logo-row {
-  margin: 90px auto 0;
+  margin: 90px 10% 0 8%;
   width: 80%;
   height: 140px;
-  justify-content: center;
+  justify-content: start;
   position: relative;
   display: flex;
   align-items: center;
+  gap:50px;
+}
+
+.hidden{
+  display: inherit;
 }
 
 .logo-img {
-  position: absolute;
   left: 0;
-  width: 140px;
-  height: 140px;
+  width: 115px;
+  height: 115px;
   border-radius: 50%;
+}
+
+.logo-img-bauman {
+  width: 125px;
+  height: 125px;
 }
 
 .title-text {
@@ -35,7 +44,7 @@
   .logo-row {
     margin: 60px auto 0;
     justify-content: start;
-    align-items: end;
+    align-items: start;
     height: 250px;
   }
   .logo-img {
@@ -50,6 +59,9 @@
   .title-text {
     font-size: 50px;
   }
+  .hidden {
+    display: none;
+  }
 }
 
 @media (max-width: 530px) {
@@ -61,13 +73,17 @@
     margin-top: 200px;
   }
   .logo-img {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 53px;
   }
   .title-text {
     font-size: 40px;
   }
+  .hidden {
+    display: none;
+  }
 }
 
 @media (max-width: 430px) {
+
 }

@@ -30,9 +30,10 @@ label:hover {
 }
 
 .menu-closed {
+  background-color: transparent; // 
   position: absolute;
-  background-color: rgba(255, 92, 0, 1);
-  border-radius: 50%;
+  // background-color: rgba(255, 92, 0, 1);
+  border-radius: 10%;
   height: 915px;
   width: 915px;
   right: -500px;
@@ -43,6 +44,7 @@ label:hover {
 
 .menu-opened {
   opacity: 0;
+  background-color: rgba(255, 92, 0, 1);
   visibility: hidden;
   position: absolute;
   overflow: hidden;
@@ -52,7 +54,7 @@ label:hover {
   align-items: center;
   right: 0;
   top: -500px;
-  transition: none;
+  transition: 300ms linear; //
   z-index: 10;
 }
 
