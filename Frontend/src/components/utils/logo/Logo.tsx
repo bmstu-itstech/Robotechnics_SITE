@@ -7,10 +7,10 @@ import crown_logo from "../../assets/icons/crown_logo.svg";
 const Logo = ({ title = "" }) => {
     return (
         <div className="logo-row">
-            <div className="hidden">
+            <div className="hidden_logo">
                 <img src={bauman_logo} className="logo-img logo-img-bauman" alt="" />
             </div>
-            <div className="hidden">
+            <div className="hidden_logo">
                 <img src={crown_logo} className="logo-img" alt="" />
             </div>
             <div>

@@ -1,3 +1,4 @@
+
 input[type=checkbox] {
   display: none;
   position: absolute;
@@ -237,7 +238,7 @@ label:hover {
 
 @media (max-height: 900px) {
   :root{
-    --list_item-margin-bottom: 37px;
+    --list_item-margin-bottom: 37px !important;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -570px;
@@ -247,7 +248,7 @@ label:hover {
 
 @media (max-height: 800px) {
   :root{
-    --list_item-margin-bottom: 25px;
+    --list_item-margin-bottom: 25px !important;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -570px;
@@ -256,8 +257,9 @@ label:hover {
 
 @media (max-height: 720px) {
   :root{
-    --list_item-margin-bottom: 15px;
+    --list_item-margin-bottom: 15px !important;
   }
+
   input[type=checkbox]:checked ~ .menu-closed {
     top: -600px;
   }

@@ -1,6 +1,8 @@
 import "./home.scss"
 import Logo from "../../utils/logo/Logo"
 import { Link } from "react-router-dom";
+import vk_logo from "../../assets/icons/vk_logo.svg"
+import arrow_down from "../../assets/icons/arrow_down.svg"
 import React from "react";
 
 export const Home = () => {
@@ -15,11 +17,22 @@ export const Home = () => {
                     искусственного интеллекта и программирования. Наша миссия - предоставить молодежи возможность
                     исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к
                     нам и откройте для себя мир будущего уже сегодня!</p>
-                <button className={"button-main "}>
-                    <Link className="link" to="/news">
-                        <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
-                    </Link>
-                </button>
+                <div className={"row"}>
+                    <button className={"button-main col-4"}>
+                        <Link className="link" to="/news">
+                            <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
+                        </Link>
+                    </button >
+                    <button className={"btn hidden col-1"}>
+                        <img src={arrow_down} alt="arrow" />
+                    </button >
+                    <div className={"hidden col vk_link-main"}>
+                        <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target = "_blank" role="button">
+                            <img src={vk_logo} alt="vk_logo" />
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
     )
