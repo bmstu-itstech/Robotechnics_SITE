@@ -8,13 +8,13 @@ const Logo = ({ title = "" }) => {
     return (
         <div className="logo-row">
             <div className="hidden_logo">
-                <img src={bauman_logo} className="logo-img logo-img-bauman" alt="" />
+                <img src={bauman_logo} className="logo-img logo-img-bauman" draggable="false" alt="" />
             </div>
             <div className="hidden_logo">
-                <img src={crown_logo} className="logo-img" alt="" />
+                <img src={crown_logo} className="logo-img" draggable="false" alt="" />
             </div>
             <div>
-                <img src={logo} className="logo-img" alt="" />
+                <img src={logo} className="logo-img" draggable="false" alt="" />
             </div>
             <p className="title-text text-uppercase">{title}</p>
         </div>

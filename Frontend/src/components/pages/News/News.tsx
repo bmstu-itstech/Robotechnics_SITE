@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import "./news.scss"
 import Logo from "../../utils/logo/Logo"
 import NewsCard from "../../utils/news-card/NewsCard";
@@ -25,7 +25,7 @@ export const News = () => {
                 setNews(res.data.news);
             }).catch(err => {
                 console.log('error')
-        })
+            })
     }, []);
 
     const responsive = {
@@ -60,7 +60,7 @@ export const News = () => {
             <Logo title="новости"/>
             <div className="news-carousel">
                 <div className="desktop-carousel">
-                    <Carousel items={news}/>
+                    <Carousel items={news} />
                 </div>
                 <div className="mobile-carousel">
                     {news.map((item, index) => (

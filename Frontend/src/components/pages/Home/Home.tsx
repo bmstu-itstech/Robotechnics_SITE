@@ -7,7 +7,7 @@ import React from "react";
 
 export const Home = () => {
     return (
-        <section className="main-page">
+        <section className="main-page" draggable="false">
             <Logo />
             <div className={"container-fluid"}>
                 <p className={"title-main text-center text-md-start col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
@@ -27,12 +27,11 @@ export const Home = () => {
                         <img src={arrow_down} alt="arrow" />
                     </button >
                     <div className={"hidden col vk_link-main"}>
-                        <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target = "_blank" role="button">
-                            <img src={vk_logo} alt="vk_logo" />
+                        <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target="_blank" role="button">
+                            <img src={vk_logo} alt="vk_logo" draggable="false" />
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
     )
