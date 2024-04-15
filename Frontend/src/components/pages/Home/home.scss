@@ -1,3 +1,15 @@
+:root{
+  --pixelRation: 1.5;
+  --rationKoef: 1/var(--pixelRation);
+}
+
+.rationAdapt{
+  *{
+    zoom:var(--rationKoef);
+    -ms-zoom: var(--rationKoef);
+  }
+}
+
 .main-page {
    background:linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)),
              url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat center;
@@ -7,7 +19,6 @@
   position: relative;
   overflow: auto;
 }
-
 
 
 .container-fluid {

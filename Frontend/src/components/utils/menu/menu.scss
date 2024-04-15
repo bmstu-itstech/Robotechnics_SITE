@@ -238,7 +238,7 @@ label:hover {
 
 @media (max-height: 900px) {
   :root{
-    --list_item-margin-bottom: 37px !important;
+    --list_item-margin-bottom: 37px;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -570px;
@@ -248,7 +248,7 @@ label:hover {
 
 @media (max-height: 800px) {
   :root{
-    --list_item-margin-bottom: 25px !important;
+    --list_item-margin-bottom: 25px;
   }
   input[type=checkbox]:checked ~ .menu-closed {
     top: -570px;
@@ -257,7 +257,7 @@ label:hover {
 
 @media (max-height: 720px) {
   :root{
-    --list_item-margin-bottom: 15px !important;
+    --list_item-margin-bottom: 15px;
   }
 
   input[type=checkbox]:checked ~ .menu-closed {

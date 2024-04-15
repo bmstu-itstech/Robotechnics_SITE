@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../../utils/logo/logo.scss'
 import "./news.scss"
 import Logo from "../../utils/logo/Logo"
 import NewsCard from "../../utils/news-card/NewsCard";
@@ -57,7 +58,11 @@ export const News = () => {
 
     return (
         <section className={"news-page"}>
-            <Logo title="новости"/>
+            <div className={"logo-row mx-auto justify-content-center"}>
+                <p title="новости" className={"title-text text-uppercase align-self-end mb-5"}>
+                    новости
+                </p>
+            </div>
             <div className="news-carousel">
                 <div className="desktop-carousel">
                     <Carousel items={news} />
@@ -74,6 +79,7 @@ export const News = () => {
                     ))}
                 </div>
             </div>
+
         </section>
     )
 }

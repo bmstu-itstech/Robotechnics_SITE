@@ -19,7 +19,7 @@ function App() {
     return (
     <Router>
         <Menu />
-        <main>
+        <main >
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/news" element={<News/>} />

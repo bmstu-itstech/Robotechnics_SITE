@@ -8,7 +8,7 @@ import React from "react";
 export const Home = () => {
     return (
         <section className="main-page" draggable="false">
-            <Logo />
+            <Logo  />
             <div className={"container-fluid"}>
                 <p className={"title-main text-center text-md-start col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
                     робототехники</p>

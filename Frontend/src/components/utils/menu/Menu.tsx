@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./menu.scss"
 import "../roots/menu_root.scss"
+import "./menu.scss"
 import { Link } from 'react-router-dom';
 
 import menu from "../../assets/icons/menu.svg"
