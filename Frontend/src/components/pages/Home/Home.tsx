@@ -1,3 +1,4 @@
+import "../../utils/roots/home_root.scss"
 import "./home.scss"
 import Logo from "../../utils/logo/Logo"
 import { Link } from "react-router-dom";
@@ -23,7 +24,7 @@ export const Home = () => {
                             <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
                         </Link>
                     </button >
-                    <button className={"btn hidden col-1"}>
+                    <button className={"btn arrow-btn-main hidden col-1"}>
                         <img src={arrow_down} alt="arrow" />
                     </button >
                     <div className={"hidden col vk_link-main"}>

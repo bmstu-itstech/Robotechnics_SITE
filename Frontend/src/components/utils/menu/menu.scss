@@ -1,16 +1,15 @@
-
 input[type=checkbox] {
   display: none;
   position: absolute;
 }
 
-input[type=checkbox]:checked ~ .menu-opened {
+input[type=checkbox]:checked~.menu-opened {
   opacity: 1;
   visibility: visible;
   transition: 500ms ease-in;
 }
 
-input[type=checkbox]:checked ~ .menu-closed {
+input[type=checkbox]:checked~.menu-closed {
   width: 2000px;
   height: 2000px;
   right: -1150px;
@@ -34,7 +33,6 @@ label:hover {
   background-color: transparent; // 
   position: absolute;
   // background-color: rgba(255, 92, 0, 1);
-  border-radius: 10%;
   height: 915px;
   width: 915px;
   right: -500px;
@@ -45,7 +43,7 @@ label:hover {
 
 .menu-opened {
   opacity: 0;
-  background-color: rgba(255, 92, 0, 1);
+  background-color: transparent;
   visibility: hidden;
   position: absolute;
   overflow: hidden;
@@ -120,11 +118,12 @@ label:hover {
   transition: .2s ease-out;
   color: white;
 
-  &:hover + .dot {
-    width: 30px;
-    height: 30px;
+  &:hover+.dot {
+    width: var(--dot-diametr);
+    height: var(--dot-diametr);
     transition: .2s ease-out;
   }
+
   &:hover {
     font-weight: bold;
     font-size: 52px;
@@ -133,7 +132,7 @@ label:hover {
 }
 
 .dot {
-  right: 50px;
+  right: var(--horizontal_line-width);
   position: absolute;
   display: inline-block;
   width: 0;
@@ -145,8 +144,8 @@ label:hover {
 
 .horizontal-line {
   display: inline-block;
-  height: 7px;
-  width: 50px;
+  height: var(--horizontal_line-height);
+  width: var(--horizontal_line-width);
   background-color: white;
   border-radius: 3px 0 0 3px;
 }
@@ -154,10 +153,9 @@ label:hover {
 .vertical-line {
   display: inline-block;
   margin-top: 172px;
-  // height: calc(100% - 163px);
   margin-bottom: var(--list_item-margin-bottom);
-  height:calc(var(--list_item-margin-bottom)*4 + 50*5px + 6.5px);
-  width: 7px;
+  height: calc(var(--list_item-margin-bottom)*3 + 50*3px + 6.5px);
+  width: var(--vertical_line-width);
   background-color: white;
   border-radius: 0 3px 3px 0;
 }
@@ -169,6 +167,7 @@ label:hover {
     right: -240px;
     top: -280px;
   }
+
   .change-button {
     width: 110px;
     height: 110px;
@@ -179,7 +178,8 @@ label:hover {
   .text-item:hover {
     font-size: 50px;
   }
-  .text-item:hover + .dot {
+
+  .text-item:hover+.dot {
     width: 0;
     height: 0;
   }
@@ -189,7 +189,8 @@ label:hover {
   .navigation {
     right: 50px;
   }
-  input[type=checkbox]:checked ~ .menu-closed {
+
+  input[type=checkbox]:checked~.menu-closed {
     margin-right: 200px;
   }
 }
@@ -201,22 +202,28 @@ label:hover {
     right: -160px;
     top: -180px;
   }
+
   .change-button img {
     width: 60px;
   }
+
   .change-button {
     right: 10px;
     top: 10px;
   }
+
   .navigation {
     right: 30px;
   }
+
   .horizontal-line {
     width: 30px;
   }
+
   .text-item {
     margin-right: 10px;
     font-size: 45px;
+
     &:hover {
       font-size: 45px;
     }
@@ -224,43 +231,135 @@ label:hover {
 }
 
 @media (max-width: 430px) {
-  .text-item, .text-item:hover {
+
+  .text-item,
+  .text-item:hover {
     font-size: 35px;
   }
 }
 
 @media (max-width: 360px) {
-  .text-item, .text-item:hover {
+
+  .text-item,
+  .text-item:hover {
     font-size: 30px;
   }
 }
 
 
 @media (max-height: 900px) {
-  :root{
+  :root {
     --list_item-margin-bottom: 37px;
   }
-  input[type=checkbox]:checked ~ .menu-closed {
+
+  input[type=checkbox]:checked~.menu-closed {
     top: -570px;
   }
 }
 
 
 @media (max-height: 800px) {
-  :root{
+  :root {
     --list_item-margin-bottom: 25px;
   }
-  input[type=checkbox]:checked ~ .menu-closed {
+
+  input[type=checkbox]:checked~.menu-closed {
     top: -570px;
   }
 }
 
 @media (max-height: 720px) {
-  :root{
+  :root {
     --list_item-margin-bottom: 15px;
   }
 
-  input[type=checkbox]:checked ~ .menu-closed {
+  input[type=checkbox]:checked~.menu-closed {
     top: -600px;
   }
+}
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  .menu-closed {
+    background-color: transparent; // 
+    position: absolute;
+    // background-color: rgba(255, 92, 0, 1);
+    height: 915px * 0.67;
+    width: 915px * 0.67;
+    right: -500px * 0.67;
+    top: -640px * 0.67;
+    transition: 300ms linear;
+    z-index: 10;
+  }
+
+  .menu-opened {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 0;
+  }
+
+  .navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .change-button {
+    width: 110px * 0.67;
+    height: 110px* 0.67;
+    color: white;
+    position: absolute;
+    right: 80px* 0.67;
+    top: 80px* 0.67;
+    z-index: 100;
+    user-select: none;
+  }
+
+  .change-button img {
+    position: absolute;
+    width: 110px * 0.67;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  :root {
+    --list_item-margin-bottom: 25px;
+  }
+
+  .text-item {
+    display: inline-block;
+    font-size: 50px * 0.67;
+    margin: 0 50px* 0.67 0 0;
+    transition: .2s ease-out;
+    color: white;
+
+    &:hover+.dot {
+      width: calc(var(--dot-diametr)* 0.67);
+      height: calc(var(--dot-diametr)* 0.67);
+      transition: .2s ease-out;
+    }
+
+    &:hover {
+      font-size: 52px* 0.67;
+      transition: .2s ease-out;
+    }
+  }
+
+  .dot {
+    right: var(--horizontal_line-width);
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s ease-out;
+  }
+
+
 }

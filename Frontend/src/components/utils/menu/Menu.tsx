@@ -19,13 +19,13 @@ const Menu = () => {
             <div className={"menu-closed"}></div>
 
             <label htmlFor="checkbox-toggle">
-                <div className={"change-button"}><img src={isChecked ? close : menu} alt="" /></div>
+                <div className={"change-button"}><img src={isChecked ? close : menu} alt="changeButton" /></div>
             </label>
 
             <div className={"menu-opened"}>
                 <div className={"navigation"}>
 
-                    <div className={"list"}>
+                    <div className={"list "}>
                         <div className={"list-item"}>
                             <p className={"text-item"}>
                                 <button className={"menu-button text-uppercase text-white"}>
@@ -48,15 +48,6 @@ const Menu = () => {
                             <p className={"text-item"}>
                                 <button className={"menu-button text-uppercase text-white"}>
                                     <Link onClick={changeMenu} className="link" to="/hardathon">хардатон</Link>
-                                </button>
-                            </p>
-                            <div className={"dot"}></div>
-                            <div className={"horizontal-line"}></div>
-                        </div>
-                        <div className={"list-item"}>
-                            <p className={"text-item"}>
-                                <button className={"menu-button text-uppercase text-white"}>
-                                    <Link onClick={changeMenu} className="link" to="/contacts">политика <br></br>перс.данных</Link> {/* заменить url на нужную вкладку  */}
                                 </button>
                             </p>
                             <div className={"dot"}></div>
