@@ -9,7 +9,7 @@ import React from "react";
 export const Home = () => {
     return (
         <section className="main-page" draggable="false">
-            <Logo  />
+            <Logo />
             <div className={"container-fluid"}>
                 <p className={"title-main text-center text-md-start col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
                     робототехники</p>
@@ -18,8 +18,8 @@ export const Home = () => {
                     искусственного интеллекта и программирования. Наша миссия - предоставить молодежи возможность
                     исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к
                     нам и откройте для себя мир будущего уже сегодня!</p>
-                <div className={"row"}>
-                    <button className={"button-main col-4"}>
+                <div className={"container "}>
+                    <button className={"button-main col-4 justify-content-center"}>
                         <Link className="link" to="/news">
                             <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
                         </Link>

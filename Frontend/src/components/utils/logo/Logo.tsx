@@ -7,15 +7,15 @@ import crown_logo from "../../assets/icons/crown_logo.svg";
 
 const Logo = ({ title = "" }) => {
     return (
-        <div className="logo-row">
-            <div className="hidden_logo">
-                <img src={bauman_logo} className="logo-img logo-img-bauman" draggable="false" alt="bauman_logo" />
+        <div className="container-fluid logo-row ">
+            <div className="hidden_logo container logo-block  mx-0 px-0 col-1 ">
+                <img src={bauman_logo} className="logo-img logo-img-bauman img-fluid" draggable="false" alt="bauman_logo" />
             </div>
-            <div className="hidden_logo">
-                <img src={crown_logo} className="logo-img" draggable="false" alt="crown_logo" />
+            <div className="hidden_logo container logo-block  mx-0 px-0 col-1">
+                <img src={crown_logo} className="logo-img img-fluid" draggable="false" alt="crown_logo" />
             </div>
-            <div>
-                <img src={logo} className="logo-img" draggable="false" alt="crm_logo" />
+            <div className={"container logo-block mx-0 px-0 col-1"}>
+                <img src={logo} className="logo-img img-fluid" draggable="false" alt="crm_logo" />
             </div>
             <p className="title-text text-uppercase">{title}</p>
         </div>
