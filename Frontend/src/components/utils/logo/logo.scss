@@ -1,5 +1,4 @@
 .logo-row {
-  margin: 90px 10% 0 8%;
   width: 100%;
   height: 200px;
   justify-content: start;
@@ -9,7 +8,7 @@
   gap: 50px;
 }
 
-.logo-block{
+.logo-block {
   min-height: 50px;
   min-width: 50px;
   max-width: calc(var(--logo-size) * var(--scale-pixel-koef));
@@ -59,9 +58,9 @@
     font-size: 50px;
   }
 
-  .hidden_logo {
-    display: none;
-  }
+  // .hidden_logo {
+  //   display: none;
+  // }
 }
 
 @media (max-width: 530px) {
@@ -70,9 +69,9 @@
     height: 140px;
   }
 
-  .title-text {
-    margin-top: 200px;
-  }
+  // .title-text {
+    // margin-top: 200px;
+  // }
 
   // .logo-img {
   //   width: 52px;
@@ -83,9 +82,9 @@
     font-size: 40px;
   }
 
-  .hidden_logo {
-    display: none;
-  }
+  // .hidden_logo {
+  //   display: none;
+  // }
 }
 
 @media (max-width: 430px) {}

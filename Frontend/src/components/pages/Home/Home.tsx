@@ -18,14 +18,14 @@ export const Home = () => {
                     искусственного интеллекта и программирования. Наша миссия - предоставить молодежи возможность
                     исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к
                     нам и откройте для себя мир будущего уже сегодня!</p>
-                <div className={"container "}>
+                <div className={" container"}>
                     <button className={"button-main col-4 justify-content-center"}>
                         <Link className="link" to="/news">
                             <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
                         </Link>
                     </button >
                     <button className={"btn arrow-btn-main hidden col-1"}>
-                        <img src={arrow_down} alt="arrow" />
+                        <img src={arrow_down} alt="arrow" className={"img-fluid"} />
                     </button >
                     <div className={"hidden col vk_link-main"}>
                         <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target="_blank" role="button">

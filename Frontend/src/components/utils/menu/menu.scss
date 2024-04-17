@@ -20,45 +20,6 @@ label:hover {
   cursor: pointer;
 }
 
-
-.menu {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.menu-closed {
-  background-color: transparent; // 
-  position: absolute;
-  // background-color: rgba(255, 92, 0, 1);
-  height: 915px;
-  width: 915px;
-  right: -500px;
-  top: -640px;
-  transition: 300ms linear;
-  z-index: 10;
-}
-
-.menu-opened {
-  
-  opacity: 0;
-  background-color: transparent;
-  visibility: hidden;
-  position: absolute;
-  overflow: hidden;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  right: 0;
-  top: 0;
-  transition: 300ms linear; //
-  z-index: 10;
-}
-
 .menu-button {
   background: none;
   border: 0;
@@ -117,20 +78,13 @@ label:hover {
 
 .text-item {
   display: inline-block;
-  font-size: 50px;
-  margin: 0 50px 0 0;
+  font-size: 40px;
   transition: .2s ease-out;
   color: white;
 
   &:hover+.dot {
     width: var(--dot-diametr);
     height: var(--dot-diametr);
-    transition: .2s ease-out;
-  }
-
-  &:hover {
-    font-weight: bold;
-    font-size: 52px;
     transition: .2s ease-out;
   }
 }
@@ -154,11 +108,10 @@ label:hover {
   border-radius: 3px 0 0 3px;
 }
 
+
 .vertical-line {
   display: inline-block;
-  margin-top: 172px;
-  margin-bottom: var(--list_item-margin-bottom);
-  height: calc(var(--list_item-margin-bottom)*3 + 50*3px + 6.5px);
+  height: auto;
   width: var(--vertical_line-width);
   background-color: white;
   border-radius: 0 3px 3px 0;
@@ -179,9 +132,6 @@ label:hover {
     top: 60px;
   }
 
-  .text-item:hover {
-    font-size: 50px;
-  }
 
   .text-item:hover+.dot {
     width: 0;
@@ -224,31 +174,16 @@ label:hover {
     width: 30px;
   }
 
-  .text-item {
-    margin-right: 10px;
-    font-size: 45px;
-
-    &:hover {
-      font-size: 45px;
-    }
-  }
+  // .text-item {
+  //   &:hover {
+  //     font-size: 45px;
+  //   }
+  // }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 430px) {}
 
-  .text-item,
-  .text-item:hover {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 360px) {
-
-  .text-item,
-  .text-item:hover {
-    font-size: 30px;
-  }
-}
+@media (max-width: 360px) {}
 
 
 @media (max-height: 900px) {
@@ -336,8 +271,7 @@ label:hover {
 
   .text-item {
     display: inline-block;
-    font-size: 50px * 0.67;
-    margin: 0 50px* 0.67 0 0;
+    font-size: 40px * 0.67;
     transition: .2s ease-out;
     color: white;
 
@@ -347,10 +281,10 @@ label:hover {
       transition: .2s ease-out;
     }
 
-    &:hover {
-      font-size: 52px* 0.67;
-      transition: .2s ease-out;
-    }
+    // &:hover {
+    //   font-size: 52px* 0.67;
+    //   transition: .2s ease-out;
+    // }
   }
 
   .dot {
