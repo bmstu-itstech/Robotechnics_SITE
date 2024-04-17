@@ -42,17 +42,19 @@ label:hover {
 }
 
 .menu-opened {
+  
   opacity: 0;
   background-color: transparent;
   visibility: hidden;
   position: absolute;
   overflow: hidden;
-  width: 900px;
-  height: 1900px;
+  width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
+  align-self: center;
   right: 0;
-  top: -500px;
+  top: 0;
   transition: 300ms linear; //
   z-index: 10;
 }
@@ -68,11 +70,11 @@ label:hover {
 }
 
 .change-button {
-  width: 110px;
-  height: 110px;
+  width: var(--change-button-width);
+  height: var(--change-button-height);
   color: white;
   position: absolute;
-  right: 80px;
+  right: 160px;
   top: 80px;
   z-index: 100;
   user-select: none;
@@ -80,6 +82,8 @@ label:hover {
 
 .change-button img {
   position: absolute;
+  width: var(--change-button-width);
+  height: var(--change-button-height);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -308,8 +312,8 @@ label:hover {
   }
 
   .change-button {
-    width: 110px * 0.67;
-    height: 110px* 0.67;
+    width: calc(var(--change-button-width) * 0.67);
+    height: calc(var(--change-button-height) * 0.67);
     color: white;
     position: absolute;
     right: 80px* 0.67;
@@ -320,7 +324,6 @@ label:hover {
 
   .change-button img {
     position: absolute;
-    width: 110px * 0.67;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
