@@ -7,4 +7,6 @@
     --dot-diametr: 30px;
     --change-button-width: 80px;
     --change-button-height: 40px;
+    --display-ration: 1;
+    --scale-pixel-koef: 1/var(--display-ration);
 }

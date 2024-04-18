@@ -8,29 +8,40 @@
   overflow: auto;
 }
 
+.more-text-main {
+  font-size: calc(var(--scale-pixel-koef) * 30px);
+  font-weight: 400;
+}
 
 .container-fluid {
   height: fit-content;
   width: 85%;
-  margin-top: 50px;
+  margin-top: calc(var(--scale-pixel-koef) * 50px);
+}
+
+.container-fluid-margless {
+  margin-top: 0px;
 }
 
 .title-main {
-  font-size: 90px;
+  font-size: calc(var(--scale-pixel-koef) * 90px);
+  line-height: calc(var(--scale-pixel-koef) * 108px);
 }
 
 .text-main {
-  margin-top: 50px;
-  width: 60%;
+  margin-top: calc(15px * var(--scale-pixel-koef));
+  font-size: calc(30px * var(--scale-pixel-koef));
+  width: calc(var(--scale-pixel-koef) * 990px);
 }
 
 .button-main {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: calc(var(--scale-pixel-koef) * 95px);
+  // margin-bottom: calc(var(--scale-pixel-koef) * 50px);
   border: solid 2px #e43603;
   background: none;
-  width: 360px;
-  height: var(--row-btn-height);
+  width: calc(var(--scale-pixel-koef) * 460px);
+  ;
+  height: calc(var(--row-btn-height) * var(--scale-pixel-koef));
   border-radius: 50px;
   justify-content: center;
 }
@@ -45,18 +56,8 @@
   gap: 50px;
 }
 
-.vk_link-main {
-  display: flex;
-  align-self: center;
-  justify-content: end;
-
-  & img {
-    height: 30px;
-  }
-}
-
-.vk_link-main :is(img, a) {
-  transform: translateX(50%);
+.vk_link-main img {
+  height: 30px;
 }
 
 .arrow-btn-main {
@@ -67,6 +68,10 @@
 
 .arrow-btn-main img {
   height: 100%;
+}
+
+.main-text-block-main {
+  margin-top: calc(var(--scale-pixel-koef) * 105px);
 }
 
 @media (max-width: 1300px) {
@@ -124,25 +129,10 @@
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {
-  $--scale-pixel-koef: 1.5;
-
-  .title-main {
-    font-size: 90px * 0.67;
+  :root {
+    --display-ration: 1.5;
   }
 
-  .text-main {
-    font-size: 30px * 0.67;
-  }
-
-  .button-main {
-    margin-top: 50px * 0.67;
-    margin-bottom: 50px * 0.67;
-    border: solid 2px #e43603;
-    background: none;
-    width: 360px * 0.67;
-    height: calc(var(--row-btn-height) * 0.67);
-    border-radius: 50px * 0.67;
-  }
 
   .links_line-main {
     width: 100%;

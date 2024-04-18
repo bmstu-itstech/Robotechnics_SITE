@@ -1,6 +1,5 @@
-$--display-ration: 1;
-$--scale-pixel-koef: 1/($--display-ration);
-
-:root{
+:root {
+    --display-ration: 1;
+    --scale-pixel-koef: 1/var(--display-ration);
     --row-btn-height: 80px;
 }

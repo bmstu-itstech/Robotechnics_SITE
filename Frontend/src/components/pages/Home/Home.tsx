@@ -10,28 +10,29 @@ export const Home = () => {
     return (
         <section className="main-page" draggable="false">
             <Logo />
-            <div className={"container-fluid"}>
-                <p className={"title-main text-center text-md-start col-11 text-uppercase text-light fw-bold lh-1"}>Центр молодежной
+            <div className={"container-fluid main-text-block-main"}>
+                <p className={"title-main text-center text-md-start col-11 text-uppercase text-light fw-bold"}>Центр молодежной <br />
                     робототехники</p>
                 <p className={"text-main text-center text-md-start h3 fw-light text-light"}>Центр Молодежной Робототехники - это инновационное
                     пространство, предназначенное для обучения и развития молодых талантов в области робототехники,
                     искусственного интеллекта и программирования. Наша миссия - предоставить молодежи возможность
                     исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к
                     нам и откройте для себя мир будущего уже сегодня!</p>
-                <div className={" container"}>
-                    <button className={"button-main col-4 justify-content-center"}>
-                        <Link className="link" to="/news">
-                            <p className={"text-light text-uppercase fw-bold fs-4 m-0"}>подробнее</p>
-                        </Link>
-                    </button >
-                    <button className={"btn arrow-btn-main hidden col-1"}>
-                        <img src={arrow_down} alt="arrow" className={"img-fluid"} />
-                    </button >
-                    <div className={"hidden col vk_link-main"}>
-                        <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target="_blank" role="button">
-                            <img src={vk_logo} alt="vk_logo" draggable="false" />
-                        </a>
-                    </div>
+
+            </div>
+            <div className={"container-fluid container-fluid-margless position-relative "}>
+                <button className={"button-main col-4 justify-content-center"}>
+                    <Link className="link" to="/news">
+                        <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
+                    </Link>
+                </button >
+                <button className={"btn arrow-btn-main hidden col-1"}>
+                    <img src={arrow_down} alt="arrow" className={"img-fluid"} />
+                </button >
+                <div className={"hidden position-absolute start-100 bottom-0"}>
+                    <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target="_blank" role="button">
+                        <img src={vk_logo} alt="vk_logo" draggable="false" />
+                    </a>
                 </div>
             </div>
         </section>
