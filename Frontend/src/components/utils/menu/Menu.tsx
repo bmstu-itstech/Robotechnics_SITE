@@ -22,58 +22,57 @@ const Menu = () => {
                     <h5 className="offcanvas-title" id="offcanvasRightLabel"> </h5>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
                 </div>
-                <div className="offcanvas-body d-flex justify-content-center align-items-start mt-5 ps-0">
-                    <div className={"list-group list-group-horizontal list-group-flush"}>
+                <div className="offcanvas-body d-flex justify-content-center align-items-start mt-5 ps-0 me-2 overflow-visible">
+                    <div className={"list-group list-group-horizontal list-group-horizontal-menu list-group-flush"}>
                         <div className={"list-group list-group-flush justify-content-center"}>
-                            <div className={"list-group-item  bg-transparent border-0 align-items-center d-flex justify-content-end"}>
-                                <p className={"text-item me-2 mb-3"}>
+                            <div className={"list-group-item  bg-transparent border-0 align-items-center d-flex justify-content-end my-auto"}>
+                                <p className={"text-item me-2"}>
                                     <button className={"menu-button text-uppercase text-white  "}>
                                         <Link onClick={changeMenu} className={"link"} to="/">главная</Link>
                                     </button>
                                 </p>
+                                <div className={"dot position-absolute start-100"}></div>
                             </div>
-                            <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end"}>
-                                <p className={"text-item me-2  mb-3"}>
+                            <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto"}>
+                                <p className={"text-item me-2"}>
                                     <button className={"menu-button text-uppercase text-white"}>
                                         <Link onClick={changeMenu} className={"link"} to="/events">мероприятия</Link>
                                     </button>
                                 </p>
-
+                                <div className={"dot position-absolute start-100"}></div>
                             </div>
-                            <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end"}>
-                                <p className={"text-item me-2  mb-3"}>
+                            <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto"}>
+                                <p className={"text-item me-2"}>
                                     <button className={"menu-button text-uppercase text-white "}>
                                         <Link onClick={changeMenu} className={"link"} to="/hardathon">хардатон</Link>
                                     </button>
                                 </p>
+                                <div className={"dot position-absolute start-100"}></div>
                             </div>
-                            <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end"}>
-                                <p className={"text-item me-2  mb-3"}>
+                            <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto"}>
+                                <p className={"text-item me-2"}>
                                     <button className={"menu-button text-uppercase text-white"}>
                                         <Link onClick={changeMenu} className={"link"} to="/partners">партнёры</Link>
                                     </button>
                                 </p>
+                                <div className={"dot position-absolute start-100"}></div>
                             </div>
                         </div>
-                        <div className={"d-flex flex-column justify-content-around"}>
-                            <div>
-                                <div className={"dot"}></div>
+                        <div className={"d-flex flex-column"}>
+                            <div className={"my-auto"}>
                                 <div className={"horizontal-line"}></div>
                             </div>
-                            <div>
-                                <div className={"dot"}></div>
+                            <div className={"my-auto"}>
                                 <div className={"horizontal-line"}></div>
                             </div>
-                            <div>
-                                <div className={"dot"}></div>
+                            <div className={"my-auto"}>
                                 <div className={"horizontal-line"}></div>
                             </div>
-                            <div>
-                                <div className={"dot"}></div>
+                            <div className={"my-auto"}>
                                 <div className={"horizontal-line"}></div>
                             </div>
                         </div>
-                        <div className={"vertical-line"}></div>
+                        <div className={"vertical-line my-auto"}></div>
                     </div>
                 </div>
             </div>

@@ -1,21 +1,3 @@
-input[type=checkbox] {
-  display: none;
-  position: absolute;
-}
-
-input[type=checkbox]:checked~.menu-opened {
-  opacity: 1;
-  visibility: visible;
-  transition: 500ms ease-in;
-}
-
-input[type=checkbox]:checked~.menu-closed {
-  width: 2000px;
-  height: 2000px;
-  right: -1150px;
-  top: -500px;
-}
-
 label:hover {
   cursor: pointer;
 }
@@ -78,20 +60,12 @@ label:hover {
 
 .text-item {
   display: inline-block;
-  font-size: 40px;
   transition: .2s ease-out;
   color: white;
 
-  &:hover+.dot {
-    width: var(--dot-diametr);
-    height: var(--dot-diametr);
-    transition: .2s ease-out;
-  }
 }
 
 .dot {
-  right: var(--horizontal_line-width);
-  position: absolute;
   display: inline-block;
   width: 0;
   height: 0;
@@ -100,7 +74,20 @@ label:hover {
   transition: .3s ease-out;
 }
 
+.list-group-horizontal-menu {
+  height: 80%;
+}
+
+.list-group-item {
+  &:hover .dot {
+    width: var(--dot-diametr);
+    height: var(--dot-diametr);
+    transition: .2s ease-out;
+  }
+}
+
 .horizontal-line {
+  align-items: center;
   display: inline-block;
   height: var(--horizontal_line-height);
   width: var(--horizontal_line-width);
@@ -111,7 +98,7 @@ label:hover {
 
 .vertical-line {
   display: inline-block;
-  height: auto;
+  height: calc(76% + 2px);
   width: var(--vertical_line-width);
   background-color: white;
   border-radius: 0 3px 3px 0;
@@ -190,10 +177,6 @@ label:hover {
   :root {
     --list_item-margin-bottom: 37px;
   }
-
-  input[type=checkbox]:checked~.menu-closed {
-    top: -570px;
-  }
 }
 
 
@@ -201,50 +184,15 @@ label:hover {
   :root {
     --list_item-margin-bottom: 25px;
   }
-
-  input[type=checkbox]:checked~.menu-closed {
-    top: -570px;
-  }
 }
 
 @media (max-height: 720px) {
   :root {
     --list_item-margin-bottom: 15px;
   }
-
-  input[type=checkbox]:checked~.menu-closed {
-    top: -600px;
-  }
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {
-  .menu-closed {
-    background-color: transparent; // 
-    position: absolute;
-    // background-color: rgba(255, 92, 0, 1);
-    height: 915px * 0.67;
-    width: 915px * 0.67;
-    right: -500px * 0.67;
-    top: -640px * 0.67;
-    transition: 300ms linear;
-    z-index: 10;
-  }
-
-  .menu-opened {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    right: 0;
-    top: 0;
-  }
-
-  .navigation {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: right;
-  }
 
   .change-button {
     width: calc(var(--change-button-width) * 0.67);
