@@ -38,7 +38,14 @@ label:hover {
   transition: .2s ease-out;
   color: white;
   font-size: 40px;
+
+  &:hover+.dot {
+    width: calc(var(--dot-diametr)* var(--scale-pixel-koef));
+    height: calc(var(--dot-diametr)* var(--scale-pixel-koef));
+    transition: .2s ease-out; 
+  }
 }
+
 
 .dot {
   display: inline-block;
