@@ -3,10 +3,10 @@
   white-space: initial;
   overflow: hidden;
   margin: 20px;
-  width: 500px;
-  height: 570px;
-  background-color: white;
-  border: 5px solid #FF5C00;
+  width:calc(var(--scale-pixel-koef) * 500px);
+  height:calc(var(--scale-pixel-koef) * 570px);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 5px solid var(--color-orange);
   border-radius: 70px;
   user-select: none;
   -webkit-user-drag: none;
@@ -28,7 +28,7 @@
 .card-title {
   height: 60px;
   width: 100%;
-  background-color: #FF5C00;
+  background-color: var(--color-orange);
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -80,7 +80,7 @@ a {
 }
 
 .card-about:hover p {
-  color: #FF5C00;
+  color: var(--color-orange);
   transition: .1s linear;
 }
 

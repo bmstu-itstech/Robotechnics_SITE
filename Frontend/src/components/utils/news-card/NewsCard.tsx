@@ -1,4 +1,5 @@
 import React from 'react';
+import "../roots/newsCard_root.scss"
 import './newscard.scss';
 import arrow from "../../assets/icons/arrow.svg";
 

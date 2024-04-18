@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../../utils/roots/news_root.scss'
 import '../../utils/logo/logo.scss'
 import "./news.scss"
 import Logo from "../../utils/logo/Logo"
@@ -58,8 +59,8 @@ export const News = () => {
 
     return (
         <section className={"news-page"}>
-            <div className={"logo-row mx-auto justify-content-center"}>
-                <p title="новости" className={"title-text text-uppercase align-self-end mb-5"}>
+            <div className={"logo-row mx-auto justify-content-center title-text-main"}>
+                <p title="новости" className={"title-text text-uppercase align-self-end"}>
                     новости
                 </p>
             </div>
