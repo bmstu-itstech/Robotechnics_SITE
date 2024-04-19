@@ -11,19 +11,22 @@ const NewsCard = ({ title, description, new_url, photo }: {
 }) => {
     return (
         <div className="news-card">
-            <div className={"news-photo orange-gradient"}>
-                <img  src={photo} alt="" />
-            </div>
-            <div className="card-title"><p className="m-0 fw-bold text-white">{title}</p></div>
-            <div className="card-text">
-                <p className="m-0 text-black lh-sm fw-light">{description}</p>
-            </div>
-            <a href={new_url}>
-                <div className="card-about">
-                    <p className="m-0 fw-light">Узнать подробности</p>
-                    <img src={arrow} alt="" />
+            <div className='desktop'>
+                <div className={"news-photo orange-gradient"}>
+                    <img src={photo} alt="" />
                 </div>
-            </a>
+                <div className="card-title"><p className="m-0 fw-bold text-white">{title}</p></div>
+                <div className="card-text">
+                    <p className="m-0 text-black lh-sm fw-light">{description}</p>
+                </div>
+                <a href={new_url}>
+                    <div className="card-about">
+                        <p className="m-0 fw-light">Узнать подробности</p>
+                        <img src={arrow} alt="get-more-btn" />
+                    </div>
+                </a>
+            </div>
+            <div className={"mobile"}></div>
         </div>
     );
 };

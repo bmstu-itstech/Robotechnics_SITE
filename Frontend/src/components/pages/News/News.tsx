@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import '../../utils/roots/news_root.scss'
 import '../../utils/logo/logo.scss'
-import "./news.scss"
 import Logo from "../../utils/logo/Logo"
+import arrow from "../../assets/icons/arrow.svg";
 import { Link } from "react-router-dom";
 import NewsCard from "../../utils/news-card/NewsCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import axios from "axios";
 import Slider from "react-slick"
+import "./news.scss"
 
 interface News {
     title: string;
@@ -60,7 +61,7 @@ export const News = () => {
 
     return (
         <section className={"news-page"}>
-            <div className={"logo-row mx-auto justify-content-center title-text-main"}>
+            <div className={"logo-row mx-auto justify-content-center"}>
                 <p title="новости" className={"title-text text-uppercase align-self-end"}>
                     новости
                 </p>
@@ -79,6 +80,12 @@ export const News = () => {
                             photo={item.photo}
                         />
                     ))}
+                    <button className={'btn position-absolute start-0 top-50 swap-btn-news rotate-180 ms-2'} type="button">
+                        <img className={'img-fluid'} src={arrow} alt="prevButton" />
+                    </button>
+                    <button className={'btn position-absolute end-0 top-50 swap-btn-news me-2'} type="button">
+                        <img className={'img-fluid'} src={arrow} alt="nextButton" />
+                    </button>
                     <button className={"container-fluid container-fluid-margless button-main col-4 justify-content-center"}>
                         <Link className="link" to="/news">
                             <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>

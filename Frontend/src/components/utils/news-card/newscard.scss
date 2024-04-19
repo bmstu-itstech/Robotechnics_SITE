@@ -44,20 +44,21 @@
 }
 
 
-.orange-gradient{
+.orange-gradient {
   position: relative;
 
-  &::before{
+  &::before {
     content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
     right: 0;
     height: 30%;
-    background:linear-gradient(359.16deg, rgba(193, 49, 0, 0.7) 0.72%, rgba(0, 0, 0, 0) 101.11%) repeat left top;
+    background: linear-gradient(359.16deg, rgba(193, 49, 0, 0.7) 0.72%, rgba(0, 0, 0, 0) 101.11%) repeat left top;
   }
-  
+
 }
+
 .card-text {
   height: 160px;
   width: 90%;
@@ -100,6 +101,7 @@ a {
   transition: .1s linear;
 }
 
+
 @media (max-width: 540px) {
   .news-card {
     width: 90%;
@@ -120,7 +122,15 @@ a {
 }
 
 @media (max-width: 1100px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: inherit;
+  }
+
   .news-card {
-    margin: 15px 30px 15px 30px;
+    margin: 15px 30px;
   }
 }

@@ -28,6 +28,14 @@
     display: none;
 }
 
+.swap-btn-news {
+    opacity: 0.8;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
 @media (max-width: 1100px) {
     .desktop-carousel {
         display: none;
