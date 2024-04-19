@@ -57,7 +57,7 @@
 }
 
 .vk_link-main img {
-  height: 30px;
+  height: calc(30px * var(--scale-pixel-koef));
 }
 
 .arrow-btn-main {
@@ -87,12 +87,14 @@
 @media (max-width: 1000px) {
   .title-main {
     font-size: 69px;
+    line-height: 80px;
   }
 }
 
 @media (max-width: 730px) {
   .title-main {
     font-size: 50px;
+    line-height: 50px;
   }
 
   .text-main {
@@ -150,7 +152,4 @@
     padding: 0;
   }
 
-  .vk_link-main img {
-    height: 30px * 0.67;
-  }
 }

@@ -15,11 +15,11 @@ const Menu = () => {
 
     return (
         <div>
-            <button className="btn position-fixed border-0 p-0 bg-transparent change-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <img src={isChecked ? close : menu} alt="changeButton" className={"img-fluid"} />
+            <button className="btn position-fixed border-0 p-0 bg-transparent change-button" onClick={changeMenu} type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <img src={isChecked ? close : menu} alt="changeButton" className={"img-fluid img-fluid-height-100"} />
             </button>
 
-            <div className="offcanvas offcanvas-end bg-transparent border-0 p-0" tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div className="offcanvas offcanvas-end bg-transparent border-0 p-0"  tabIndex={-1}  id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasRightLabel"> </h5>
                     <button type="button" className="d-none btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
@@ -27,10 +27,10 @@ const Menu = () => {
                 <div className="offcanvas-body d-flex justify-content-end align-items-start mt-5 ps-0 overflow-visible">
                     <div className={"list-group list-group-horizontal list-group-horizontal-menu list-group-flush"}>
                         <div className={"list-group list-group-flush justify-content-center"}>
-                            <div className={"list-group-item  bg-transparent border-0 align-items-center d-flex justify-content-end my-auto ps-0"}>
+                            <div className={"list-group-item  bg-transparent border-0 align-items-center d-flex justify-content-end my-auto ps-0"} >
                                 <p className={"text-item"}>
                                     <button className={"menu-button text-uppercase text-white  "}>
-                                        <Link onClick={changeMenu} className={"link"} to="/">главная</Link>
+                                        <Link  className={"link"} to="/" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" onClick={changeMenu}>главная</Link>
                                     </button>
                                 </p>
                                 <div className={"dot position-absolute start-100"}></div>
@@ -38,7 +38,7 @@ const Menu = () => {
                             <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto ps-0"}>
                                 <p className={"text-item"}>
                                     <button className={"menu-button text-uppercase text-white"}>
-                                        <Link onClick={changeMenu} className={"link"} to="/events">мероприятия</Link>
+                                        <Link  className={"link"} to="/events" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" onClick={changeMenu}>мероприятия</Link>
                                     </button>
                                 </p>
                                 <div className={"dot position-absolute start-100"}></div>
@@ -46,7 +46,7 @@ const Menu = () => {
                             <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto ps-0"}>
                                 <p className={"text-item"}>
                                     <button className={"menu-button text-uppercase text-white "}>
-                                        <Link onClick={changeMenu} className={"link"} to="/hardathon">хардатон</Link>
+                                        <Link  className={"link"} to="/hardathon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" onClick={changeMenu}>хардатон</Link>
                                     </button>
                                 </p>
                                 <div className={"dot position-absolute start-100"}></div>
@@ -54,7 +54,7 @@ const Menu = () => {
                             <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto ps-0"}>
                                 <p className={"text-item"}>
                                     <button className={"menu-button text-uppercase text-white"}>
-                                        <Link onClick={changeMenu} className={"link"} to="/partners">партнёры</Link>
+                                        <Link className={"link"} to="/partners" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" onClick={changeMenu}>партнёры</Link>
                                     </button>
                                 </p>
                                 <div className={"dot position-absolute start-100"}></div>

@@ -20,7 +20,7 @@ label:hover {
   user-select: none;
   right: calc(var(--scale-pixel-koef) * 70px);
   top: calc(var(--scale-pixel-koef) * 80px);
-  ;
+
 }
 
 .change-button img {
@@ -42,7 +42,7 @@ label:hover {
   &:hover+.dot {
     width: calc(var(--dot-diametr)* var(--scale-pixel-koef));
     height: calc(var(--dot-diametr)* var(--scale-pixel-koef));
-    transition: .2s ease-out; 
+    transition: .2s ease-out;
   }
 }
 
@@ -77,6 +77,10 @@ label:hover {
   width: var(--vertical_line-width);
   background-color: white;
   border-radius: 0 3px 3px 0;
+}
+
+.img-fluid-height-100 {
+  height: 100%;
 }
 
 @media (max-width: 1450px) {}
@@ -133,7 +137,7 @@ label:hover {
       width: calc(var(--dot-diametr)* var(--scale-pixel-koef));
       height: calc(var(--dot-diametr)* var(--scale-pixel-koef));
       transition: .2s ease-out;
-      
+
     }
 
   }

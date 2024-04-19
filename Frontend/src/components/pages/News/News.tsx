@@ -3,6 +3,7 @@ import '../../utils/roots/news_root.scss'
 import '../../utils/logo/logo.scss'
 import "./news.scss"
 import Logo from "../../utils/logo/Logo"
+import { Link } from "react-router-dom";
 import NewsCard from "../../utils/news-card/NewsCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -78,6 +79,11 @@ export const News = () => {
                             photo={item.photo}
                         />
                     ))}
+                    <button className={"container-fluid container-fluid-margless button-main col-4 justify-content-center"}>
+                        <Link className="link" to="/news">
+                            <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
+                        </Link>
+                    </button >
                 </div>
             </div>
 
