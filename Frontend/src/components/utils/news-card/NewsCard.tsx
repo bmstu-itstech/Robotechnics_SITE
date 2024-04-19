@@ -11,8 +11,8 @@ const NewsCard = ({ title, description, new_url, photo }: {
 }) => {
     return (
         <div className="news-card">
-            <div className="news-photo">
-                <img src={photo} alt=""/>
+            <div className={"news-photo orange-gradient"}>
+                <img  src={photo} alt="" />
             </div>
             <div className="card-title"><p className="m-0 fw-bold text-white">{title}</p></div>
             <div className="card-text">
@@ -21,7 +21,7 @@ const NewsCard = ({ title, description, new_url, photo }: {
             <a href={new_url}>
                 <div className="card-about">
                     <p className="m-0 fw-light">Узнать подробности</p>
-                    <img src={arrow} alt=""/>
+                    <img src={arrow} alt="" />
                 </div>
             </a>
         </div>
