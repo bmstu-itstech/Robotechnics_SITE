@@ -15,7 +15,7 @@ const NewsCard = ({ title, description, new_url, photo }: {
                 <div className={"news-photo orange-gradient"}>
                     <img src={photo} alt="" />
                 </div>
-                <div className="card-title"><p className="m-0 fw-bold text-white">{title}</p></div>
+                <div className="card-title"><p className="m-0 fw-bold">{title}</p></div>
                 <div className="card-text">
                     <p className="m-0 text-black lh-sm fw-light">{description}</p>
                 </div>

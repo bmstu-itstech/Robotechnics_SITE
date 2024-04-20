@@ -23,15 +23,15 @@
   margin-top: 30px;
 }
 
-.mobile-carousel {
+.mobile-carousel-achievements {
   display: none;
 }
 
 @media (max-width: 1100px) {
-  .desktop-carousel {
+  .desktop-carousel-achievements {
     display: none;
   }
-  .mobile-carousel {
+  .mobile-carousel-achievements {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

@@ -53,9 +53,11 @@ export const News = () => {
                 </div>
             ))}
             controlsStrategy="alternate"
-            disableButtonsControls={true}
             responsive={responsive}
             infinite={true}
+            // autoWidth={true}
+            autoHeight={true}
+
         />
     );
 
@@ -70,7 +72,7 @@ export const News = () => {
                 <div className="desktop-carousel">
                     <Carousel items={news} />
                 </div>
-                <div className="mobile-carousel">
+                {/* <div className="mobile-carousel">
                     {news.map((item, index) => (
                         <NewsCard
                             key={index}
@@ -91,7 +93,7 @@ export const News = () => {
                             <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
                         </Link>
                     </button >
-                </div>
+                </div> */}
             </div>
 
         </section>

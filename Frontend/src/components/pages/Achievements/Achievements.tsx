@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import "./achievements.scss"
 import Logo from "../../utils/logo/Logo"
 import AchieveCard from "../../utils/achieve-card/AchieveCard";
@@ -21,10 +21,10 @@ export const Achievements = () => {
     useEffect(() => {
         axios.get('http://localhost:8000/api/v0/achievements/?page=1')
             .then(res => {
-                    setAchievements(res.data.achievements);
+                setAchievements(res.data.achievements);
             }).catch(err => {
                 console.log(err);
-        })
+            })
     }, []);
 
     const responsive = {
@@ -57,12 +57,24 @@ export const Achievements = () => {
 
     return (
         <section className="achievements-page">
-            <Logo title="достижения"/>
+            <div className={"logo-row mx-auto justify-content-center"}>
+                <p title="достижения" className={"title-text text-uppercase align-self-end"}>
+                    достижения
+                </p>
+            </div>
             <div className="achievements-carousel">
-                <div className="desktop-carousel">
-                    <Carousel items={achievements}/>
+                <div className="desktop-carousel-achievements">
+                {achievements.map((achievement, index) => (
+                        <AchieveCard
+                            title={achievement.title}
+                            description={achievement.description}
+                            photo_album_url={achievement.photo_album_url}
+                            link_to_media={achievement.link_to_media}
+                            photo={achievement.photo}
+                        />
+                    ))}
                 </div>
-                <div className="mobile-carousel">
+                <div className="mobile-carousel-achievements">
                     {achievements.map((achievement, index) => (
                         <AchieveCard
                             title={achievement.title}
