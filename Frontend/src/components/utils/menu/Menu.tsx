@@ -15,14 +15,14 @@ const Menu = () => {
 
     return (
         <div>
-            <button className="btn position-fixed border-0 p-0 bg-transparent change-button" onClick={changeMenu} type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button className="btn position-fixed border-0 p-0 bg-transparent change-button"  onClick={changeMenu} type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src={isChecked ? close : menu} alt="changeButton" className={"img-fluid img-fluid-height-100"} />
             </button>
 
             <div className="offcanvas offcanvas-end bg-transparent border-0 p-0"  tabIndex={-1}  id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasRightLabel"> </h5>
-                    <button type="button" className="d-none btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                    <button type="button" className="d-none btn-close-white" data-bs-dismiss="offcanvas"  aria-label="Закрыть"></button>
                 </div>
                 <div className="offcanvas-body d-flex justify-content-end align-items-start mt-5 ps-0 overflow-visible">
                     <div className={"list-group list-group-horizontal list-group-horizontal-menu list-group-flush"}>
