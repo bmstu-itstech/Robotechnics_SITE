@@ -40,7 +40,6 @@
   border: solid 2px #e43603;
   background: none;
   width: calc(var(--scale-pixel-koef) * 460px);
-  ;
   height: calc(var(--row-btn-height) * var(--scale-pixel-koef));
   border-radius: 50px;
   justify-content: center;
@@ -102,7 +101,7 @@
   }
 
   .button-main {
-    width: 90%;
+    width: 100%;
   }
 
   .hidden {

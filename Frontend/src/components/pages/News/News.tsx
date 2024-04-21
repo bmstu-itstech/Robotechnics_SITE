@@ -36,7 +36,7 @@ export const News = () => {
     const responsive = {
         0: { items: 1 },
         1100: { items: 2 },
-        1250: { items: 3 },
+        1600: { items: 3 },
         2350: { items: 4 }
     };
 
@@ -57,6 +57,7 @@ export const News = () => {
             responsive={responsive}
             infinite={true}
             autoHeight={true}
+            disableDotsControls={true}
 
         />
     );
@@ -72,7 +73,7 @@ export const News = () => {
                 <Carousel items={news} />
                 <button className={"container-fluid-margless button-news mx-auto"}>
                     <Link className="link" to="/news">
-                        <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
+                        <p className={"more-text-main text-light text-uppercase  m-0 fs-5"}>подробнее</p>
                     </Link>
                 </button >
                 {/* <div className="mobile-carousel">

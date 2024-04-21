@@ -10,21 +10,27 @@ const NewsCard = ({ title, description, new_url, photo }: {
     photo: string;
 }) => {
     return (
-        <div className="card">
-            <div className={"orange-gradient"}>
-                <img src={photo} className={"card-img img-fluid"} alt="card-img" />
-            </div>
-            <div className={"card-img-overlay"}>
-                <h1 className="card-header fw-bold card-title-mobile text-center">
-                    {title}
-                </h1>
-                <div className="card-text hidden">
-                    <p className="m-0 text-black lh-sm fw-light text-start">{description}</p>
+        <div className="news-card">
+            <div className={"news-mobile orange-gradient  position-relative"}>
+                <div className="news-photo">
+                    <img src={photo} alt="" />
                 </div>
-                <a href={new_url} className={"hidden"}>
+                <div className="card-title position-absolute bottom-0 start-50 translate-middle-x mb-5">
+                    <p className=" fw-bold text-white ">{title}</p>
+                </div>
+            </div>
+            <div className={"news-desktop position-relative "}>
+                <div className="news-photo h-50">
+                    <img src={photo} alt="" />
+                </div>
+                <div className="card-title"><p className="m-0  text-white">{title}</p></div>
+                <div className="card-text">
+                    <p className="m-0 text-black lh-sm fw-light">{description}</p>
+                </div>
+                <a href={new_url}>
                     <div className="card-about">
                         <p className="m-0 fw-light">Узнать подробности</p>
-                        <img src={arrow} alt="get-more-btn" />
+                        <img src={arrow} alt="" />
                     </div>
                 </a>
             </div>

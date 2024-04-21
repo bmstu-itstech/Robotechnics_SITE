@@ -82,11 +82,14 @@
     border: solid 2px #e43603;
     background: none;
     width: 80%;
-    height: calc(var(--row-btn-height) * var(--scale-pixel-koef));
+    max-width: 500px;
+    ;
+    height: calc(40px * var(--scale-pixel-koef));
     border-radius: 50px;
     justify-content: center;
 
 }
+
 
 @media (min-width: 1100px) {
     .alice-carousel__prev-btn {
@@ -110,6 +113,23 @@
     .alice-carousel__prev-btn-item {
         margin-left: 10px !important;
     }
+}
+
+@media (min-width: 320px) {
+    .button-news {
+        width: 80%;
+
+    }
+
+}
+
+@media (min-width: 769px) {
+    .button-news {
+        margin-top: 200px;
+        width: 60%;
+        height: calc(50px * var(--scale-pixel-koef));
+    }
+
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {
