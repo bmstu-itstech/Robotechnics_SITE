@@ -29,7 +29,7 @@ export const Home = () => {
                 <button className={"btn arrow-btn-main hidden col-1"}>
                     <img src={arrow_down} alt="arrow" className={"img-fluid"} />
                 </button >
-                <div className={"hidden position-absolute start-100 bottom-0"}>
+                <div className={"hidden position-absolute start-100 bottom-0 translate-middle"}>
                     <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target="_blank" role="button">
                         <img src={vk_logo} alt="vk_logo" draggable="false" />
                     </a>
