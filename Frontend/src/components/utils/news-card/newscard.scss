@@ -106,7 +106,7 @@ a {
 
 @media (max-width: 540px) {
   .news-card {
-    width: 90%;
+    width: 80%;
     height: 350px;
   }
 
@@ -124,15 +124,22 @@ a {
 }
 
 @media (max-width: 1100px) {
-  .desktop {
-    display: none;
-  }
+  // .desktop {
+  //   display: none;
+  // }
 
-  .mobile {
-    display: inherit;
-  }
+  // .mobile {
+  //   display: inherit;
+  // }
 
   // .news-card {
   //   margin: 15px 30px;
   // }
+}
+
+@media (min-width: 1100px){
+  .hidden{
+    display: none;
+  }
+  
 }

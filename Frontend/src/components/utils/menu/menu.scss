@@ -63,7 +63,7 @@ label:hover {
 
 .horizontal-line {
   align-items: center;
-  display: inline-block;
+  display: block;
   height: var(--horizontal_line-height);
   width: var(--horizontal_line-width);
   background-color: white;
@@ -72,8 +72,8 @@ label:hover {
 
 
 .vertical-line {
-  display: inline-block;
-  height: calc(76% + 2px);
+  display: block;
+  height: calc(75% + var(--horizontal_line-height));
   width: var(--vertical_line-width);
   background-color: white;
   border-radius: 0 3px 3px 0;

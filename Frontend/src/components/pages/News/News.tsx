@@ -10,6 +10,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import axios from "axios";
 import Slider from "react-slick"
 import "./news.scss"
+import { func } from 'prop-types';
 
 interface News {
     title: string;
