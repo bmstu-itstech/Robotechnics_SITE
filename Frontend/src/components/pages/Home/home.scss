@@ -73,7 +73,7 @@
   margin-top: calc(var(--scale-pixel-koef) * 105px);
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1450px) and (-webkit-device-pixel-ratio: 1) {
   .vk_logo {
     right: 0 !important;
     left: unset !important;

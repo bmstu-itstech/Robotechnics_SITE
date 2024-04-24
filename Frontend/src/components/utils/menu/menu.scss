@@ -37,7 +37,7 @@ label:hover {
   display: inline-block;
   transition: .2s ease-out;
   color: white;
-  font-size: 40px;
+  font-size: clamp(25px, 80vw, 40px);
 
   &:hover+.dot {
     width: calc(var(--dot-diametr)* var(--scale-pixel-koef));
@@ -132,15 +132,11 @@ label:hover {
   }
 
   .text-item {
-    display: inline-block;
-    font-size: 40px * 0.67;
-    transition: .2s ease-out;
-    color: white;
+    font-size: calc(clamp(25px, 80vw, 40px) * var(--scale-pixel-koef));
 
     &:hover+.dot {
       width: calc(var(--dot-diametr)* var(--scale-pixel-koef));
       height: calc(var(--dot-diametr)* var(--scale-pixel-koef));
-      transition: .2s ease-out;
 
     }
 
