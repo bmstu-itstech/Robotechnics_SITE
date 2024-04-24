@@ -83,7 +83,11 @@ label:hover {
   height: 100%;
 }
 
-@media (max-width: 1450px) {}
+@media (max-width: 1450px) {
+  .change-button {
+    transform: translate(0%, -50%) !important;
+  }
+}
 
 @media (max-width: 850px) {}
 

@@ -73,6 +73,13 @@
   margin-top: calc(var(--scale-pixel-koef) * 105px);
 }
 
+@media (max-width: 1450px) {
+  .vk_logo {
+    right: 0 !important;
+    left: unset !important;
+  }
+}
+
 @media (max-width: 1300px) {
   // .container-fluid {
   //   margin-top: 0;

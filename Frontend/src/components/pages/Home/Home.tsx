@@ -26,10 +26,10 @@ export const Home = () => {
                         <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
                     </Link>
                 </button >
-                <button className={"btn arrow-btn-main hidden col-1"}>
+                <button className={"btn arrow-btn-main hidden col-1 border-0"}>
                     <img src={arrow_down} alt="arrow" className={"img-fluid"} />
                 </button >
-                <div className={"hidden position-absolute start-100 bottom-0 translate-middle"}>
+                <div className={"hidden position-absolute start-100 bottom-0 vk_logo translate-middle-x"}>
                     <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" target="_blank" role="button">
                         <img src={vk_logo} alt="vk_logo" draggable="false" />
                     </a>
