@@ -1,19 +1,23 @@
-.achieve-card {
-  display: inline-block;
-  white-space: initial;
-  overflow: hidden;
-  margin: 20px;
-  width: 500px;
-  height: 570px;
-  background-color: black;
-  border: 5px solid #FF5C00;
-  border-radius: 70px;
+.achieve-card-mobile {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid var(--color-orange);
+  border-radius: 30px;
   user-select: none;
+  overflow: hidden;
   -webkit-user-drag: none;
+  height: clamp(82px, 5vh, 100px);
+
+  flex-direction: row;
+}
+
+.achieve-mobile-text {
+  font-size: clamp(14px, 2vw, 20px);
 }
 
 .achieve-photo {
-  width: 100%;
+  min-width: 30%;
+  max-width: 30%;
   height: 100%;
 
   & img {
@@ -25,25 +29,63 @@
   }
 }
 
+.achieve-vertical-line {
+  max-height: 100%;
+  width: 8px;
+  background: var(--color-orange);
+}
+
+.achieve-horizontal-line {
+  height: 3px;
+  align-self: center;
+  width: 80%;
+  background: var(--color-orange);
+
+}
+
 .achieve-title {
-  height: 60px;
   width: 100%;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
+  align-content: center;
 
   & p {
-    width: 350px;
-    line-height: 100%;
+    min-height: 100%;
+  
     text-align: center;
     user-select: none;
     -webkit-user-drag: none;
-    font-size: 25px;
+    font-size: clamp(12px, 3vw, 20px);
+  }
+
+}
+
+
+.achieve-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    font-size: clamp(12px, 3vw, 20px);
   }
 }
 
+
+
+.achieve-more::after {
+  content: "";
+  background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
+  width: clamp(5px, 2vw, 12px);
+  height: clamp(5px, 2vw, 12px);
+  object-fit: contain;
+  transform: translate(50%, -50%);
+}
+
+.achieve-mobile:nth-child(even){
+  .achieve-card-mobile{
+    flex-direction: row-reverse;
+  }
+}
 .achieve-text {
   height: 160px;
   width: 90%;
@@ -77,6 +119,12 @@ a {
   transition: .1s linear;
 }
 
+.achieve-vertical-group {
+  align-items: center;
+  min-height: 100%;
+  max-height: 100%;
+}
+
 .overlay-gradient {
   position: absolute;
   top: 0;
@@ -107,7 +155,7 @@ a {
 
 
 .card {
-  all:unset;
+  all: unset;
   border: 5px solid var(--color-orange);
 }
 

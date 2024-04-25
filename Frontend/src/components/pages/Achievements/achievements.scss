@@ -12,7 +12,7 @@
 .alice-carousel__stage-item.__active,
 .alice-carousel__stage-item.__cloned,
 .alice-carousel__stage-item.__target {
-  text-align:center;
+  text-align: center;
 }
 
 .alice-carousel__dots {
@@ -27,13 +27,17 @@
   display: none;
 }
 
+
 @media (max-width: 1100px) {
   .desktop-carousel-achievements {
     display: none;
   }
+
   .mobile-carousel-achievements {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 50px;
   }
 }

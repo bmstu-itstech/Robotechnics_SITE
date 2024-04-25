@@ -43,6 +43,7 @@ label:hover {
     width: calc(var(--dot-diametr)* var(--scale-pixel-koef));
     height: calc(var(--dot-diametr)* var(--scale-pixel-koef));
     transition: .2s ease-out;
+    transform: translateX(-50%);
   }
 }
 
