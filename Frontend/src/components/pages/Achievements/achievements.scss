@@ -27,6 +27,11 @@
   display: none;
 }
 
+.desktop-carousel-achievements {
+  display: flex;
+  flex-direction: row;
+}
+
 
 @media (max-width: 1100px) {
   .desktop-carousel-achievements {

@@ -1,4 +1,4 @@
-.achieve-card-mobile {
+.mobile-carousel-achievements .achieve-card-mobile {
   display: flex;
   background-color: transparent;
   border: 1px solid var(--color-orange);
@@ -12,17 +12,17 @@
   max-width: 650px;
 }
 
-.achieve-mobile {
+.mobile-carousel-achievements .achieve-mobile {
   width: 100%;
   height: 100%;
   justify-content: center;
 }
 
-.achieve-mobile-text {
+.mobile-carousel-achievements .achieve-mobile-text {
   font-size: clamp(14px, 2vw, 20px);
 }
 
-.achieve-photo {
+.mobile-carousel-achievements .achieve-photo {
   display: flex;
   min-width: 30%;
   max-width: 30%;
@@ -41,13 +41,13 @@
 }
 
 
-.achieve-vertical-line {
+.mobile-carousel-achievements .achieve-vertical-line {
   max-height: 100%;
   width: 8px;
   background: var(--color-orange);
 }
 
-.achieve-horizontal-line {
+.mobile-carousel-achievements .achieve-horizontal-line {
   height: 3px;
   align-self: center;
   width: 80%;
@@ -55,7 +55,7 @@
 
 }
 
-.achieve-title {
+.mobile-carousel-achievements .achieve-title {
   width: 100%;
   text-transform: uppercase;
   align-content: center;
@@ -72,7 +72,7 @@
 }
 
 
-.achieve-more {
+.mobile-carousel-achievements .achieve-more {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -87,7 +87,7 @@
 
 
 
-.achieve-more::after {
+.mobile-carousel-achievements .achieve-more::after {
   content: "";
   background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
   width: clamp(5px, 2vw, 12px);
@@ -129,7 +129,7 @@ a {
 //   transition: .1s linear;
 // }
 
-.achieve-vertical-group {
+.mobile-carousel-achievements .achieve-vertical-group {
   align-items: center;
   justify-content: center;
   height: min-content;
@@ -173,14 +173,29 @@ a {
 //   all: unset;
 // }
 
-.achieve-mobile:nth-child(even) {
+.achieve-desktop {
+  display: none;
+}
+
+.achieve-card:nth-child(even) .achieve-mobile {
   .achieve-card-mobile {
     flex-direction: row-reverse;
   }
 }
 
-// @media (max-width: 1100px) {
-//   .achieve-card {
-//     margin: 15px 30px 15px 30px;
-//   }
-// }
+.achieve-card:nth-child(1) .achieve-desktop {
+  .achieve-card-desktop {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1100px) {
+  .achieve-mobile {
+    display: none;
+  }
+
+  .achieve-desktop {
+    display: unset;
+  }
+
+}
