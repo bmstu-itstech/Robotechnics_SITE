@@ -62,8 +62,8 @@ export const Achievements = () => {
                     достижения
                 </p>
             </div>
-            <div className="achievements-carousel d-flex justify-content-center">
-                <div className="desktop-carousel-achievements">
+            <div className="container-fluid achievements-carousel d-flex justify-content-center">
+                <div className="container-fluid desktop-carousel-achievements">
                     {achievements.map((achievement, index) => (
                         <AchieveCard
                             title={achievement.title}

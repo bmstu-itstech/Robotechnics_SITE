@@ -1,138 +1,119 @@
-.mobile-carousel-achievements .achieve-card-mobile {
-  display: flex;
-  background-color: transparent;
-  border: 1px solid var(--color-orange);
-  border-radius: clamp(30px, 3vw, 40px);
-  user-select: none;
-  overflow: hidden;
-  -webkit-user-drag: none;
-  height: clamp(100px, 30vw, 250px);
-  width: 100%;
-  flex-direction: row;
-  max-width: 650px;
-}
+// --------------------MOBILE------------------------
 
-.mobile-carousel-achievements .achieve-mobile {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-
-.mobile-carousel-achievements .achieve-mobile-text {
-  font-size: clamp(14px, 2vw, 20px);
-}
-
-.mobile-carousel-achievements .achieve-photo {
-  display: flex;
-  min-width: 30%;
-  max-width: 30%;
-  overflow: hidden;
-
-  & img {
-    object-fit: cover;
-    /* Do not scale the image */
-    object-position: center center;
-    /* Center the image within the element */
-    -o-object-fit: cover;
-    -o-object-position: center center;
-    height: 100%;
+.mobile-carousel-achievements {
+  & .achieve-card-mobile {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid var(--color-orange);
+    border-radius: clamp(30px, 3vw, 40px);
+    user-select: none;
+    overflow: hidden;
+    -webkit-user-drag: none;
+    height: clamp(100px, 30vw, 250px);
     width: 100%;
+    flex-direction: row;
+    max-width: 650px;
   }
-}
 
+  & .achieve-mobile {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
 
-.mobile-carousel-achievements .achieve-vertical-line {
-  max-height: 100%;
-  width: 8px;
-  background: var(--color-orange);
-}
+  & .achieve-mobile-text {
+    font-size: clamp(14px, 2vw, 20px);
+  }
 
-.mobile-carousel-achievements .achieve-horizontal-line {
-  height: 3px;
-  align-self: center;
-  width: 80%;
-  background: var(--color-orange);
+  & .achieve-photo {
+    min-width: 30%;
+    max-width: 30%;
+    overflow: hidden;
 
-}
+    & img {
+      object-fit: cover;
+      /* Do not scale the image */
+      object-position: center center;
+      /* Center the image within the element */
+      -o-object-fit: cover;
+      -o-object-position: center center;
+      height: 100%;
+      width: 100%;
+    }
+  }
 
-.mobile-carousel-achievements .achieve-title {
-  width: 100%;
-  text-transform: uppercase;
-  align-content: center;
+  & .achieve-vertical-line {
+    max-height: 100%;
+    width: 8px;
+    background: var(--color-orange);
+  }
 
-  & p {
-    text-align: center;
+  & .achieve-horizontal-line {
+    height: 3px;
+    align-self: center;
+    width: 80%;
+    background: var(--color-orange);
+
+  }
+
+  & .achieve-title {
+    width: 100%;
+    text-transform: uppercase;
+    align-content: center;
+
+    & p {
+      text-align: center;
+      margin-top: clamp(14px, 4vw, 22px);
+      margin-bottom: clamp(14px, 4vw, 22px);
+      user-select: none;
+      -webkit-user-drag: none;
+      font-size: clamp(12px, 3vw, 20px);
+    }
+
+  }
+
+  & .achieve-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: clamp(14px, 4vw, 22px);
     margin-bottom: clamp(14px, 4vw, 22px);
+
+    a {
+      font-size: clamp(12px, 3vw, 20px);
+    }
+  }
+
+  & .achieve-more::after {
+    content: "";
+    background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
+    width: clamp(5px, 2vw, 12px);
+    height: clamp(5px, 2vw, 12px);
+    object-fit: contain;
+    transform: translate(50%, -50%);
+  }
+
+  & .achieve-vertical-group {
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+  }
+}
+
+//-----------------------------DESKTOP--------------------------
+
+.desktop-carousel-achievements {
+  & .achieve-card-desktop {
+    display: flex;
+    width: 33%;
+    border-radius: clamp(30px, 3vw, 40px);
     user-select: none;
+    overflow: hidden;
     -webkit-user-drag: none;
-    font-size: clamp(12px, 3vw, 20px);
+    height: clamp(280px, 30vw, 450px);
+    flex-direction: column;
   }
-
-}
-
-
-.mobile-carousel-achievements .achieve-more {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: clamp(14px, 4vw, 22px);
-  margin-bottom: clamp(14px, 4vw, 22px);
-
-  a {
-    font-size: clamp(12px, 3vw, 20px);
-  }
-}
-
-
-
-.mobile-carousel-achievements .achieve-more::after {
-  content: "";
-  background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
-  width: clamp(5px, 2vw, 12px);
-  height: clamp(5px, 2vw, 12px);
-  object-fit: contain;
-  transform: translate(50%, -50%);
-}
-
-// .achieve-text {
-//   height: 160px;
-//   width: 90%;
-//   margin: 20px auto 0;
-//   overflow: auto;
-//   text-align: left;
-//   user-select: none;
-//   -webkit-user-drag: none;
-// }
-
-a {
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-// .achieve-button {
-//   border: solid 2px #FF5C00;
-//   background: #FF5C00;
-//   width: 360px;
-//   height: 60px;
-//   border-radius: 50px;
-
-//   & a {
-//     font-size: 28px;
-//     text-transform: uppercase;
-//   }
-// }
-
-// .achieve-button:hover p {
-//   color: #FF5C00;
-//   transition: .1s linear;
-// }
-
-.mobile-carousel-achievements .achieve-vertical-group {
-  align-items: center;
-  justify-content: center;
-  height: min-content;
 }
 
 .overlay-gradient {
@@ -144,37 +125,17 @@ a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);
 }
 
-// @media (max-width: 540px) {
-//   .achieve-card {
-//     width: 90%;
-//     height: 350px;
-//   }
 
-//   .achieve-photo {
-//     height: 200px;
-//   }
-
-//   .achieve-text {
-//     display: none;
-//   }
-
-//   .achieve-about {
-//     margin-top: 10px;
-//   }
-// }
-
-
-// .card {
-//   all: unset;
-//   border: 5px solid var(--color-orange);
-// }
-
-// .card-title {
-//   all: unset;
-// }
 
 .achieve-desktop {
-  display: none;
+  display: none !important;
+}
+
+
+
+a {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .achieve-card:nth-child(even) .achieve-mobile {
@@ -185,17 +146,19 @@ a {
 
 .achieve-card:nth-child(1) .achieve-desktop {
   .achieve-card-desktop {
-    flex-grow: 1;
+    width: 100%;
+    min-width: 100%;
   }
 }
 
+
 @media (min-width: 1100px) {
   .achieve-mobile {
-    display: none;
+    display: none !important;
   }
 
   .achieve-desktop {
-    display: unset;
+    display: unset !important;
   }
 
 }
