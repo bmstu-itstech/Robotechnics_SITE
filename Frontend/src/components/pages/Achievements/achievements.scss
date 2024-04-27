@@ -1,7 +1,8 @@
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
 .achievements-page {
-  background: url("../../../../src/components/assets/images/background.svg") no-repeat center;
+  background:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+   url("../../../../src/components/assets/images/background.svg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -9,6 +10,7 @@
   overflow: auto;
   scrollbar-color: rgb(193 49 0 / 80%) transparent;
 }
+
 
 .alice-carousel__stage-item.__active,
 .alice-carousel__stage-item.__cloned,

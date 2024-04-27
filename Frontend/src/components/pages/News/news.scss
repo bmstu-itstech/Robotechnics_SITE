@@ -2,7 +2,8 @@
 
 
 .news-page {
-    background: url("../../../../src/components/assets/images/background.svg") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../../../src/components/assets/images/background.svg") no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100vh;
