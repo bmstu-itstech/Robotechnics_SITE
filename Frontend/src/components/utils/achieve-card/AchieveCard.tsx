@@ -1,4 +1,5 @@
 import React from 'react';
+import '../roots/achieveCard_root.scss'
 import './achievecard.scss';
 import arrow from "../../assets/icons/arrow.svg";
 
@@ -29,14 +30,14 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
                 </div>
             </div>
 
-            <div className="d-flex achieve-desktop">
-                <div className={"card achieve-card-desktop"}>
-                    <img src={photo} alt="card-img achieve-photo " />
+            <button className="d-flex achieve-desktop border-0 p-0 bg-transparent">
+                <a className={"card achieve-card-desktop"} href={link_to_media}>
+                    <img className={"achieve-photo"} src={photo} alt="card-img" />
                     <div className={"card-img-overlay overlay-gradient"}>
-                        <h3 className="card-title fw-bold text-white text-uppercase text-center">{title}</h3>
+                        <h3 className="card-title fw-bold text-uppercase text-center top-50 start-50">{title}</h3>
                     </div>
-                </div>
-            </div>
+                </a>
+            </button>
         </div>
     );
 };

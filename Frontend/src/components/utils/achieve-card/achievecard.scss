@@ -4,7 +4,7 @@
   & .achieve-card-mobile {
     display: flex;
     background-color: transparent;
-    border: 1px solid var(--color-orange);
+    border: 2px solid var(--color-border-orange);
     border-radius: clamp(30px, 3vw, 40px);
     user-select: none;
     overflow: hidden;
@@ -43,14 +43,14 @@
   & .achieve-vertical-line {
     max-height: 100%;
     width: 8px;
-    background: var(--color-orange);
+    background: var(--color-border-orange);
   }
 
   & .achieve-horizontal-line {
     height: 3px;
     align-self: center;
     width: 80%;
-    background: var(--color-orange);
+    background: var(--color-border-orange);
 
   }
 
@@ -66,6 +66,7 @@
       user-select: none;
       -webkit-user-drag: none;
       font-size: clamp(12px, 3vw, 20px);
+      color: var(--color-text-white);
     }
 
   }
@@ -102,15 +103,21 @@
 //-----------------------------DESKTOP--------------------------
 
 .desktop-carousel-achievements {
+  & .achieve-card {
+    min-width: 33.3%;
+    max-width: 33.3%;
+    padding: clamp(10px, 2vw, 30px);
+  }
+
   & .achieve-card-desktop {
     display: flex;
     border-radius: clamp(30px, 3vw, 40px);
     user-select: none;
     overflow: hidden;
     -webkit-user-drag: none;
-    height: clamp(280px, 30vw, 450px);
+    height: clamp(150px, 15vw, 300px);
     flex-direction: row;
-    border: 1px solid var(--color-orange);
+    border: 2px solid var(--color-border-orange);
   }
 
   & .achieve-photo {
@@ -120,6 +127,11 @@
     -o-object-position: center center;
     height: 100%;
     width: 100%;
+    min-width: 100%;
+  }
+
+  & .card-title {
+    color: var(--color-text-white) !important;
   }
 }
 
@@ -153,10 +165,12 @@ a {
   }
 }
 
-.achieve-card:nth-child(1) .achieve-desktop {
-  .achieve-card-desktop {
-    width: 100%;
-    min-width: 100%;
+.desktop-carousel-achievements .achieve-card:nth-child(1) {
+  min-width: 100%;
+  max-width: 100%;
+
+  & .achieve-card-desktop {
+    height: clamp(300px, 28vw, 600px);
   }
 }
 

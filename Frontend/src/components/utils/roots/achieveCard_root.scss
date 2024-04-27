@@ -1,5 +1,6 @@
-:root{
+:root {
     --display-ration: 1;
     --scale-pixel-koef: 1/($--display-ration);
-    --color-orange: rgba(193, 49, 0, 1)
+    --color-border-orange: rgba(193, 49, 0, 1);
+    --color-text-white: rgb(255, 255, 255, 1);
 }

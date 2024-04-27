@@ -7,6 +7,7 @@
   height: 100vh;
   position: relative;
   overflow: auto;
+  scrollbar-color: rgb(193 49 0 / 80%) transparent;
 }
 
 .alice-carousel__stage-item.__active,
@@ -29,6 +30,7 @@
 }
 
 .desktop-carousel-achievements {
+  max-width: 2000px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
