@@ -33,8 +33,8 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
             <button className="d-flex achieve-desktop border-0 p-0 bg-transparent">
                 <a className={"card achieve-card-desktop"} href={link_to_media}>
                     <img className={"achieve-photo"} src={photo} alt="card-img" />
-                    <div className={"card-img-overlay overlay-gradient"}>
-                        <h3 className="card-title fw-bold text-uppercase text-center top-50 start-50">{title}</h3>
+                    <div className={"card-img-overlay  overlay-gradient d-flex "}>
+                        <h3 className="card-title text-uppercase text-center ">{title}</h3>
                     </div>
                 </a>
             </button>

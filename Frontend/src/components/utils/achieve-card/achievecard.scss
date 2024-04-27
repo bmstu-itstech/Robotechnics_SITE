@@ -58,6 +58,7 @@
     width: 100%;
     text-transform: uppercase;
     align-content: center;
+    ;
 
     & p {
       text-align: center;
@@ -78,7 +79,6 @@
     align-items: center;
     margin-top: calc(clamp(14px, 4vw, 22px) * var(--scale-pixel-koef));
     margin-bottom: calc(clamp(14px, 4vw, 22px) * var(--scale-pixel-koef));
-
     a {
       font-size: calc(clamp(12px, 3vw, 20px) * var(--scale-pixel-koef));
     }
@@ -132,6 +132,14 @@
 
   & .card-title {
     color: var(--color-text-white) !important;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    font-size: calc(var(--scale-pixel-koef) * clamp(24px, 2vw, 36px));
   }
 }
 
