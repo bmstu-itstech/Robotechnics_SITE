@@ -5,11 +5,11 @@
     display: flex;
     background-color: transparent;
     border: 2px solid var(--color-border-orange);
-    border-radius: clamp(30px, 3vw, 40px);
+    border-radius: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
     user-select: none;
     overflow: hidden;
     -webkit-user-drag: none;
-    height: clamp(100px, 30vw, 250px);
+    height: calc(clamp(100px, 30vw, 250px) * var(--scale-pixel-koef));
     width: 100%;
     flex-direction: row;
     max-width: 650px;
@@ -22,7 +22,7 @@
   }
 
   & .achieve-mobile-text {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: calc(clamp(14px, 2vw, 20px) * var(--scale-pixel-koef));
   }
 
   & .achieve-photo {
@@ -65,7 +65,7 @@
       margin-bottom: clamp(14px, 4vw, 22px);
       user-select: none;
       -webkit-user-drag: none;
-      font-size: clamp(12px, 3vw, 20px);
+      font-size: calc(clamp(12px, 3vw, 20px) * var(--scale-pixel-koef));
       color: var(--color-text-white);
     }
 
@@ -76,19 +76,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: clamp(14px, 4vw, 22px);
-    margin-bottom: clamp(14px, 4vw, 22px);
+    margin-top: calc(clamp(14px, 4vw, 22px) * var(--scale-pixel-koef));
+    margin-bottom: calc(clamp(14px, 4vw, 22px) * var(--scale-pixel-koef));
 
     a {
-      font-size: clamp(12px, 3vw, 20px);
+      font-size: calc(clamp(12px, 3vw, 20px) * var(--scale-pixel-koef));
     }
   }
 
   & .achieve-more::after {
     content: "";
     background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
-    width: clamp(5px, 2vw, 12px);
-    height: clamp(5px, 2vw, 12px);
+    width: calc(clamp(5px, 2vw, 12px) * var(--scale-pixel-koef));
+    height: calc(clamp(5px, 2vw, 12px) * var(--scale-pixel-koef));
     object-fit: contain;
     transform: translate(50%, -50%);
   }
@@ -106,16 +106,16 @@
   & .achieve-card {
     min-width: 33.3%;
     max-width: 33.3%;
-    padding: clamp(10px, 2vw, 30px);
+    padding: calc(clamp(10px, 2vw, 30px) * var(--scale-pixel-koef));
   }
 
   & .achieve-card-desktop {
     display: flex;
-    border-radius: clamp(30px, 3vw, 40px);
+    border-radius: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
     user-select: none;
     overflow: hidden;
     -webkit-user-drag: none;
-    height: clamp(150px, 15vw, 300px);
+    aspect-ratio: 2/1;
     flex-direction: row;
     border: 2px solid var(--color-border-orange);
   }
@@ -170,7 +170,7 @@ a {
   max-width: 100%;
 
   & .achieve-card-desktop {
-    height: clamp(300px, 28vw, 600px);
+    aspect-ratio: 3/1;
   }
 }
 

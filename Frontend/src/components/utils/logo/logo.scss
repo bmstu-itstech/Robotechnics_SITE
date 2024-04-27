@@ -1,6 +1,6 @@
 .logo-row {
   width: 100%;
-  height: calc(var(--scale-pixel-koef) * 130px);
+  height: calc(var(--scale-pixel-koef) * clamp(60px, 15vw, 130px));
   justify-content: start;
   position: relative;
   display: flex;
@@ -23,7 +23,7 @@
 
 .title-text {
   margin: 0;
-  font-size: clamp(30px,10vw, 80px);
+  font-size: calc(clamp(14px, 8vw, 80px) * var(--scale-pixel-koef));
   font-weight: 900;
   color: white;
   line-height: 100%;
@@ -34,6 +34,8 @@
   .logo-row {
     gap: calc(var(--scale-pixel-koef) * 25px);
   }
+
+
 }
 
 @media (max-width: 730px) {
@@ -49,9 +51,9 @@
 }
 
 @media (max-width: 430px) {
-  .title-text {
-    font-size: calc(var(--scale-pixel-koef)* 30px);
-  }
+  // .title-text {
+  //   font-size: calc(var(--scale-pixel-koef)* 30px);
+  // }
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {

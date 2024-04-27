@@ -13,8 +13,8 @@ label:hover {
 }
 
 .change-button {
-  width: calc(var(--change-button-width) * var(--scale-pixel-koef));
-  height: calc(var(--change-button-height) * var(--scale-pixel-koef));
+  width: calc(clamp(40px, 7vw, 80px) * var(--scale-pixel-koef));
+  height: auto;
   color: white;
   z-index: 10000;
   user-select: none;
