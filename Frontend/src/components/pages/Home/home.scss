@@ -73,11 +73,9 @@
   margin-top: calc(var(--scale-pixel-koef) * 105px);
 }
 
-@media (max-width: 1450px) and (-webkit-device-pixel-ratio: 1) {
-  .vk_logo {
-    right: 0 !important;
-    left: unset !important;
-  }
+.vk_logo {
+  bottom: calc(var(--scale-pixel-koef) * clamp(10px, 4vw, 30px));
+  right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px) - 5vw);
 }
 
 @media (max-width: 1300px) {

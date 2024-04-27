@@ -13,13 +13,13 @@ label:hover {
 }
 
 .change-button {
-  width: calc(clamp(40px, 7vw, 80px) * var(--scale-pixel-koef));
-  height: auto;
+  height: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
+  width: auto;
   color: white;
   z-index: 10000;
   user-select: none;
-  right: calc(var(--scale-pixel-koef) * 70px);
-  top: calc(var(--scale-pixel-koef) * 80px);
+  right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px));
+  top: calc(var(--scale-pixel-koef) * 60px);
 
 }
 
@@ -84,11 +84,11 @@ label:hover {
   height: 100%;
 }
 
-@media (max-width: 1450px) {
-  .change-button {
-    transform: translate(0%, -50%) !important;
-  }
-}
+// @media (max-width: 1450px) {
+//   .change-button {
+//     transform: translate(0%, -50%) !important;
+//   }
+// }
 
 @media (max-width: 850px) {}
 
