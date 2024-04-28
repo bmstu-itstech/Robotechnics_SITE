@@ -98,6 +98,7 @@
     justify-content: center;
     height: min-content;
   }
+
 }
 
 //-----------------------------DESKTOP--------------------------
@@ -207,7 +208,7 @@ a {
     display: inherit;
     height: fit-content;
     flex-direction: column;
-    width: 45%;
+    width: 35%;
     height: 100%;
     justify-content: space-between;
     padding-bottom: 2%;
@@ -257,7 +258,7 @@ a {
   }
 
   & .achieve-description {
-    font-size: calc(var(--scale-pixel-koef) * clamp(20px, 1.7vw, 40px));
+    font-size: calc(var(--scale-pixel-koef) * clamp(20px, 1.4vw, 40px));
     text-align: left;
     height: auto;
   }

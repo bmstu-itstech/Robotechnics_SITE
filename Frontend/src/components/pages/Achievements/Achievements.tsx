@@ -4,6 +4,7 @@ import Logo from "../../utils/logo/Logo"
 import AchieveCard from "../../utils/achieve-card/AchieveCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import down_arrow from "../../assets/icons/arrow.svg";
 import axios from "axios";
 
 interface Achievement {
@@ -74,7 +75,7 @@ export const Achievements = () => {
                         />
                     ))}
                 </div>
-                <div className="mobile-carousel-achievements">
+                <div className="mobile-carousel-achievements ">
                     {achievements.map((achievement, index) => (
                         <AchieveCard
                             title={achievement.title}
@@ -84,6 +85,9 @@ export const Achievements = () => {
                             photo={achievement.photo}
                         />
                     ))}
+                    <button className={"btn b-0 p-0 bg-transparent position-absolute swap-card"}>
+                        <img src={down_arrow} alt="down-arrow" />
+                    </button>
                 </div>
             </div>
         </section>

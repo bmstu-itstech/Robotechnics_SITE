@@ -11,7 +11,7 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
     photo: string
 }) => {
     return (
-        <div className={"achieve-card"}>
+        <div className={"achieve-card position-relative "}>
             <div className="d-inline-flex achieve-mobile">
                 <div className={"achieve-card-mobile list-group list-group-horizontal flex-fill"}>
                     <div className="achieve-photo border-0 p-0">
@@ -36,7 +36,7 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
                     <div className={"card-img-overlay overlay-gradient d-flex  "}>
                         <h3 className="card-title text-uppercase text-center">{title}</h3>
                         <div className={"first-card"}>
-                            <p className={"achieve-description"}>{description}</p>
+                            <p className={"achieve-description text-break" }>{description}</p>
                             <div className={"d-flex flex-row"}>
                                 <button className={"btn achieve-button-f-card"}>Фото</button>
                                 <button className={"btn achieve-button-f-card"}>СМИ</button>
