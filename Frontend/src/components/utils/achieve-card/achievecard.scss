@@ -140,7 +140,7 @@
     padding: 0px;
     margin: 0px;
     font-weight: 400;
-    font-size: calc(var(--scale-pixel-koef) * clamp(24px, 2vw, 36px));
+    font-size: calc(var(--scale-pixel-koef) * clamp(24px, 2.5vw, 36px));
   }
 
   & .first-card {
