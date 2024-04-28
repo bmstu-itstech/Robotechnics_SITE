@@ -4,6 +4,7 @@ import arrow from "../../assets/icons/arrow.svg"
 import pic1 from "../../assets/images/events/event1.png"
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {localhost} from "../../../index"
 
 interface Hardathon {
     title: string,
@@ -15,7 +16,7 @@ export const Hardathon = () => {
     const [hardathons, setHardathons] = useState<Hardathon[]>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/v0/hardatons/?page=1')
+        axios.get(localhost +'hardatons/?page=1')
             .then(res => {
                 setHardathons(res.data.hardatons);
             }).catch(err => {

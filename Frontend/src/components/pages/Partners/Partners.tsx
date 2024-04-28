@@ -10,6 +10,7 @@ import pic4 from "../../assets/images/partners/pic4.png"
 import axios from "axios";
 import AchieveCard from "../../utils/achieve-card/AchieveCard";
 import {Link} from "react-router-dom";
+import {localhost} from "../../../index"
 
 interface Partners {
     title: string;
@@ -21,7 +22,7 @@ export const Partners = () => {
     const [partners, setPartners] = useState<Partners[]>([]);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v0/partners/?page=1')
+        axios.get(localhost + 'partners/?page=1')
             .then(res => {
                 setPartners(res.data.partners);
             }).catch(err => {
@@ -36,14 +37,14 @@ export const Partners = () => {
         1550: { items: 4 }
     };
 
-    const Carousel = ({ items } : { items: Partners[] }) => (
+    const Carousel = ({ items }: { items: Partners[] }) => (
         <AliceCarousel
             mouseTracking
             items={items.map((item, index) => (
                 <div key={index}>
                     <Link to={item.link}>
                         <div className={"partner-card"}>
-                             <img src={item.photo}/>
+                            <img src={item.photo} alt={item.title}/>
                         </div>
                     </Link>
                 </div>
@@ -55,10 +56,9 @@ export const Partners = () => {
         />
     );
 
-
     return (
         <section className={"page-section"}>
-            <Logo title="наши партнёры"/>
+            <h1 className="title">Наши партнёры</h1>
             <Carousel items={partners}/>
         </section>
     )
