@@ -63,10 +63,11 @@
 
     & p {
       text-align: center;
-      line-height: clamp(14px, 6vw, 20px);
+      // line-height: calc(clamp(14px, 6vw, 30px) * var(--scale-pixel-koef));
       user-select: none;
+      font-weight: 900;
       -webkit-user-drag: none;
-      font-size: calc(clamp(12px, 4.5vw, 20px) * var(--scale-pixel-koef));
+      font-size: calc(clamp(12px, 4.5vw, 30px) * var(--scale-pixel-koef));
       color: var(--color-text-white);
     }
 
@@ -80,7 +81,7 @@
     height: auto;
 
     a {
-      font-size: calc(clamp(12px, 4.5vw, 20px) * var(--scale-pixel-koef));
+      font-size: calc(clamp(12px, 4.5vw, 30px) * var(--scale-pixel-koef));
     }
   }
 
@@ -178,6 +179,21 @@ a {
 .achieve-card:nth-child(even) .achieve-mobile {
   .achieve-card-mobile {
     flex-direction: row-reverse;
+  }
+}
+
+
+.desktop-carousel-achievements .achieve-card {
+  display: none;
+}
+
+.desktop-carousel-achievements {
+  & .achieve-card:nth-child(1),
+  .achieve-card:nth-child(2),
+  .achieve-card:nth-child(3),
+  .achieve-card:nth-child(4) 
+  {
+    display: inherit;
   }
 }
 
