@@ -26,3 +26,25 @@ body {
 a {
   text-decoration: none;
 }
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  :root {
+    --display-ration: 1.5;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  :root {
+    --display-ration: 1.25;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.75) {
+  :root {
+    --display-ration: 1.75;
+  }
+}
+@media (-webkit-device-pixel-ratio: 2) {
+  :root {
+    --display-ration: 2;
+  }
+}

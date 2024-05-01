@@ -4,7 +4,7 @@
   & .achieve-card-mobile {
     display: flex;
     background-color: transparent;
-    border: 2px solid var(--color-border-orange);
+    border: 2px solid var(--color-orange);
     border-radius: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
     user-select: none;
     overflow: hidden;
@@ -43,14 +43,14 @@
   & .achieve-vertical-line {
     max-height: 100%;
     width: 8px;
-    background: var(--color-border-orange);
+    background: var(--color-orange);
   }
 
   & .achieve-horizontal-line {
     height: 3px;
     align-self: center;
     width: 80%;
-    background: var(--color-border-orange);
+    background: var(--color-orange);
     margin-top: 3%;
     margin-bottom: 3%;
   }
@@ -119,7 +119,7 @@
     -webkit-user-drag: none;
     aspect-ratio: 2/1;
     flex-direction: row;
-    border: 2px solid var(--color-border-orange);
+    border: 2px solid var(--color-orange);
   }
 
   & .achieve-photo {
@@ -235,7 +235,7 @@ a {
   }
 
   & .achieve-button-f-card {
-    background: var(--color-border-orange);
+    background: var(--color-orange);
     border-radius: 60px;
     height: calc(var(--scale-pixel-koef) * clamp(50px, 3.5vw, 80px));
     line-height: 100%;

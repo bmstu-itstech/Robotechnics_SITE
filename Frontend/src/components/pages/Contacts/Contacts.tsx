@@ -8,7 +8,17 @@ export const Contacts = () => {
     return (
         <section className="contacts-section">
             <Logo title="контакты" />
-            <div className="container">
+            <main>
+                <div className="container-fluid d-flex flex-row wrapper justify-content-center">
+                    <div className="card col-4 ">
+                        <img src={photo1} className={"contact-photo"} alt="ЦРМ_director_photo" />
+                    </div>
+                    <div className={"card col-4"}>
+
+                    </div>
+                </div>
+            </main>
+            {/* <div className="container">
                 <div className="row justify-content-center m-5 text-white contacts">
                     <div className="row contact h-100">
                         <div className="col-4 h-100 d-flex align-items-center">
@@ -50,9 +60,9 @@ export const Contacts = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <footer>
-                <p className="footer-text text-black">Developed @ 2023 by ITS tech</p>
+                <p className="text-white">Developed @ 2023 by ITS tech</p>
             </footer>
         </section>
     )

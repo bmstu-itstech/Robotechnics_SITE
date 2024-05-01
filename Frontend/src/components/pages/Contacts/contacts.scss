@@ -1,11 +1,45 @@
 .contacts-section {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("../../../../src/components/assets/images/background.svg") no-repeat;
+        url("../../../../src/components/assets/images/background.svg") no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     scrollbar-color: rgb(193 49 0 / 80%) transparent;
+
+    .contact-photo {
+        object-fit: cover;
+        object-position: center center;
+        -o-object-fit: cover;
+        -o-object-position: center center;
+        height: 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .wrapper {
+        gap: calc(clamp(30px, 5vw, 60px) * var(--scale-pixel-koef)) //попроавить 
+    }
+
+    .card {
+        height: calc(clamp(200px, 20vw, 600px) * var(--scale-pixel-koef));
+        background: transparent;
+        border: 2px solid var(--color-orange);
+    }
+
+    footer {
+        position: absolute;
+        background-color: #FF5C00;
+        bottom: 0;
+        width: 100%;
+        height: 5vw;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
 }
 
 p {
@@ -51,17 +85,4 @@ p {
     margin-left: 5px;
     width: 10px;
     padding-bottom: 3px;
-}
-
-footer {
-    position: absolute;
-    background-color: #FF5C00;
-    bottom: 0;
-    width: 100%;
-    height: 5vw;
-    min-height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
 }
