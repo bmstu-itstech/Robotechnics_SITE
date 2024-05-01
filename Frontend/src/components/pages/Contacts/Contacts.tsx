@@ -23,13 +23,13 @@ export const Contacts = () => {
 
 
         <div className={"card col-4 px-4 py-3 mx-auto w-100 my-auto"}>
-            <div className="row row-cols-1 links information-card  text-start h-100">
+            <div className="row row-cols-1 links information-card  text-start h-100 text-start">
                 <div className="col d-flex flex-wrap ">
-                    <span className="text-weight-normal text-scale-normal">Телефон: <a className="text-weight-normal text-scale-normal" href="tel:+78005553535">8(800)555-35-35</a></span>
-                    <span className="text-weight-normal text-scale-normal">Email: <a className="text-weight-normal text-scale-normal" href="mailto:cmr@bmstu.ru">cmr@bmstu.ru</a></span>
+                    <span className="text-weight-normal text-scale-normal">Телефон: <a className="text-weight-normal text-scale-normal more-arrow" href="tel:+78005553535">8(800)555-35-35</a></span>
+                    <span className="text-weight-normal text-scale-normal">Email: <a className="text-weight-normal text-scale-normal more-arrow" href="mailto:cmr@bmstu.ru">cmr@bmstu.ru</a></span>
                 </div>
-                <button className="col  bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto">Политика перс. данных</button>
-                <button className="col  bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto">Сайт Университета</button>
+                <button className="col  bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal flex-wrap w-100">Политика перс. данных</button>
+                <button className="col  bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal flex-wrap w-100">Сайт Университета</button>
             </div>
         </div>
     ];

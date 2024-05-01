@@ -20,10 +20,11 @@
     .more-arrow::after {
         content: "";
         background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
-        width: calc(clamp(5px, 0.8vw, 20px) * var(--scale-pixel-koef));
-        height: calc(clamp(5px, 0.8vw, 20px) * var(--scale-pixel-koef));
+        width: calc(clamp(10px, 0.8vw, 20px) * var(--scale-pixel-koef));
+        aspect-ratio: 1/1;
         object-fit: contain;
-
+        min-width: 10px;
+        min-height: 10px;
     }
 
     .text-scale-normal {
@@ -107,9 +108,9 @@
         border-radius: 13px;
         aspect-ratio: 1/1;
         overflow: hidden;
-        padding-top: calc(var(--scale-pixel-koef) * clamp(20px, 1vw, 60px));
-        padding-bottom: calc(var(--scale-pixel-koef) * clamp(20px, 1vw, 60px));
-        padding-inline: calc(var(--scale-pixel-koef) * clamp(30px, 2vw, 100px));
+        padding-top: calc(var(--scale-pixel-koef) * clamp(20px, 6vw, 60px));
+        padding-bottom: calc(var(--scale-pixel-koef) * clamp(20px, 6vw, 60px));
+        padding-inline: calc(var(--scale-pixel-koef) * clamp(30px, 10vw, 100px));
     }
 
     .contact-information {
