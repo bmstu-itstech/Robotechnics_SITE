@@ -59,19 +59,17 @@ export const Contacts = () => {
                                 <p className={"text-weight-normal text-scale-normal"}>1234567@mail.ru</p>
                             </div>
                         </div>
-                        <div className={"card col-4 px-4 py-3"}>
+                        <div className={"card col-4 "}>
                             <div className="row row-cols-1 links information-card  text-start h-100">
                                 <div className="col d-flex flex-wrap ">
                                     <span className="text-scale-normal">Телефон: <a className="text-weight-normal text-scale-normal" href="tel:+78005553535">8(800)555-35-35</a></span>
                                     <span className="text-scale-normal">Email: <a className="text-weight-normal text-scale-normal" href="mailto:cmr@bmstu.ru">cmr@bmstu.ru</a></span>
                                 </div>
-                                <button className="col bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto">Политика перс. данных</button>
-                                <button className="col bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto">Сайт Университета</button>
+                                <a className="col d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto flex-wrap">Политика перс. данных</a>
+                                <a className="col d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto flex-wrap">Сайт Университета</a>
                                 <div className="col">
-
-                                    <span className={"text-weight-normal text-scale-normal"}>Адрес: </span>
+                                    <span className={"text-weight-normal text-scale-normal d-flex gap-1 "}>Адрес: <a href="" className={"d-flex flex-nowrap more-arrow"}>Схема проезда</a> </span>
                                     <p className="text-weight-normal text-scale-normal">105005, г. Москва, 2-ая Бауманская, д.5, стр.1</p>
-
                                 </div>
                                 <div className="col">
                                     <span className="text-weight-normal text-scale-normal">Соцсети:</span>
@@ -85,11 +83,11 @@ export const Contacts = () => {
                     </div>
                 </div>
                 <div className="mobile h-100 w-100 ">
-                    <div className="container-fluid d-flex align-items-center h-100 my-0 flex-column">
+                    <div className="container-fluid d-flex px-0 align-items-center h-100 my-0 flex-column">
                         <Carousel />
-                        <div className="contact-information mb-auto text-start w-100">
+                        <div className="contact-information mb-auto text-start">
                             <div className="d-flex flex-row ">
-                                <span className={"text-weight-normal text-scale-normal contact-main-text"}>Адрес: </span>
+                                <span className={"text-weight-normal text-scale-normal contact-main-text"}>Адрес:</span>
                                 <p className="text-weight-normal text-scale-normal contact-desc-text">105005, г. Москва, 2-ая Бауманская, д.5, стр.1</p>
 
                             </div>
@@ -107,7 +105,7 @@ export const Contacts = () => {
                 </div>
             </main>
             <footer>
-                <p className="text-white text-scale-normal">Developed @ 2023 by ITS tech</p>
+                <p className="text-white text-scale-large">Developed @ 2023 by ITS tech</p>
             </footer>
         </section>
     )

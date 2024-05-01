@@ -20,18 +20,19 @@
     .more-arrow::after {
         content: "";
         background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
-        width: calc(clamp(5px, 2vw, 12px) * var(--scale-pixel-koef));
-        height: calc(clamp(5px, 2vw, 12px) * var(--scale-pixel-koef));
+        width: calc(clamp(5px, 0.8vw, 20px) * var(--scale-pixel-koef));
+        height: calc(clamp(5px, 0.8vw, 20px) * var(--scale-pixel-koef));
         object-fit: contain;
 
     }
 
     .text-scale-normal {
-        font-size: calc(clamp(12px, 1.6vw, 36px));
+        font-size: calc(clamp(12px, 1.2vw, 36px));
+        align-content: center;
     }
 
     .text-scale-large {
-        font-size: calc(clamp(16px, 1.8vw, 44px));
+        font-size: calc(clamp(16px, 1.6vw, 44px));
     }
 }
 
@@ -48,11 +49,11 @@
     }
 
     .wrapper {
-        gap: calc(clamp(30px, 5vw, 60px) * var(--scale-pixel-koef)) //попроавить
+        gap: calc(clamp(40px, 5vw, 60px) * var(--scale-pixel-koef)); //попроавить
     }
 
     .card {
-        height: calc(clamp(200px, 30vw, 600px));
+        height: calc(clamp(500px, 30vw, 650px) * var(--scale-pixel-koef));
         background: transparent;
         border: 2px solid var(--color-orange);
         border-radius: 35px;
@@ -71,7 +72,11 @@
     }
 
     .information-card {
-        gap: calc(clamp(10px, 2vw, 30px) * var(--scale-pixel-koef));
+        padding-inline: calc(var(--scale-pixel-koef)* clamp(30px, 4vw, 40px));
+        padding-top: calc(var(--scale-pixel-koef) * clamp(20px, 1vw, 40px));
+        padding-bottom: calc(var(--scale-pixel-koef) * clamp(20px, 1vw, 40px));
+
+
     }
 
 }
@@ -131,6 +136,48 @@
     .text-scale-large {
         font-size: clamp(20px, 6vw, 28px);
     }
+
+    .alice-carousel__dots {
+        margin: 0 !important;
+    }
+
+    .alice-carousel__prev-btn-item {
+        border-radius: 50%;
+        display: block;
+        height: clamp(50px, 9vw, 60px);
+        width: clamp(50px, 9vw, 60px);
+        position: absolute;
+        top: 40%;
+        right: 90%;
+        background:
+            url("../../assets/icons/arrow.svg") no-repeat center;
+        opacity: 0.8;
+        transform: scaleX(-1);
+        padding: 0;
+
+        span {
+            display: none;
+        }
+    }
+
+    .alice-carousel__next-btn-item {
+        border-radius: 50%;
+        display: block;
+        height: clamp(50px, 9vw, 60px);
+        width: clamp(50px, 9vw, 60px);
+        position: absolute;
+        top: 40%;
+        left: 90%;
+        background:
+            url("../../assets/icons/arrow.svg") no-repeat center;
+
+        opacity: 0.8;
+        padding: 0;
+
+        span {
+            display: none;
+        }
+    }
 }
 
 p {
@@ -140,6 +187,7 @@ p {
 
 a {
     color: white;
+    cursor: pointer;
 }
 
 .links {
