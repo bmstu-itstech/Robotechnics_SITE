@@ -27,6 +27,13 @@ a {
   text-decoration: none;
 }
 
+.text-weight-bold{
+  font-weight: 900;
+}
+.text-weight-normal{
+  font-weight: 400;
+}
+
 @media (-webkit-device-pixel-ratio: 1.5) {
   :root {
     --display-ration: 1.5;

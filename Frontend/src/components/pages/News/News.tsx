@@ -76,28 +76,6 @@ export const News = () => {
                         <p className={"more-text-main text-light text-uppercase  m-0 fs-5"}>подробнее</p>
                     </Link>
                 </button >
-                {/* <div className="mobile-carousel">
-                    {news.map((item, index) => (
-                        <NewsCard
-                            key={index}
-                            title={item.title}
-                            description={item.description}
-                            new_url={item.new_url}
-                            photo={item.photo}
-                        />
-                    ))}
-                    <button className={'btn position-absolute start-0 top-50 swap-btn-news rotate-180 ms-2'} type="button">
-                        <img className={'img-fluid'} src={arrow} alt="prevButton" />
-                    </button>
-                    <button className={'btn position-absolute end-0 top-50 swap-btn-news me-2'} type="button">
-                        <img className={'img-fluid'} src={arrow} alt="nextButton" />
-                    </button>
-                    <button className={"container-fluid container-fluid-margless button-main col-4 justify-content-center"}>
-                        <Link className="link" to="/news">
-                            <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
-                        </Link>
-                    </button >
-                </div> */}
             </div>
 
         </section>
