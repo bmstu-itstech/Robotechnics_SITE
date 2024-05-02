@@ -1,3 +1,106 @@
+.bizikov-pic {
+    width: 650px;
+    height: 750px;
+    display: inline-block;
+
+    img {
+        margin: -211px;
+    }
+}
+
+.quote {
+    width: 900px;
+    height: 450px;
+    border: 5px solid #C13100;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(193, 49, 0, 0) 0%, rgba(193, 49, 0, 0.64) 100%);
+
+
+    p {
+        margin: auto;
+        width: 90%;
+        color: white;
+        font-size: 32px;
+        line-height: 38px;
+        padding-top: 40px;
+        font-weight: 400;
+    }
+
+    .author {
+        width: 550px;
+        text-align: end;
+        margin-right: 40px;
+        padding-top: 80px;
+        font-weight: 700;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.w-400 {
+    width: 400px;
+}
+
+@media ((max-width: 1650px) and (min-width: 1051px)) {
+    .board {
+        margin-top: -150px;
+    }
+    .bizikov-pic  {
+        img {
+            margin: 0px;
+            width: 700px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .bizikov-pic  {
+        display: none;
+    }
+    .quote  {
+        width: 500px;
+
+        p {
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .author {
+            width: 250px;
+            padding-top: 150px;
+        }
+    }
+
+    .buttons {
+        width: 500px;
+        display: inline-block;
+    }
+
+    .w-400 {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .quote  {
+        width: 300px;
+
+        .author {
+            width: 250px;
+        }
+    }
+
+    .buttons {
+        width: 300px;
+    }
+
+    .w-400 {
+        width: 300px;
+    }
+}
+
 .arrow-right, .arrow-left {
     display: block;
     background-color: transparent;
