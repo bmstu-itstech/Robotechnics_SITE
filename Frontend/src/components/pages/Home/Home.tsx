@@ -25,7 +25,7 @@ export const Home = () => {
                         нам и откройте для себя мир будущего уже сегодня!</p>
 
                 </div>
-                <div className={"container-fluid container-fluid-margless position-relative "}>
+                <div className={"container-fluid container-fluid-margless position-relative h-auto"}>
                     <button className={"button-main col-4 justify-content-center"}>
                         <Link className="link" to="/news">
                             <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>

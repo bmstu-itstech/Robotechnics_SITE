@@ -33,6 +33,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -54,7 +55,7 @@ a {
 // }
 
 .page {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {

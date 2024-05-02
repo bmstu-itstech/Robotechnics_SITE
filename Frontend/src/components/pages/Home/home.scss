@@ -9,6 +9,9 @@
   position: relative;
   overflow: auto;
   scrollbar-color: rgb(193 49 0 / 80%) transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .more-text-main {
@@ -40,7 +43,6 @@
 }
 
 .button-main {
-  margin-top: calc(var(--scale-pixel-koef) * 95px);
   // margin-bottom: calc(var(--scale-pixel-koef) * 50px);
   border: solid 2px var(--color-orange);
   background: none;

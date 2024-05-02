@@ -7,7 +7,7 @@ import crown_logo from "../../assets/icons/crown_logo.svg";
 
 const Logo = ({ title = "" }) => {
     return (
-        <div className="container-fluid logo-row ">
+        <div className="container-fluid logo-row container-fluid-margless">
             <div className="container logo-block mx-0 px-0 col-1 hidden_logo">
                 <img src={bauman_logo} className="logo-img logo-img-bauman img-fluid" draggable="false" alt="bauman_logo" />
             </div>

@@ -11,6 +11,9 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     overflow: auto;
     scrollbar-color: rgb(193 49 0 / 80%) transparent;
 

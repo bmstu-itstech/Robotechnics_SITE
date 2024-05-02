@@ -47,8 +47,8 @@ export const Contacts = () => {
     return (
         <section className="contacts-section page">
             <Logo title="контакты" />
-            <main className="h-100 w-100">
-                <div className="desktop h-100 w-100">
+            <main className="h-100  w-100">
+                <div className="desktop h-100  w-100">
                     <div className="container-fluid d-flex flex-row wrapper justify-content-center h-100 align-items-center my-0">
                         <div className="card col-4 orange-overlay">
                             <img src={main_director_photo} className={"contact-photo"} alt="ЦРМ_director_photo" />
