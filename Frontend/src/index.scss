@@ -8,17 +8,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scrollbar-color: rgb(193 49 0 / 80%) rgb(5, 2, 14);
+
+
+  &::-webkit-scrollbar-thumb {
+    /* плашка-бегунок */
+    background: rgb(193 49 0 / 80%);
+  }
+
+  &::-webkit-scrollbar-track {
+    /* фон */
+    background: rgb(5, 2, 14);
+  }
+
 }
 
-.body::-webkit-scrollbar-thumb {
-  /* плашка-бегунок */
-  background: rgb(193 49 0 / 80%);
-}
 
-.body::-webkit-scrollbar-track {
-  /* фон */
-  background: rgb(5, 2, 14);
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -32,7 +36,9 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(100vh);
   scroll-behavior: smooth;
 }
 
@@ -49,13 +55,14 @@ a {
 }
 
 // .pages-group{
-//   // scroll-snap-type: mandatory;
-//   // scroll-snap-points-y: repeat(100vh);
-//   // scroll-snap-type: y mandatory;
+//   scroll-snap-type: mandatory;
+//   scroll-snap-points-y: repeat(100vh);
+//   scroll-snap-type: y mandatory;
 // }
 
 .page {
   scroll-snap-align: start;
+  padding-block: calc(40px *var(--scale-pixel-koef));
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {

@@ -33,7 +33,7 @@
 
 .title-text {
   margin: 0;
-  font-size: calc(clamp(14px, 8vw, 80px) * var(--scale-pixel-koef));
+  font-size: calc(clamp(14px, 6vw, 80px) * var(--scale-pixel-koef));
   font-weight: 900;
   color: white;
   line-height: 100%;

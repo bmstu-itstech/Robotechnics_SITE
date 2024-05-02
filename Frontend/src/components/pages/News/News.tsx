@@ -56,7 +56,6 @@ export const News = () => {
             controlsStrategy="alternate"
             responsive={responsive}
             infinite={true}
-            autoHeight={true}
             disableDotsControls={true}
 
         />
@@ -64,7 +63,7 @@ export const News = () => {
 
     return (
         <section className={"news-page page"}>
-            <Logo title="новости"/>
+            <Logo title="новости" />
             {/* <div className={"logo-row mx-auto justify-content-center"}>
                 <p title="новости" className={"title-text text-uppercase align-self-end"}>
                     новости

@@ -108,7 +108,8 @@
   & .achieve-card {
     min-width: 33.3%;
     max-width: 33.3%;
-    padding: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
+    padding-right: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
+    padding-top: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
   }
 
   & .achieve-card-desktop {
@@ -194,6 +195,10 @@ a {
   .achieve-card:nth-child(3),
   .achieve-card:nth-child(4) {
     display: inherit;
+  }
+
+  &.achieve-card:nth-child(4) {
+    padding-right: 0;
   }
 }
 

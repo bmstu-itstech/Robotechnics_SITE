@@ -45,7 +45,7 @@ export const Contacts = () => {
     );
 
     return (
-        <section className="contacts-section page">
+        <section className="contacts-section page pb-0">
             <Logo title="контакты" />
             <main className="h-100  w-100">
                 <div className="desktop h-100  w-100">

@@ -31,12 +31,12 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
             </div>
 
             <button className="d-flex achieve-desktop border-0 p-0 bg-transparent">
-                <a className={"card achieve-card-desktop"} href={link_to_media}>
+                <a className={"card achieve-card-desktop h-100"} href={link_to_media}>
                     <img className={"achieve-photo"} src={photo} alt="card-img" />
                     <div className={"card-img-overlay overlay-gradient d-flex  "}>
                         <h3 className="card-title text-uppercase text-center">{title}</h3>
                         <div className={"first-card"}>
-                            <p className={"achieve-description text-break" }>{description}</p>
+                            <p className={"achieve-description text-break"}>{description}</p>
                             <div className={"d-flex flex-row"}>
                                 <button className={"btn achieve-button-f-card"}>Фото</button>
                                 <button className={"btn achieve-button-f-card"}>СМИ</button>
