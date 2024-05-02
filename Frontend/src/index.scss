@@ -7,6 +7,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: rgb(193 49 0 / 80%) rgb(5, 2, 14);
+}
+
+.body::-webkit-scrollbar-thumb {
+  /* плашка-бегунок */
+  background: rgb(193 49 0 / 80%);
+}
+
+.body::-webkit-scrollbar-track {
+  /* фон */
+  background: rgb(5, 2, 14);
 }
 
 code {
@@ -21,17 +32,29 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 a {
   text-decoration: none;
 }
 
-.text-weight-bold{
+.text-weight-bold {
   font-weight: 900;
 }
-.text-weight-normal{
+
+.text-weight-normal {
   font-weight: 400;
+}
+
+// .pages-group{
+//   // scroll-snap-type: mandatory;
+//   // scroll-snap-points-y: repeat(100vh);
+//   // scroll-snap-type: y mandatory;
+// }
+
+.page {
+  scroll-snap-align: center;
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {
@@ -45,11 +68,13 @@ a {
     --display-ration: 1.25;
   }
 }
+
 @media (-webkit-device-pixel-ratio: 1.75) {
   :root {
     --display-ration: 1.75;
   }
 }
+
 @media (-webkit-device-pixel-ratio: 2) {
   :root {
     --display-ration: 2;

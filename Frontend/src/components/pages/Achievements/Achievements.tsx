@@ -57,13 +57,9 @@ export const Achievements = () => {
     );
 
     return (
-        <section className="achievements-page">
-            <div className={"logo-row mx-auto justify-content-center"}>
-                <p title="достижения" className={"title-text text-uppercase align-self-end"}>
-                    достижения
-                </p>
-            </div>
-            <div className="container-fluid achievements-carousel d-flex justify-content-center">
+        <section className="achievements-page page">
+            <Logo title="достижения" />
+            <div className="container-fluid achievements-carousel d-flex justify-content-center px-0">
                 <div className="desktop-carousel-achievements">
                     {achievements.map((achievement, index) => (
                         <AchieveCard

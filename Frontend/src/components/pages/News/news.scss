@@ -2,10 +2,13 @@
 
 
 .news-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%),
+        linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%),
         url("../../../../src/components/assets/images/background.svg") no-repeat center;
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     overflow: auto;

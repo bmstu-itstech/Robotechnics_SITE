@@ -63,12 +63,13 @@ export const News = () => {
     );
 
     return (
-        <section className={"news-page"}>
-            <div className={"logo-row mx-auto justify-content-center"}>
+        <section className={"news-page page"}>
+            <Logo title="новости"/>
+            {/* <div className={"logo-row mx-auto justify-content-center"}>
                 <p title="новости" className={"title-text text-uppercase align-self-end"}>
                     новости
                 </p>
-            </div>
+            </div> */}
             <div className="news-carousel">
                 <Carousel items={news} />
                 <button className={"container-fluid-margless button-news mx-auto"}>

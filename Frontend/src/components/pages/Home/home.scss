@@ -1,8 +1,10 @@
 .main-page {
-  background: linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66)),
+    linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%),
     url("../../../../src/components/assets/images/backgrounds/mainpage.png") no-repeat center;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   overflow: auto;
@@ -17,7 +19,7 @@
 .container-fluid {
   height: fit-content;
   width: 85%;
-  margin-top: calc(var(--scale-pixel-koef) * 50px);
+  margin-top: calc(var(--scale-pixel-koef) * clamp(30px, 2vw, 50px));
 }
 
 .container-fluid-margless {
@@ -40,7 +42,7 @@
 .button-main {
   margin-top: calc(var(--scale-pixel-koef) * 95px);
   // margin-bottom: calc(var(--scale-pixel-koef) * 50px);
-  border: solid 2px #e43603;
+  border: solid 2px var(--color-orange);
   background: none;
   width: calc(var(--scale-pixel-koef) * 460px);
   height: calc(var(--row-btn-height) * var(--scale-pixel-koef));
@@ -72,23 +74,21 @@
   height: 100%;
 }
 
-.main-text-block-main {
-  margin-top: calc(var(--scale-pixel-koef) * 105px);
-}
-
 .vk_logo {
   bottom: calc(var(--scale-pixel-koef) * clamp(10px, 4vw, 30px));
   right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px) - 5vw);
 }
 
-@media( max-width: 1100px){
-  .title-main{
+@media(max-width: 1100px) {
+  .title-main {
     font-weight: 900;
   }
-  .text-main{
+
+  .text-main {
     font-weight: 700;
   }
 }
+
 
 @media (max-width: 1300px) {
   // .container-fluid {

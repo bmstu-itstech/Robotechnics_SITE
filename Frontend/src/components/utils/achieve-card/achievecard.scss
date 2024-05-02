@@ -108,7 +108,7 @@
   & .achieve-card {
     min-width: 33.3%;
     max-width: 33.3%;
-    padding: calc(clamp(10px, 2vw, 30px) * var(--scale-pixel-koef));
+    padding: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
   }
 
   & .achieve-card-desktop {
@@ -117,7 +117,7 @@
     user-select: none;
     overflow: hidden;
     -webkit-user-drag: none;
-    aspect-ratio: 2/1;
+    aspect-ratio: 2.4/1;
     flex-direction: row;
     border: 2px solid var(--color-orange);
   }
@@ -188,11 +188,11 @@ a {
 }
 
 .desktop-carousel-achievements {
+
   & .achieve-card:nth-child(1),
   .achieve-card:nth-child(2),
   .achieve-card:nth-child(3),
-  .achieve-card:nth-child(4) 
-  {
+  .achieve-card:nth-child(4) {
     display: inherit;
   }
 }
@@ -203,7 +203,7 @@ a {
 
 
   & .achieve-card-desktop {
-    aspect-ratio: 3/1;
+    aspect-ratio: 3.2/1;
   }
 
   & .overlay-gradient {

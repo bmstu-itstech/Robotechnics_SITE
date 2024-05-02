@@ -7,6 +7,16 @@
   align-items: start;
   gap: calc(var(--scale-pixel-koef) * 50px);
 
+  .hidden_logo {
+    display: none;
+  }
+
+}
+
+.first-page {
+  .hidden_logo {
+    display: inherit;
+  }
 }
 
 .logo-block {
@@ -30,15 +40,20 @@
   font-weight: 400;
 }
 
+
+
 @media (max-width: 1100px) {
   .logo-row {
     gap: calc(var(--scale-pixel-koef) * 25px);
-  
-    & .title-text{
+
+    & .title-text {
       font-weight: 900;
     }
   }
 
+  .hidden_logo {
+    display: none;
+  }
 }
 
 @media (max-width: 730px) {
