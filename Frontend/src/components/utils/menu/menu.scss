@@ -18,8 +18,9 @@ label:hover {
   color: white;
   z-index: 10000;
   user-select: none;
-  right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px));
-  top: calc(var(--scale-pixel-koef) * 60px);
+
+  right: calc(var(--scale-pixel-koef) * clamp(20px, 6vw, 150px));
+  top: calc(var(--scale-pixel-koef) * 70px);
 
 }
 

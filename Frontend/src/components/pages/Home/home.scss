@@ -72,8 +72,7 @@
 }
 
 .arrow-btn-main {
-  height: var(--row-btn-height);
-  align-self: center;
+  height: calc(90% * var(--scale-pixel-koef));
   padding: 0;
 }
 
@@ -83,7 +82,7 @@
 
 .vk_logo {
   bottom: calc(var(--scale-pixel-koef) * clamp(10px, 4vw, 30px));
-  right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px) - 5vw);
+  right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px) - 3vw);
 }
 
 @media(max-width: 1100px) {
@@ -159,20 +158,15 @@
   }
 
 
-  .links_line-main {
-    width: 100%;
-    height: 140px * 0.67;
-    justify-content: start;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 50px * 0.67;
-  }
+  // .links_line-main {
+  //   width: 100%;
+  //   height: 140px * 0.67;
+  //   justify-content: start;
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 50px * 0.67;
+  // }
 
-  .arrow-btn-main {
-    height: calc(var(--row-btn-height) * 0.67);
-    align-self: center;
-    padding: 0;
-  }
 
 }

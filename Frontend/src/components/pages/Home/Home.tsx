@@ -13,9 +13,9 @@ import { Classnames } from "react-alice-carousel";
 export const Home = () => {
     return (
         <div className={"pages-group"}>
-            <section className="main-page page first-page" draggable="false">
+            <section className="page main-page first-page" draggable="false">
                 <Logo />
-                <div className={"container-fluid main-text-block-main"}>
+                <div className={"container-fluid container-fluid-margless main-text-block-main"}>
                     <p className={"title-main text-center text-md-start col col-xl-11 text-uppercase text-light "}>Центр молодежной <br />
                         робототехники</p>
                     <p className={"text-main text-center text-md-start h3  text-light"}>Центр Молодежной Робототехники - это инновационное
@@ -26,12 +26,12 @@ export const Home = () => {
 
                 </div>
                 <div className={"container-fluid container-fluid-margless position-relative h-auto"}>
-                    <button className={"button-main col-4 justify-content-center"}>
+                    <button className={"button-main col-4 justify-content-center "}>
                         <Link className="link" to="/news">
                             <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
                         </Link>
                     </button >
-                    <button className={"btn arrow-btn-main hidden col-1 border-0"}>
+                    <button className={"btn arrow-btn-main hidden col-1 border-0 "}>
                         <img src={arrow_down} alt="arrow" className={"img-fluid"} />
                     </button >
                     <div className={"hidden position-absolute vk_logo "}>
