@@ -62,7 +62,7 @@ a {
 
 .page {
   scroll-snap-align: start;
-  padding-block: calc(40px *var(--scale-pixel-koef));
+  padding-block: calc(30px *var(--scale-pixel-koef));
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {

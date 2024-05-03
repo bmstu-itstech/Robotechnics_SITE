@@ -28,8 +28,8 @@ export const Contacts = () => {
                     <span className="text-weight-normal text-scale-normal">Телефон: <a className="text-weight-normal text-scale-normal more-arrow" href="tel:+78005553535">8(800)555-35-35</a></span>
                     <span className="text-weight-normal text-scale-normal">Email: <a className="text-weight-normal text-scale-normal more-arrow" href="mailto:cmr@bmstu.ru">cmr@bmstu.ru</a></span>
                 </div>
-                <button className="col  bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal flex-wrap w-100">Политика перс. данных</button>
-                <button className="col  bg-transparent border-0 d-flex more-arrow text-white text-weight-normal text-scale-normal flex-wrap w-100">Сайт Университета</button>
+                <a className="col  bg-transparent border-0 d-flex more-arrow text-weight-normal text-scale-normal flex-wrap w-100">Политика перс. данных</a>
+                <a className="col  bg-transparent border-0 d-flex more-arrow text-weight-normal text-scale-normal flex-wrap w-100">Сайт Университета</a>
             </div>
         </div>
     ];
@@ -65,8 +65,8 @@ export const Contacts = () => {
                                     <span className="text-scale-normal">Телефон: <a className="text-weight-normal text-scale-normal" href="tel:+78005553535">8(800)555-35-35</a></span>
                                     <span className="text-scale-normal">Email: <a className="text-weight-normal text-scale-normal" href="mailto:cmr@bmstu.ru">cmr@bmstu.ru</a></span>
                                 </div>
-                                <a className="col d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto flex-wrap">Политика перс. данных</a>
-                                <a className="col d-flex more-arrow text-white text-weight-normal text-scale-normal w-auto flex-wrap">Сайт Университета</a>
+                                <a className="col d-flex more-arrow  text-weight-normal text-scale-normal w-auto flex-wrap">Политика перс. данных</a>
+                                <a className="col d-flex more-arrow  text-weight-normal text-scale-normal w-auto flex-wrap">Сайт Университета</a>
                                 <div className="col">
                                     <span className={"text-weight-normal text-scale-normal d-flex gap-1 "}>Адрес: <a href="" className={"d-flex flex-nowrap more-arrow"}>Схема проезда</a> </span>
                                     <p className="text-weight-normal text-scale-normal">105005, г. Москва, 2-ая Бауманская, д.5, стр.1</p>
@@ -91,11 +91,11 @@ export const Contacts = () => {
                                 <p className="text-weight-normal text-scale-normal contact-desc-text">105005, г. Москва, 2-ая Бауманская, д.5, стр.1</p>
 
                             </div>
-                            <div className=" d-flex flex-row">
+                            <div className="d-flex flex-row">
                                 <span className="text-weight-normal text-scale-normal contact-main-text">Соцсети:</span>
                                 <div className="d-flex flex-row justify-content-between contact-desc-text">
-                                    <a className="text-weight-normal d-flex more-arrow text-scale-normal more-arrow" href="https://vk.com/robotics_bmstu">ВКонтакте</a>
-                                    <a className="text-weight-normal d-flex more-arrow text-scale-normal more-arrow" href="https://t.me/robotics_bmstu">Телеграм</a>
+                                    <a className="text-weight-normal d-flex  text-scale-normal more-arrow" href="https://vk.com/robotics_bmstu">ВКонтакте</a>
+                                    <a className="text-weight-normal d-flex  text-scale-normal more-arrow" href="https://t.me/robotics_bmstu">Телеграм</a>
                                 </div>
                             </div>
 
@@ -107,6 +107,8 @@ export const Contacts = () => {
             <footer>
                 <p className="text-white text-scale-large">Developed @ 2023 by ITS tech</p>
             </footer>
+
         </section>
+
     )
 }

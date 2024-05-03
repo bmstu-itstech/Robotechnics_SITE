@@ -47,6 +47,7 @@
     gap: calc(var(--scale-pixel-koef) * 25px);
 
     & .title-text {
+      font-size: clamp(20px, 7vw, 30px);
       font-weight: 900;
     }
   }

@@ -71,12 +71,12 @@ export const News = () => {
             </div> */}
             <div className="news-carousel">
                 <Carousel items={news} />
-                <button className={"container-fluid-margless button-news mx-auto"}>
-                    <Link className="link" to="/news">
-                        <p className={"more-text-main text-light text-uppercase  m-0 fs-5"}>подробнее</p>
-                    </Link>
-                </button >
             </div>
+            <button className={"container-fluid container-fluid-margless button-news mx-auto"}>
+                <Link className="link" to="/news">
+                    <p className={"more-text-main text-light text-uppercase  m-0 fs-5"}>подробнее</p>
+                </Link>
+            </button >
 
         </section>
     )

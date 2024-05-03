@@ -13,24 +13,24 @@ const NewsCard = ({ title, description, new_url, photo }: {
         <div className="news-card">
             <div className={"news-mobile orange-gradient  position-relative"}>
                 <div className="news-photo">
-                    <img src={photo} alt="" />
+                    <img src={photo} alt="news_photo_mobile" />
                 </div>
                 <div className="card-title position-absolute bottom-0 start-50 translate-middle-x mb-5">
-                    <p className=" fw-bold text-white ">{title}</p>
+                    <p className=" text-weight-bold text-white ">{title}</p>
                 </div>
             </div>
             <div className={"news-desktop position-relative "}>
-                <div className="news-photo h-50">
-                    <img src={photo} alt="" />
+                <div className="news-photo">
+                    <img src={photo} alt="news_photo_mobile" />
                 </div>
                 <div className="card-title"><p className="m-0  text-white">{title}</p></div>
                 <div className="card-text">
-                    <p className="m-0 text-black lh-sm fw-light">{description}</p>
+                    <p className="m-0 text-black lh-sm text-weight-normal">{description}</p>
                 </div>
                 <a href={new_url}>
                     <div className="card-about">
-                        <p className="m-0 fw-light">Узнать подробности</p>
-                        <img src={arrow} alt="" />
+                        <p className="m-0 text-weight-normal">Узнать подробности</p>
+                        <img src={arrow} alt="more-arrow" />
                     </div>
                 </a>
             </div>

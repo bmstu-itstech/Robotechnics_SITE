@@ -250,6 +250,12 @@ a {
     margin-top: auto;
     text-align: baseline;
     font-weight: 400;
+    transition: all 1s;
+
+    &:hover {
+      background: white;
+      color: var(--color-orange);
+    }
   }
 
   & .achieve-photo {

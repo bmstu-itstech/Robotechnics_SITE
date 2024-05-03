@@ -21,14 +21,28 @@
         align-items: center;
     }
 
+
+    .more-arrow {
+        transition: all 1s;
+
+        &:hover {
+            color: var(--color-orange);
+            transform: translateY(-5%);
+        }
+    }
+
     .more-arrow::after {
         content: "";
-        background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
+        mask: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
+        -webkit-mask: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
+        mask-size: contain;
+        -webkit-mask-size: contain;
         width: calc(clamp(10px, 0.8vw, 20px) * var(--scale-pixel-koef));
         aspect-ratio: 1/1;
-        object-fit: contain;
+        background-color: currentColor;
         min-width: 10px;
         min-height: 10px;
+
     }
 
     .text-scale-normal {

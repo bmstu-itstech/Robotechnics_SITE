@@ -50,6 +50,11 @@
   height: calc(var(--row-btn-height) * var(--scale-pixel-koef));
   border-radius: 50px;
   justify-content: center;
+  transition: background 1s;
+
+  &:hover {
+    background: var(--color-orange);
+  }
 }
 
 .links_line-main {
