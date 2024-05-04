@@ -27,12 +27,7 @@ export const Home = () => {
                 </div>
                 <div className={"container-fluid container-fluid-margless position-relative h-auto"}>
                     <button className={"button-main col-4 justify-content-center "}>
-                        <Link className="link" to="/news">
-                            <p className={"more-text-main text-light text-uppercase  m-0"}>подробнее</p>
-                        </Link>
-                    </button >
-                    <button className={"btn arrow-btn-main hidden col-1 border-0 "}>
-                        <img src={arrow_down} alt="arrow" className={"img-fluid"} />
+                        <a className={"more-text-main text-light text-uppercase m-0 h-100 w-100"} href="#contacts">подробнее</a>
                     </button >
                     <div className={"hidden position-absolute vk_logo "}>
                         <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" role="button">
