@@ -106,19 +106,25 @@
 
 .desktop-carousel-achievements {
   & .achieve-card {
-    min-width: 33.3%;
-    max-width: 33.3%;
-    padding-right: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
-    padding-top: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
+    width: 33.3%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding-right: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
+    // padding-top: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
   }
 
   & .achieve-card-desktop {
     display: flex;
     border-radius: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
+    width: 100%;
+
     user-select: none;
     overflow: hidden;
     -webkit-user-drag: none;
-    aspect-ratio: 2.4/1;
+    // aspect-ratio: 2.4/1;
+
     flex-direction: row;
     border: 2px solid var(--color-orange);
   }
@@ -163,7 +169,8 @@
 
 
 .achieve-desktop {
-  width: 100%;
+  width: 90%;
+  height: 90%;
   display: none !important;
 }
 
@@ -205,10 +212,17 @@ a {
 .desktop-carousel-achievements .achieve-card:nth-child(1) {
   min-width: 100%;
   max-width: 100%;
+  height: 65%;
 
 
   & .achieve-card-desktop {
-    aspect-ratio: 3.2/1;
+    max-height: 90%;
+    width: 100%;
+  }
+
+  & .achieve-desktop {
+    width: 97%;
+    height: 100%;
   }
 
   & .overlay-gradient {

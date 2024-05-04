@@ -83,6 +83,11 @@
 .vk_logo {
   bottom: calc(var(--scale-pixel-koef) * clamp(10px, 4vw, 30px));
   right: calc(var(--scale-pixel-koef) * clamp(20px, 4vw, 70px) - 3vw);
+
+  img {
+    width: calc(var(--scale-pixel-koef) * 56px);
+  }
+
 }
 
 @media(max-width: 1100px) {

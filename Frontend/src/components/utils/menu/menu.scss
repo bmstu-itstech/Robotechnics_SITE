@@ -30,7 +30,7 @@ label:hover {
 
 
 .offcanvas-body {
-  margin-right: calc(var(--scale-pixel-koef) * 40px);
+  margin-right: calc(var(--scale-pixel-koef) * 135px);
 }
 
 
@@ -48,6 +48,9 @@ label:hover {
   }
 }
 
+.list-group-item {
+  padding-right: calc(25px * var(--scale-pixel-koef));
+}
 
 .dot {
   display: inline-block;
