@@ -57,7 +57,7 @@ export const Achievements = () => {
     );
 
     return (
-        <section className="achievements-page page">
+        <section className="achievements-page page" id="achievements">
             <Logo title="достижения" />
             <div className="container-fluid mt-0 h-100 achievements-carousel d-flex justify-content-center px-0">
                 <div className="desktop-carousel-achievements">

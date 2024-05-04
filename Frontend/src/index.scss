@@ -54,14 +54,13 @@ a {
   font-weight: 400;
 }
 
-// .pages-group{
-//   scroll-snap-type: mandatory;
-//   scroll-snap-points-y: repeat(100vh);
-//   scroll-snap-type: y mandatory;
-// }
+.pages-group{
+  scroll-behavior: smooth;
+}
 
 .page {
   scroll-snap-align: start;
+  scroll-behavior: smooth;
   padding-block: calc(30px *var(--scale-pixel-koef));
 }
 

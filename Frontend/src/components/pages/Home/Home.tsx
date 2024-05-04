@@ -1,19 +1,25 @@
 import "../../utils/roots/home_root.scss"
 import "./home.scss"
 import Logo from "../../utils/logo/Logo"
-import { Link } from "react-router-dom";
 import { Contacts } from "../Contacts/Contacts";
 import { News } from "../News/News";
 import { Achievements } from "../Achievements/Achievements";
 import vk_logo from "../../assets/icons/vk_logo.svg"
-import arrow_down from "../../assets/icons/arrow_down.svg"
-import React from "react";
-import { Classnames } from "react-alice-carousel";
+import React, { useRef } from "react";
+import { func } from "prop-types";
+
 
 export const Home = () => {
+    const newsRef = useRef<HTMLDivElement | null>(null);
+
+    function scrolToNews() {
+        newsRef.current?.scrollIntoView({
+            behavior: "smooth"
+        })
+    }
     return (
-        <div className={"pages-group"}>
-            <section className="page main-page first-page" draggable="false">
+        <div className={"pages-group"} >
+            <section className="page main-page first-page" draggable="false" id="home">
                 <Logo />
                 <div className={"container-fluid container-fluid-margless main-text-block-main"}>
                     <p className={"title-main text-center text-md-start col col-xl-11 text-uppercase text-light "}>Центр молодежной <br />
@@ -26,8 +32,8 @@ export const Home = () => {
 
                 </div>
                 <div className={"container-fluid container-fluid-margless position-relative h-auto"}>
-                    <button className={"button-main col-4 justify-content-center "}>
-                        <a className={"more-text-main text-light text-uppercase m-0 h-100 w-100"} href="#contacts">подробнее</a>
+                    <button className={"button-main col-4 justify-content-center"} onClick={scrolToNews} >
+                        <a className={"more-text-main text-light text-uppercase m-0 h-100 w-100"}>подробнее</a>
                     </button >
                     <div className={"hidden position-absolute vk_logo "}>
                         <a className={""} href="https://vk.com/robotics_bmstu?ysclid=luzenwsftr242559607" role="button">
@@ -36,7 +42,9 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-            <News />
+            <div id="news" ref={newsRef}>
+                <News />
+            </div>
             <Achievements />
             <Contacts />
         </div>

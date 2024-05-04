@@ -11,6 +11,7 @@ import axios from "axios";
 import Slider from "react-slick"
 import "./news.scss"
 import { func } from 'prop-types';
+import { useRef } from "react";
 
 interface News {
     title: string;
@@ -21,7 +22,6 @@ interface News {
 
 
 export const News = () => {
-
     const [news, setNews] = useState<News[]>([]);
 
     useEffect(() => {
@@ -62,7 +62,7 @@ export const News = () => {
     );
 
     return (
-        <section className={"news-page page"}>
+        <section className={"news-page page"} >
             <Logo title="новости" />
             <div className="news-carousel">
                 <Carousel items={news} />
