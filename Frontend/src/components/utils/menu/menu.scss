@@ -30,7 +30,7 @@ label:hover {
 
 
 .offcanvas-body {
-  margin-right: calc(var(--scale-pixel-koef) * 135px);
+  margin-right: calc(var(--scale-pixel-koef) * clamp(20px, 6vw, 150px));
 }
 
 
