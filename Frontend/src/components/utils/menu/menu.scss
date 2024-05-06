@@ -6,6 +6,11 @@ label:hover {
   background: none;
   border: 0;
   padding: 0;
+  transition: all .3s;
+
+  &:hover {
+    transform: scale(105%);
+  }
 }
 
 .link {
