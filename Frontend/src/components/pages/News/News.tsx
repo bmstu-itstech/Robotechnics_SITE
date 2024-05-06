@@ -6,6 +6,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import axios from "axios";
 import Slider from "react-slick"
+import {Link} from "react-router-dom";
 
 interface News {
     title: string;
