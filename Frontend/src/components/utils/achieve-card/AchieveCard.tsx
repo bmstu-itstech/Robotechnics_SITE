@@ -30,7 +30,6 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
     }
 
     var btn = document.getElementById("swap_btn")
-    console.log(btn)
     btn?.addEventListener('click', handleButtonClick)
 
     return (
