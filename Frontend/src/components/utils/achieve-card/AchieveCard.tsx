@@ -22,14 +22,14 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
     }, []);
 
     function handleButtonClick() {
-        var itest = document.getElementById("itest")
+        var itest = document.getElementById("achieve-wrapper")
         itest?.scrollBy({
             top: height,
             behavior: "smooth"
         })
     }
 
-    var btn = document.getElementById("swap")
+    var btn = document.getElementById("swap_btn")
     console.log(btn)
     btn?.addEventListener('click', handleButtonClick)
 

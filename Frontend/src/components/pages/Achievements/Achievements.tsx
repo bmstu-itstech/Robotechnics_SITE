@@ -75,7 +75,7 @@ export const Achievements = () => {
                         />
                     ))}
                 </div>
-                <div className="mobile-carousel-achievements" id="itest">
+                <div className="mobile-carousel-achievements" id="achieve-wrapper">
                     {achievements.map((achievement, index) => (
                         <AchieveCard
                             title={achievement.title}
@@ -85,7 +85,7 @@ export const Achievements = () => {
                             photo={achievement.photo}
                         />
                     ))}
-                    <button className={"btn b-0 p-0 bg-transparent swap-card"} id="swap">
+                    <button className={"btn b-0 p-0 bg-transparent swap-card"} id="swap_btn">
                         <img src={down_arrow} alt="down-arrow" />
                     </button>
                 </div>
