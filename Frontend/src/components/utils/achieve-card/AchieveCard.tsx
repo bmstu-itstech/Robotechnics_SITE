@@ -2,16 +2,39 @@ import React from 'react';
 import '../roots/achieveCard_root.scss'
 import './achievecard.scss';
 import arrow from "../../assets/icons/arrow.svg";
+import { useLayoutEffect, useRef, useState } from 'react';
 
-const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo }: {
+const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo}: {
     title: string,
     description: string,
     photo_album_url: string,
     link_to_media: string,
     photo: string
+
 }) => {
+
+    const ref = useRef<HTMLDivElement>(null);
+    const [height, setHeight] = useState(0);
+    useLayoutEffect(() => {
+        if (ref.current) {
+            setHeight(ref.current.offsetHeight);
+        }
+    }, []);
+
+    function handleButtonClick() {
+        var itest = document.getElementById("itest")
+        itest?.scrollBy({
+            top: height,
+            behavior: "smooth"
+        })
+    }
+
+    var btn = document.getElementById("swap")
+    console.log(btn)
+    btn?.addEventListener('click', handleButtonClick)
+
     return (
-        <div className={"achieve-card position-relative "}>
+        <div className={"achieve-card position-relative "} ref={ref}>
             <div className="d-inline-flex achieve-mobile">
                 <div className={"achieve-card-mobile list-group list-group-horizontal flex-fill"}>
                     <div className="achieve-photo border-0 p-0">

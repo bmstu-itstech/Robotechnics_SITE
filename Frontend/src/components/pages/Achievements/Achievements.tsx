@@ -46,6 +46,7 @@ export const Achievements = () => {
                         photo_album_url={item.photo_album_url}
                         link_to_media={item.link_to_media}
                         photo={item.photo}
+
                     />
                 </div>
             ))}
@@ -56,10 +57,12 @@ export const Achievements = () => {
         />
     );
 
+
+
     return (
         <section className="achievements-page page" id="achievements">
             <Logo title="достижения" />
-            <div className="container-fluid mt-0 h-100 achievements-carousel d-flex justify-content-center px-0">
+            <div className="container-fluid mt-0 h-100 achievements-carousel d-flex justify-content-center px-0" >
                 <div className="desktop-carousel-achievements">
                     {achievements.map((achievement, index) => (
                         <AchieveCard
@@ -68,10 +71,11 @@ export const Achievements = () => {
                             photo_album_url={achievement.photo_album_url}
                             link_to_media={achievement.link_to_media}
                             photo={achievement.photo}
+
                         />
                     ))}
                 </div>
-                <div className="mobile-carousel-achievements ">
+                <div className="mobile-carousel-achievements" id="itest">
                     {achievements.map((achievement, index) => (
                         <AchieveCard
                             title={achievement.title}
@@ -81,7 +85,7 @@ export const Achievements = () => {
                             photo={achievement.photo}
                         />
                     ))}
-                    <button className={"btn b-0 p-0 bg-transparent position-absolute swap-card"}>
+                    <button className={"btn b-0 p-0 bg-transparent swap-card"} id="swap">
                         <img src={down_arrow} alt="down-arrow" />
                     </button>
                 </div>
