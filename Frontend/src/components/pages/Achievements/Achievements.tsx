@@ -12,7 +12,8 @@ interface Achievement {
     description: string,
     photo_album_url: string,
     link_to_media: string,
-    photo: string
+    photo: string,
+    index: number
 }
 
 export const Achievements = () => {
@@ -46,6 +47,7 @@ export const Achievements = () => {
                         photo_album_url={item.photo_album_url}
                         link_to_media={item.link_to_media}
                         photo={item.photo}
+                        index={index}
 
                     />
                 </div>
@@ -71,6 +73,7 @@ export const Achievements = () => {
                             photo_album_url={achievement.photo_album_url}
                             link_to_media={achievement.link_to_media}
                             photo={achievement.photo}
+                            index={index}
 
                         />
                     ))}
@@ -83,6 +86,8 @@ export const Achievements = () => {
                             photo_album_url={achievement.photo_album_url}
                             link_to_media={achievement.link_to_media}
                             photo={achievement.photo}
+                            index={index}
+
                         />
                     ))}
                     <button className={"btn b-0 p-0 bg-transparent swap-card"} id="swap_btn">

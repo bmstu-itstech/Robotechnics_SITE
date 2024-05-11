@@ -4,37 +4,33 @@ import './achievecard.scss';
 import arrow from "../../assets/icons/arrow.svg";
 import { useLayoutEffect, useRef, useState } from 'react';
 
-const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo}: {
+const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo, index }: {
     title: string,
     description: string,
     photo_album_url: string,
     link_to_media: string,
-    photo: string
+    photo: string,
+    index: number
 
 }) => {
-
+    // const textInputRefs = useRef<(HTMLDivElement | null)[]>([])
     const ref = useRef<HTMLDivElement>(null);
-    const [height, setHeight] = useState(0);
-    useLayoutEffect(() => {
-        if (ref.current) {
-            setHeight(ref.current.offsetHeight);
-        }
-    }, []);
+    // const [height, setHeight] = useState(0);
+    // useLayoutEffect(() => {
+    //     if (ref.current) {
+    //         setHeight(ref.current.offsetHeight);
+    //     }
+    // }, []);
 
-    function handleButtonClick() {
-        var itest = document.getElementById("achieve-wrapper")
-        itest?.scrollBy({
-            top: height,
-            behavior: "smooth"
-        })
-    }
 
     var btn = document.getElementById("swap_btn")
-    btn?.addEventListener('click', handleButtonClick)
+    btn?.addEventListener('click', function () {
+        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'center' })
+    });
 
     return (
-        <div className={"achieve-card position-relative "} ref={ref}>
-            <div className="d-inline-flex achieve-mobile">
+        <div className={"achieve-card position-relative "} ref={ref} >
+            <div className="d-inline-flex achieve-mobile" >
                 <div className={"achieve-card-mobile list-group list-group-horizontal flex-fill"}>
                     <div className="achieve-photo border-0 p-0">
                         <img src={photo} alt="achieve-photo-img" />
@@ -67,6 +63,7 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
                     </div>
                 </a>
             </button>
+            <script src="scrollIntoView.js"></script>
         </div>
     );
 };
