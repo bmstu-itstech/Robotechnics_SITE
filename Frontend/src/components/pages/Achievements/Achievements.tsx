@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, Ref } from 'react';
 import "./achievements.scss"
 import Logo from "../../utils/logo/Logo"
 import AchieveCard from "../../utils/achieve-card/AchieveCard";
-import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import down_arrow from "../../assets/icons/arrow.svg";
 import axios from "axios";
@@ -13,7 +12,8 @@ interface Achievement {
     photo_album_url: string,
     link_to_media: string,
     photo: string,
-    index: number
+    index: number,
+    inputRef: Ref<HTMLDivElement>
 }
 
 export const Achievements = () => {
@@ -29,36 +29,18 @@ export const Achievements = () => {
             })
     }, []);
 
-    const responsive = {
-        0: { items: 1 },
-        1100: { items: 2 },
-        1650: { items: 3 },
-        2350: { items: 4 }
-    };
 
-    const Carousel = ({ items }: { items: Achievement[] }) => (
-        <AliceCarousel
-            mouseTracking
-            items={items.map((item, index) => (
-                <div key={index}>
-                    <AchieveCard
-                        title={item.title}
-                        description={item.description}
-                        photo_album_url={item.photo_album_url}
-                        link_to_media={item.link_to_media}
-                        photo={item.photo}
-                        index={index}
 
-                    />
-                </div>
-            ))}
-            responsive={responsive}
-            controlsStrategy="alternate"
-            disableButtonsControls={true}
-            infinite={true}
-        />
-    );
+    const InputRefs = useRef<(HTMLDivElement | null)[]>([])
+    var cur_pos = 0;
 
+    function swapHandler() {
+        InputRefs.current[cur_pos++]?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'start'
+        });
+    }
 
 
     return (
@@ -67,19 +49,20 @@ export const Achievements = () => {
             <div className="container-fluid mt-0 h-100 achievements-carousel d-flex justify-content-center px-0" >
                 <div className="desktop-carousel-achievements">
                     {achievements.map((achievement, index) => (
-                        <AchieveCard
+                        < AchieveCard
                             title={achievement.title}
                             description={achievement.description}
                             photo_album_url={achievement.photo_album_url}
                             link_to_media={achievement.link_to_media}
                             photo={achievement.photo}
                             index={index}
-
+                            inputRef={(ref) => InputRefs.current[index] = ref}
                         />
                     ))}
                 </div>
                 <div className="mobile-carousel-achievements" id="achieve-wrapper">
                     {achievements.map((achievement, index) => (
+
                         <AchieveCard
                             title={achievement.title}
                             description={achievement.description}
@@ -87,10 +70,10 @@ export const Achievements = () => {
                             link_to_media={achievement.link_to_media}
                             photo={achievement.photo}
                             index={index}
-
+                            inputRef={(ref) => InputRefs.current[index] = ref}
                         />
                     ))}
-                    <button className={"btn b-0 p-0 bg-transparent swap-card"} id="swap_btn">
+                    <button className={"btn b-0 p-0 bg-transparent swap-card"} onClick={swapHandler}>
                         <img src={down_arrow} alt="down-arrow" />
                     </button>
                 </div>

@@ -2,34 +2,21 @@ import React from 'react';
 import '../roots/achieveCard_root.scss'
 import './achievecard.scss';
 import arrow from "../../assets/icons/arrow.svg";
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, Ref } from 'react';
 
-const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo, index }: {
+const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo, index, inputRef }: {
     title: string,
     description: string,
     photo_album_url: string,
     link_to_media: string,
     photo: string,
-    index: number
+    index: number,
+    inputRef: Ref<HTMLDivElement>
 
 }) => {
-    // const textInputRefs = useRef<(HTMLDivElement | null)[]>([])
-    const ref = useRef<HTMLDivElement>(null);
-    // const [height, setHeight] = useState(0);
-    // useLayoutEffect(() => {
-    //     if (ref.current) {
-    //         setHeight(ref.current.offsetHeight);
-    //     }
-    // }, []);
-
-
-    var btn = document.getElementById("swap_btn")
-    btn?.addEventListener('click', function () {
-        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'center' })
-    });
 
     return (
-        <div className={"achieve-card position-relative "} ref={ref} >
+        <div className={"achieve-card position-relative "} ref = {inputRef} >
             <div className="d-inline-flex achieve-mobile" >
                 <div className={"achieve-card-mobile list-group list-group-horizontal flex-fill"}>
                     <div className="achieve-photo border-0 p-0">
