@@ -29,17 +29,16 @@ export const Achievements = () => {
             })
     }, []);
 
-
-
     const InputRefs = useRef<(HTMLDivElement | null)[]>([])
     var cur_pos = 0;
 
     function swapHandler() {
+        console.log(cur_pos)
         InputRefs.current[cur_pos++]?.scrollIntoView({
             behavior: 'smooth',
-            block: 'center',
-            inline: 'start'
+            block: 'start'
         });
+
     }
 
 
@@ -62,7 +61,6 @@ export const Achievements = () => {
                 </div>
                 <div className="mobile-carousel-achievements" id="achieve-wrapper">
                     {achievements.map((achievement, index) => (
-
                         <AchieveCard
                             title={achievement.title}
                             description={achievement.description}

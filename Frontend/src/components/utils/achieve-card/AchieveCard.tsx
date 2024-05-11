@@ -16,7 +16,7 @@ const AchieveCard = ({ title, description, photo_album_url, link_to_media, photo
 }) => {
 
     return (
-        <div className={"achieve-card position-relative "} ref = {inputRef} >
+        <div className={"achieve-card position-relative "} ref={inputRef} >
             <div className="d-inline-flex achieve-mobile" >
                 <div className={"achieve-card-mobile list-group list-group-horizontal flex-fill"}>
                     <div className="achieve-photo border-0 p-0">
