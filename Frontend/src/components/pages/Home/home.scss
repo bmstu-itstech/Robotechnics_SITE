@@ -20,7 +20,6 @@
 }
 
 .container-fluid {
-  height: fit-content;
   width: 85%;
   margin-top: calc(var(--scale-pixel-koef) * clamp(30px, 2vw, 50px));
 }

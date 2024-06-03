@@ -54,20 +54,15 @@ a {
   font-weight: 400;
 }
 
-.pages-group{
+.pages-group {
   scroll-behavior: smooth;
 }
 
 .page {
   scroll-snap-align: start;
   scroll-behavior: smooth;
-  padding-block: calc(30px *var(--scale-pixel-koef));
+  padding-block: calc(45px *var(--scale-pixel-koef));
 }
-
-.page:nth-child(1) {
-  padding-block: calc(60px *var(--scale-pixel-koef));
-}
-
 
 
 @media (-webkit-device-pixel-ratio: 1.5) {
