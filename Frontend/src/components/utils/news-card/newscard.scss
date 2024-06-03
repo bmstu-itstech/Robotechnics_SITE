@@ -7,14 +7,15 @@
   aspect-ratio: 1/1.1;
   background-color: rgba(255, 255, 255, 0.9);
   border: 5px solid var(--color-orange);
+  box-sizing: border-box;
   border-radius: calc(60px * var(--scale-pixel-koef));
   user-select: none;
   -webkit-user-drag: none;
 
 
   & .news-photo {
-    height: clamp(40%, 12vw, 45%);
-
+    max-height: clamp(40%, 12vw, 45%);
+    min-height: clamp(40%, 12vw, 45%);
     // min-height: 40%; // unknwn behavior
     & img {
       object-fit: cover;

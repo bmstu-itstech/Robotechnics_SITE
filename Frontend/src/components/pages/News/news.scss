@@ -22,16 +22,13 @@
         padding-right: 7.5% !important;
     }
 
-    // .alice-carousel__stage-item{
-    //     width: 33%;
-    // }
-
     .alice-carousel__stage-item.__active,
     .alice-carousel__stage-item.__cloned,
     .alice-carousel__stage-item.__target {
         text-align: center;
         justify-content: center;
     }
+
 
     .alice-carousel__dots {
         margin: 0 !important;

@@ -22,9 +22,9 @@ export const Home = () => {
             <section className="page main-page first-page" draggable="false" id="home">
                 <Logo />
                 <div className={"container-fluid container-fluid-margless main-text-block-main"}>
-                    <p className={"title-main text-center text-md-start col col-xl-11 text-uppercase text-light "}>Центр молодежной <br />
+                    <p className={"title-main text-center text-md-start col-12 col-md-8 text-uppercase text-light "}>Центр молодежной <br />
                         робототехники</p>
-                    <p className={"text-main text-center text-md-start h3  text-light"}>Центр Молодежной Робототехники - это инновационное
+                    <p className={"text-main text-center text-md-start h3  text-light col-12 col-md-8 "}>Центр Молодежной Робототехники - это инновационное
                         пространство, предназначенное для обучения и развития молодых талантов в области робототехники,
                         искусственного интеллекта и программирования. Наша миссия - предоставить молодежи возможность
                         исследовать и создавать будущее с помощью передовых технологий и творчества. Присоединяйтесь к

@@ -30,8 +30,8 @@ export const Achievements = () => {
     }, []);
 
     const InputRefs = useRef<(HTMLDivElement | null)[]>([])
+    
     var cur_pos = 0;
-
     function swapHandler() {
         console.log(cur_pos)
         InputRefs.current[cur_pos++]?.scrollIntoView({

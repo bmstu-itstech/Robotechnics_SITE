@@ -35,9 +35,9 @@ export const News = () => {
 
     const responsive = {
         0: { items: 1 },
-        1100: { items: 2 },
-        1600: { items: 3 },
-        2350: { items: 4 }
+        800: { items: 2 },
+        1000: { items: 3 },
+        2550: { items: 4 }
     };
 
     const Carousel = ({ items }: { items: News[] }) => (
@@ -57,6 +57,7 @@ export const News = () => {
             responsive={responsive}
             infinite={true}
             disableDotsControls={true}
+
 
         />
     );

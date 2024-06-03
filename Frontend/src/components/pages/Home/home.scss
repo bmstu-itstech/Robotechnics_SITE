@@ -30,8 +30,8 @@
 }
 
 .title-main {
-  font-size: calc(var(--scale-pixel-koef) * 90px);
-  line-height: calc(var(--scale-pixel-koef) * 108px);
+  font-size: calc(clamp(30px, 8vw, 90px) * var(--scale-pixel-koef));
+  line-height: calc(clamp(32px, 10vw, 108px) * var(--scale-pixel-koef));
   font-weight: 400;
 }
 
@@ -39,15 +39,13 @@
   font-weight: 400;
   margin-top: calc(15px * var(--scale-pixel-koef));
   font-size: calc(30px * var(--scale-pixel-koef));
-  width: calc(var(--scale-pixel-koef) * 990px);
 }
 
 .button-main {
   // margin-bottom: calc(var(--scale-pixel-koef) * 50px);
   border: solid 2px var(--color-orange);
   background: none;
-  width: calc(var(--scale-pixel-koef) * 460px);
-  height: calc(var(--row-btn-height) * var(--scale-pixel-koef));
+  height: calc(clamp(60px, 8vw, 80px) * var(--scale-pixel-koef));
   border-radius: 50px;
   justify-content: center;
   transition: background 1s;
@@ -106,27 +104,21 @@
   //   margin-top: 0;
   // }
 
-  .text-main {
-    width: 90%;
-  }
 }
 
 @media (max-width: 1000px) {
-  .title-main {
-    font-size: 69px;
-    line-height: 80px;
-  }
+  // .title-main {
+  //   font-size: 69px;
+  //   line-height: 80px;
+  // }
 }
 
 @media (max-width: 730px) {
-  .title-main {
-    font-size: 50px;
-    line-height: 50px;
-  }
+  // .title-main {
+  //   font-size: 50px;
+  //   line-height: 50px;
+  // }
 
-  .text-main {
-    width: 90%;
-  }
 
   .button-main {
     width: 100%;
@@ -142,36 +134,20 @@
 }
 
 @media (max-width: 530px) {
-  .title-main {
-    font-size: 40px;
-  }
+  // .title-main {
+  //   font-size: 40px;
+  // }
 
-  .text-main {
-    width: 100%;
-  }
 }
 
 @media (max-width: 430px) {
-  .title-main {
-    font-size: 35px;
-  }
+  // .title-main {
+  //   font-size: 35px;
+  // }
 }
 
 @media (-webkit-device-pixel-ratio: 1.5) {
   :root {
     --display-ration: 1.5;
   }
-
-
-  // .links_line-main {
-  //   width: 100%;
-  //   height: 140px * 0.67;
-  //   justify-content: start;
-  //   position: relative;
-  //   display: flex;
-  //   align-items: center;
-  //   gap: 50px * 0.67;
-  // }
-
-
 }
