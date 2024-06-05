@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_URL = 'http://darleet.com'
+BASE_URL = 'https://darleet.com'
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'summy-dummy key')
 

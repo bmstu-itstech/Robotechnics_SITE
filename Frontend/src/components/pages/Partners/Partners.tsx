@@ -16,7 +16,7 @@ export const Partners = () => {
     const [partners, setPartners] = useState<Partners[]>([]);
 
     useEffect(() => {
-        axios.get('http://darleet.com/api/v0/partners/?page=1')
+        axios.get('//darleet.com/api/v0/partners/?page=1')
             .then(res => {
                 setPartners(res.data.partners);
             }).catch(err => {

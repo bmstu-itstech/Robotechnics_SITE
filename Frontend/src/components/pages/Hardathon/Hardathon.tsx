@@ -15,7 +15,7 @@ export const Hardathon = () => {
     const [hardathons, setHardathons] = useState<Hardathon[]>([]);
 
     useEffect(() => {
-        axios.get('http://darleet.com/api/v0/hardatons/?page=1')
+        axios.get('//darleet.com/api/v0/hardatons/?page=1')
             .then(res => {
                 setHardathons(res.data.hardatons);
             }).catch(err => {

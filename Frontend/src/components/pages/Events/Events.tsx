@@ -17,7 +17,7 @@ export const Events = () => {
     const [events, setEvents] = useState<Event[]>([]);
 
     useEffect( () => {
-        axios.get('http://darleet.com/api/v0/classic_events/?page=1')
+        axios.get('//darleet.com/api/v0/classic_events/?page=1')
             .then(res => {
                 setEvents(res.data.classic_events);
             }).catch( err => {
