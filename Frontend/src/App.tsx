@@ -5,6 +5,7 @@ import {
     Route,
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Helmet } from 'react-helmet';
 import Menu from "./components/utils/menu/Menu";
 import {News} from "./components/pages/News/News";
 import {Events} from "./components/pages/Events/Events";
@@ -18,6 +19,9 @@ import {Hardathon} from "./components/pages/Hardathon/Hardathon";
 function App() {
     return (
     <Router>
+        <Helmet>
+            <title>Центр молодежной робототехники</title>
+        </Helmet>
         <Menu />
         <main>
             <Routes>
