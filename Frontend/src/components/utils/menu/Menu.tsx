@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import "../roots/menu_root.scss"
-import "./menu.scss"
 import { Link } from 'react-router-dom';
-
 import menu from "../../assets/icons/menu.svg"
 import close from "../../assets/icons/close.svg"
-import { event } from "jquery";
+import "./../roots/menu_root.scss"
+import "./menu.scss"
 
 const Menu = () => {
     const [isChecked, setChecked] = useState(false);
@@ -25,7 +23,7 @@ const Menu = () => {
                 <img src={isChecked ? close : menu} alt="changeButton" className={"img-fluid img-fluid-height-100"} />
             </button>
 
-            <div className="offcanvas offcanvas-end bg-transparent border-0 p-0" tabIndex={-1} id="offcanvasRight" data-bs-backdrop="true" aria-labelledby="offcanvasRightLabel" >
+            <div className="offcanvas offcanvas-end bg-transparent border-0 p-0 w-auto" tabIndex={-1} id="offcanvasRight" data-bs-backdrop="true" aria-labelledby="offcanvasRightLabel" >
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasRightLabel"> </h5>
                     <button type="button" className="d-none btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
