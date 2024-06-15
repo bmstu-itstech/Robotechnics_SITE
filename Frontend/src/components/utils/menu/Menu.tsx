@@ -19,7 +19,7 @@ const Menu = () => {
 
     return (
         <div>
-            <button className="btn  position-fixed border-0 p-0 bg-transparent change-button translate-middle-x" onClick={changeMenu} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button className="btn  position-fixed border-0 p-0 bg-transparent change-button " onClick={changeMenu} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src={isChecked ? close : menu} alt="changeButton" className={"img-fluid img-fluid-height-100"} />
             </button>
 
