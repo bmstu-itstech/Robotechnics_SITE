@@ -39,7 +39,7 @@ class DetailProjectSerializer(serializers.ModelSerializer):
                   'implementation_scale', 'photo',)
 
 
-class HardatonProjectsSerializer(serializers.ModelSerializer):
+class HardathonProjectsSerializer(serializers.ModelSerializer):
     """!
     @brief Сериализатор
     @details Нужен для преобразовывания сложных типов данных в json
@@ -49,7 +49,7 @@ class HardatonProjectsSerializer(serializers.ModelSerializer):
         fields = ('title',)
 
 
-class HardatonPartnersSerializer(serializers.ModelSerializer):
+class HardathonPartnersSerializer(serializers.ModelSerializer):
     """!
     @brief Сериализатор
     @details Нужен для преобразовывания сложных типов данных в json

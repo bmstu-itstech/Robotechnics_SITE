@@ -3,8 +3,8 @@ from hardathon.models import Hardathon, Project
 from hardathon.serializers import (DetailProjectSerializer,
                                    HardathonByIdSerializer,
                                    HardathonSerializer,
-                                   HardatonPartnersSerializer,
-                                   HardatonProjectsSerializer)
+                                   HardathonPartnersSerializer,
+                                   HardathonProjectsSerializer)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -18,20 +18,20 @@ class HardathonViewSet(APIView):
     def get(self, request, pk=None):
         data = {}
         if pk:
-            hardaton = get_object_or_404(Hardathon, pk=pk)
-            serializer = HardathonByIdSerializer(hardaton)
+            hardathon = get_object_or_404(Hardathon, pk=pk)
+            serializer = HardathonByIdSerializer(hardathon)
             data = serializer.data
         else:
-            hardatons = Hardathon.get_all_objects_by_id()
-            serializer = HardathonSerializer(instance=hardatons, many=True)
+            hardathons = Hardathon.get_all_objects_by_id()
+            serializer = HardathonSerializer(instance=hardathons, many=True)
             data = {
-                'count': len(hardatons),
-                'hardatons': serializer.data
+                'count': len(hardathons),
+                'hardathons': serializer.data
             }
         return Response(data)
 
 
-class HardatonProjectsViewSet(APIView):
+class HardathonProjectsViewSet(APIView):
     """!
     @brief API view для проектов хардатона
     @details Возвращает json всех проектов или
@@ -45,7 +45,7 @@ class HardatonProjectsViewSet(APIView):
             data = serializer.data
         else:
             projects = Project.get_all_objects_by_id()
-            serializer = HardatonProjectsSerializer(instance=projects, many=True)
+            serializer = HardathonProjectsSerializer(instance=projects, many=True)
             data = {
                 'count': len(projects),
                 'projects': serializer.data
@@ -53,15 +53,15 @@ class HardatonProjectsViewSet(APIView):
         return Response(data)
 
 
-class HardatonPartnersViewSet(APIView):
+class HardathonPartnersViewSet(APIView):
     """!
     @brief API view партнёров хардатона
     @details Возвращает json партнёров хардатона, переданного по pk
     """
     def get(self, request, pk=None):
-        hardaton = get_object_or_404(Hardathon, pk=pk)
-        partners = hardaton.partners.all()
-        serializer = HardatonPartnersSerializer(instance=partners, many=True)
+        hardathon = get_object_or_404(Hardathon, pk=pk)
+        partners = hardathon.partners.all()
+        serializer = HardathonPartnersSerializer(instance=partners, many=True)
         data = {
             'count': len(partners),
             'partners': serializer.data
