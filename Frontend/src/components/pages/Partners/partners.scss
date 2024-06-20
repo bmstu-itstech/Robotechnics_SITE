@@ -1,38 +1,36 @@
+
+
 .page-section {
     position: absolute;
     background: url("../../../../src/components/assets/images/background.svg") no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .partner-card {
-    margin: 0 auto;
+    margin: 10px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     width: 300px;
     height: 400px;
-
-    & img {
-        object-fit: contain;
-        width: 100%;
-        user-select: none;
-        -webkit-user-drag: none;
-        cursor: pointer;
-    }
 }
 
-.line {
-    margin: 90px 0 50px 0;
-    height: 140px;
+.partner-card img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
 }
 
 .title {
-    position: absolute;
-    text-align: center;
     font-size: 80px;
     font-weight: 900;
     color: white;
-    user-select: text;
 }

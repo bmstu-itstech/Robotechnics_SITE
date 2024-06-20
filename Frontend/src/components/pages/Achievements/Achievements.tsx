@@ -5,6 +5,7 @@ import AchieveCard from "../../utils/achieve-card/AchieveCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import axios from "axios";
+import {localhost} from "../../../index"
 
 interface Achievement {
     title: string,
@@ -19,7 +20,7 @@ export const Achievements = () => {
     const [achievements, setAchievements] = useState<Achievement[]>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/v0/achievements/?page=1')
+        axios.get(localhost + 'achievements/?page=1')
             .then(res => {
                     setAchievements(res.data.achievements);
             }).catch(err => {
