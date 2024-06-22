@@ -17,6 +17,7 @@ import {Hardathon} from "./components/pages/Hardathon/Hardathon";
 import {PartnersHardathon} from "./components/pages/Hardathon/Partners/PartnersHard";
 import {PartnersH} from "./components/pages/Hardathon/ProjectDetails/ProjectDetails";
 
+
 function App() {
     return (
     <Router>
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/hardathon" element={<Hardathon/>} />
                 <Route path="/hardathon/Partners" element={<PartnersHardathon/>} />
                 <Route path="/hardathon/ProjectDetails" element={<PartnersH/>} />
+                
             </Routes>
         </main>
     </Router>

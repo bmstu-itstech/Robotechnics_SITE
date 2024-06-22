@@ -19,14 +19,10 @@ export const PartnersH = () => {
                     <p>Старт приёма заявок: xx.xx.20xx</p>
                     <p>Окончание регистрации: xx.xx.20xx</p>
                     <p>Подведение итогов: xx.xx.20xx</p>
+                    <p>Место проведения: <a className="link-place" href="#form">адрес/ссылка</a></p>
                 </div>
             </div>
-            <div className = {"additional-container"}>
-                <div className={"text-additional"}>
-                    <p>Место проведения:</p>
-                    <a className="link-place" href="#form">адрес</a>
-                </div>
-            </div>
+            
             <div className={"buttons-group"}>
                     <button className={"button-gr"} >
                         <a className="link-group" href="#form">УПОМИНАНИЯ В СМИ</a>
