@@ -7,18 +7,18 @@ import {Link} from "react-router-dom";
 export const ProjectDetails = () => {
     return (
         <section className={"page page-section"}>
+            <Logo title="хардатон 2024"/>
              <button className={"button-main2"}>
-                    <Link className="link" to=".." relative={"path"}>
-                        <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>
-                    </Link>
-                </button>
-            <Logo title="хардатон 2023"/>
+                <Link className="link" to="../.." relative={"path"}>
+                    <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>
+                </Link>
+            </button>
             <div className = {"main-container"}>
                 <div className={"text-main1"}>
-                    <p>Дата проведения: xx.xx.20xx</p>
-                    <p>Старт приёма заявок: xx.xx.20xx</p>
-                    <p>Окончание регистрации: xx.xx.20xx</p>
-                    <p>Подведение итогов: xx.xx.20xx</p>
+                    <p>Дата проведения: 31.10.2024</p>
+                    <p>Старт приёма заявок: 20.10.2024</p>
+                    <p>Окончание регистрации: 26.10.2024</p>
+                    <p>Подведение итогов: 10.11.2024</p>
                     <p>Место проведения: <a className="link-place" href="#form">адрес/ссылка</a></p>
                 </div>
             </div>

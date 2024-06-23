@@ -49,7 +49,7 @@ export const Hardathon = () => {
 
     return (
         <section className={"page events-page"}>
-            <Logo title="Хардатон 2023"/>
+            <Logo title="Хардатон 2024"/>
             <div className={"board-outer d-flex justify-content-center"}>
                 <div className="board">
                     <div className={"bizikov-pic"}>
