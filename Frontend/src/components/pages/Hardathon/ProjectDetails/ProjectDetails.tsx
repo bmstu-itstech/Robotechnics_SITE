@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 
 export const ProjectDetails = () => {
     return (
-        <section className={"page-section"}>
+        <section className={"page page-section"}>
              <button className={"button-main2"}>
                     <Link className="link" to=".." relative={"path"}>
                         <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>

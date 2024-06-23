@@ -37,7 +37,7 @@ export const Events = () => {
     }
 
     return (
-        <section className={"events-page"}>
+        <section className={"page events-page"}>
             <Logo title="мероприятия"/>
             <div className={"board-outer d-flex justify-content-center"}>
                 <div className={"slider-container"}>
