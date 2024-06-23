@@ -1,11 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import "./news.scss"
+import React, { useEffect, useState } from 'react';
+import '../../utils/roots/news_root.scss'
+import '../../utils/logo/logo.scss'
 import Logo from "../../utils/logo/Logo"
+import arrow from "../../assets/icons/arrow.svg";
+import { Link } from "react-router-dom";
 import NewsCard from "../../utils/news-card/NewsCard";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import axios from "axios";
 import Slider from "react-slick"
+import "./news.scss"
+import { func } from 'prop-types';
+import { useRef } from "react";
 
 interface News {
     title: string;
@@ -16,7 +22,6 @@ interface News {
 
 
 export const News = () => {
-
     const [news, setNews] = useState<News[]>([]);
 
     useEffect(() => {
@@ -25,14 +30,14 @@ export const News = () => {
                 setNews(res.data.news);
             }).catch(err => {
                 console.log('error')
-        })
+            })
     }, []);
 
     const responsive = {
         0: { items: 1 },
-        1100: { items: 2 },
-        1650: { items: 3 },
-        2350: { items: 4 }
+        800: { items: 2 },
+        1000: { items: 3 },
+        2550: { items: 4 }
     };
 
     const Carousel = ({ items }: { items: News[] }) => (
@@ -49,31 +54,26 @@ export const News = () => {
                 </div>
             ))}
             controlsStrategy="alternate"
-            disableButtonsControls={true}
             responsive={responsive}
             infinite={true}
+            disableDotsControls={true}
+
+
         />
     );
 
     return (
-        <section className={"news-page"}>
-            <Logo title="новости"/>
+        <section className={"news-page page"} >
+            <Logo title="новости" />
             <div className="news-carousel">
-                <div className="desktop-carousel">
-                    <Carousel items={news}/>
-                </div>
-                <div className="mobile-carousel">
-                    {news.map((item, index) => (
-                        <NewsCard
-                            key={index}
-                            title={item.title}
-                            description={item.description}
-                            new_url={item.new_url}
-                            photo={item.photo}
-                        />
-                    ))}
-                </div>
+                <Carousel items={news} />
             </div>
+            <button className={"container-fluid container-fluid-margless button-news mx-auto"}>
+                <Link className="link" to="/news">
+                    <p className={"more-text-main text-light text-uppercase  m-0 fs-5"}>подробнее</p>
+                </Link>
+            </button >
+
         </section>
     )
 }

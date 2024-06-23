@@ -48,7 +48,7 @@ export const Hardathon = () => {
     }
 
     return (
-        <section className={"events-page"}>
+        <section className={"page events-page"}>
             <Logo title="мероприятия"/>
             <div className={"board-outer d-flex justify-content-center"}>
                 <img className={"arrow-left"} src={arrow} alt="" onClick={slideLeft}/>

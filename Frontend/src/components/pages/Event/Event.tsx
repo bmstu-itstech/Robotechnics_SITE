@@ -94,7 +94,7 @@ export const Event = () => {
     };
 
     return (
-        <section className={"page-section"}>
+        <section className={"page page-section"}>
 
             <div className={`${finderState ? 'dark-back' : ''}`}></div>
             <div className={`sidebar ${finderState ? 'sidebar-closed' : ''}`}>

@@ -1,0 +1,6 @@
+:root {
+    --color-orange: rgba(193, 49, 0, 1);
+    --color-orange-80: rgba(193, 49, 0, 0.8);
+    --display-ration: 1;
+    --scale-pixel-koef: 1/var(--display-ration);
+}

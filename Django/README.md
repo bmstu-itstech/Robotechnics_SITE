@@ -6,7 +6,7 @@
     pip install --upgrade pip
     ```
 2. Установить необходимые пакеты: 
-   ```bash
+   ```bashcd 
    pip install -r requirements.txt
    ```
 3. Синхронизировать структуру базы данных с моделями: 
