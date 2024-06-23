@@ -14,6 +14,9 @@ import {Partners} from "./components/pages/Partners/Partners";
 import {Contacts} from "./components/pages/Contacts/Contacts";
 import {Home} from "./components/pages/Home/Home";
 import {Hardathon} from "./components/pages/Hardathon/Hardathon";
+import {PartnersHardathon} from "./components/pages/Hardathon/Partners/PartnersHard";
+import {ProjectDetails} from "./components/pages/Hardathon/ProjectDetails/ProjectDetails";
+
 
 function App() {
     return (
@@ -23,11 +26,14 @@ function App() {
                 <Route path="/" element={<Home/>} />
                 <Route path="/news" element={<News/>} />
                 <Route path="/events" element={<Events/>} />
-                <Route path="/event/:id" element={<Event/>} />
+                <Route path="/events/:id" element={<Event/>} />
                 <Route path="/achievements" element={<Achievements/>} />
                 <Route path="/partners" element={<Partners/>} />
                 <Route path="/contacts" element={<Contacts/>} />
-                <Route path="/hardathon" element={<Hardathon/>} />
+                <Route path="/hardathons" element={<Hardathon/>} />
+                <Route path="/hardathons/:id/partners" element={<PartnersHardathon/>} />
+                <Route path="/hardathons/:id/details" element={<ProjectDetails/>} />
+                
             </Routes>
     </Router>
   );
