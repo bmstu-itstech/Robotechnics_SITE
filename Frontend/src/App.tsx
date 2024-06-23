@@ -14,25 +14,30 @@ import {Partners} from "./components/pages/Partners/Partners";
 import {Contacts} from "./components/pages/Contacts/Contacts";
 import {Home} from "./components/pages/Home/Home";
 import {Hardathon} from "./components/pages/Hardathon/Hardathon";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+
+const queryClient = new QueryClient()
 
 function App() {
     return (
-    <Router>
-        <Menu />
-        <main>
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/news" element={<News/>} />
-                <Route path="/events" element={<Events/>} />
-                <Route path="/event/:id" element={<Event/>} />
-                <Route path="/achievements" element={<Achievements/>} />
-                <Route path="/partners" element={<Partners/>} />
-                <Route path="/contacts" element={<Contacts/>} />
-                <Route path="/hardathon" element={<Hardathon/>} />
-            </Routes>
-        </main>
-    </Router>
-  );
+        <QueryClientProvider client={queryClient}>
+            <Router>
+                <Menu/>
+                <main>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/news" element={<News/>}/>
+                        <Route path="/events" element={<Events/>}/>
+                        <Route path="/event/:id" element={<Event/>}/>
+                        <Route path="/achievements" element={<Achievements/>}/>
+                        <Route path="/partners" element={<Partners/>}/>
+                        <Route path="/contacts" element={<Contacts/>}/>
+                        <Route path="/hardathon" element={<Hardathon/>}/>
+                    </Routes>
+                </main>
+            </Router>
+        </QueryClientProvider>
+    );
 }
 
 export default App;
