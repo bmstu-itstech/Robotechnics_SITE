@@ -4,6 +4,7 @@ import arrow from "../../assets/icons/arrow.svg"
 import pic1 from "../../assets/images/events/event1.png"
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 interface Hardathon {
     title: string,
@@ -54,12 +55,14 @@ export const Hardathon = () => {
                 <img className={"arrow-left"} src={arrow} alt="" onClick={slideLeft}/>
                 <div className="board">
                     {hardathons.map((hardathon, index) => (
-                        <div className={"event-hard-card"}>
-                            <img src={hardathon.photo} alt=""/>
-                            <div className={"text"}>
-                                <p>{hardathon.title}</p>
+                        <Link to={"/hardathons/"+(index+1)}>
+                            <div className={"event-hard-card"}>
+                                <img src={hardathon.photo} alt=""/>
+                                <div className={"text"}>
+                                    <p>{hardathon.title}</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
                 <img className={"arrow-right"} src={arrow} alt="" onClick={slideRight}/>
