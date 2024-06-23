@@ -89,7 +89,7 @@ export const Event = () => {
     const handleClick = () => {
         if (params.id !== undefined) {
             const nextId = parseInt(params.id) + 1;
-            navigate("/event/" + nextId);
+            navigate("/events/" + nextId);
         }
     };
 

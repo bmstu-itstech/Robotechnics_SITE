@@ -43,7 +43,7 @@ export const Events = () => {
                 <div className={"slider-container"}>
                     <div className="board">
                         {events.map((event, index) => (
-                            <Link to={"/event/"+(index+1)}>
+                            <Link to={"/events/"+(index+1)}>
                                 <div className={`event-card ${index % 2 === 0 ? 'wide' : '' || index === events.length - 1 ? 'wide' : ''}`}>
                                     <img src={event.photo} alt={event.title}/>
                                     <div className={"text"}>
