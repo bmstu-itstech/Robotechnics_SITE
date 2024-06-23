@@ -55,7 +55,7 @@ export const PartnersHardathon = () => {
     return (
         <section className={"page-section1"}>
              <button className={"button-main3"}>
-                    <Link className="link1" to="/Hardathon/ProjectDetails">
+                    <Link className="link1" to="../details" relative={"path"}>
                         <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>
                     </Link>
                 </button>

@@ -4,11 +4,11 @@ import Logo from "../../../utils/logo/Logo"
 import {Link} from "react-router-dom";
 
 
-export const PartnersH = () => {
+export const ProjectDetails = () => {
     return (
         <section className={"page-section"}>
              <button className={"button-main2"}>
-                    <Link className="link" to="">
+                    <Link className="link" to=".." relative={"path"}>
                         <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>
                     </Link>
                 </button>
@@ -39,7 +39,7 @@ export const PartnersH = () => {
                         <a className="link-group" href="#form">ДОКУМЕНТЫ</a>
                     </button>
                     <button className={"button-gr"}>
-                    <Link className="link" to="/Hardathon/Partners">
+                    <Link className="link" to={"../partners"} relative={"path"}>
                         <p className={"link-group"}>ПАРТНЁРЫ</p>
                     </Link>
                     </button>
