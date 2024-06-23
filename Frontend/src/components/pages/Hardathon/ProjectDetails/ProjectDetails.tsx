@@ -40,7 +40,7 @@ export const ProjectDetails = () => {
                     </button>
                     <button className={"button-gr"}>
                     {/*<Link className="link" to={"../partners"} relative={"path"}>*/}
-                    <Link className="link" to={""} relative={"path"}>
+                    <Link className="link" to={"/partners"} relative={"path"}>
                         <p className={"link-group"}>ПАРТНЁРЫ</p>
                     </Link>
                     </button>
