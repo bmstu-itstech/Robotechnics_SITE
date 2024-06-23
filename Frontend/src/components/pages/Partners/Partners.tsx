@@ -57,7 +57,7 @@ export const Partners = () => {
 
 
     return (
-        <section className={"page-section"}>
+        <section className={"page page-section"}>
             <Logo title="наши партнёры"/>
             <Carousel items={partners}/>
         </section>
