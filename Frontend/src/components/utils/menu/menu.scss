@@ -31,10 +31,10 @@ label:hover {
 
 .menu-closed {
   position: absolute;
-  background-color: rgba(255, 92, 0, 1);
+  background-color: none;
   border-radius: 50%;
   height: 915px;
-  width: 915px;
+  width: 500px;
   right: -500px;
   top: -640px;
   transition: 300ms linear;
@@ -42,11 +42,12 @@ label:hover {
 }
 
 .menu-opened {
+  background-color: rgba(255, 92, 0, 1);
   opacity: 0;
   visibility: hidden;
   position: absolute;
   overflow: hidden;
-  width: 900px;
+  width: 915px;
   height: 1900px;
   display: flex;
   align-items: center;

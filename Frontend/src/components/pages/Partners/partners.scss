@@ -18,6 +18,7 @@
         object-fit: contain;
         width: 100%;
         user-select: none;
+        @import url(../../../../src/components/assets/images/partners/tinkoff.svg);
         -webkit-user-drag: none;
         cursor: pointer;
     }

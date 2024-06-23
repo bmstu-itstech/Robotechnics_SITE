@@ -1,6 +1,6 @@
 .logo-row {
-  margin: 90px auto 0;
-  width: 80%;
+  margin: 55px auto 0;
+  width: 85%;
   height: 140px;
   justify-content: center;
   position: relative;
@@ -10,16 +10,17 @@
 
 .logo-img {
   position: absolute;
-  left: 0;
-  width: 140px;
-  height: 140px;
+  left:30px;
+  top: 17px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
 }
 
 .title-text {
   margin: 0;
   font-size: 80px;
-  font-weight: 900;
+  font-weight: 400;
   color: white;
   line-height: 100%;
 }
@@ -39,7 +40,7 @@
     height: 250px;
   }
   .logo-img {
-    top: 0;
+    top:0;
   }
 }
 
