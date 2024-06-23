@@ -1,18 +1,27 @@
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
 .achievements-page {
-  background: url("../../../../src/components/assets/images/background.svg") no-repeat center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%),
+    linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%),
+    url("../../../../src/components/assets/images/background.svg") no-repeat center;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   overflow: auto;
+  scrollbar-color: rgb(193 49 0 / 80%) transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .alice-carousel__stage-item.__active,
 .alice-carousel__stage-item.__cloned,
 .alice-carousel__stage-item.__target {
-  text-align:center;
+  text-align: center;
 }
 
 .alice-carousel__dots {
@@ -23,17 +32,69 @@
   margin-top: 30px;
 }
 
-.mobile-carousel {
+.mobile-carousel-achievements {
+  width: 100%;
   display: none;
+  overflow-y: hidden;
 }
 
+.desktop-carousel-achievements {
+  max-width: 2000px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
 @media (max-width: 1100px) {
-  .desktop-carousel {
+  .desktop-carousel-achievements {
     display: none;
   }
-  .mobile-carousel {
+
+  .mobile-carousel-achievements {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    gap: 2rem;
+    margin-block: 2rem;
+
+    & .swap-card {
+      z-index: 2;
+      bottom: 5%;
+      left: auto;
+      right: auto;
+      position: sticky;
+
+
+      & img {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .achievements-page {
+    overflow-y: hidden;
+  }
+
+  .achievements-carousel {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20%;
+      background: rgb(0, 0, 0);
+      background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+    }
   }
 }
