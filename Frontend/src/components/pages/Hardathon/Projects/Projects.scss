@@ -43,10 +43,9 @@
     border-radius: 50px;
 }
 
-.main-container{
+.main-container-proj{
     position:absolute;
     border: solid 5px #e43603;
-    background: rgba(0, 0, 0,.5);
     width: 625px;
     height: 470px;
     top: 265px;
@@ -54,25 +53,17 @@
     gap: 0px;
     border-radius: 60px;
     opacity: 0px;
+    background: url("../../../../../src/components/assets/images/backgrounds/event1.png") no-repeat;
+    background-size: 140% Auto;
+    background-position:center center;
 }
 
-.additional-container{
-    border: solid 5px #e43603;
-    width: 625px;
-    height: 470px;
-    top: 265px;
-    left: 100px;
-    gap: 0px;
-    border-radius: 60px;
-    opacity: 0px;
-    filter:blur(10px);
-}
 
-.buttons-group{
+.buttons-group-projects{
   position: absolute;
   right:0px;
   width: 590px;
-  top: 260px;
+  top: 340px;
 }
 
 .link-group{
@@ -83,7 +74,7 @@
     text-align: center;
 }
 
-.button-gr{
+.button-gr-proj{
     background-color: #e43603;
     border-radius: 50px;
     border: none,;

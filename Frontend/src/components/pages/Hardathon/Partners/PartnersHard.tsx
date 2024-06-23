@@ -7,6 +7,7 @@ import axios from "axios";
 import AchieveCard from "../../../utils/achieve-card/AchieveCard";
 import {Link} from "react-router-dom";
 
+
 interface PartnersHardathon {
     title1: string;
     link1: string;
@@ -54,13 +55,53 @@ export const PartnersHardathon = () => {
 
     return (
         <section className={"page-section1"}>
-             <button className={"button-main3"}>
+             <button className={"button-main-back"}>
                     <Link className="link1" to="/Hardathon/ProjectDetails">
                         <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>
                     </Link>
                 </button>
             <Logo title="партнеры хардатона"/>
             <Carousel items={partners}/>
+
+            {/*для статической демонстрации*/}
+            <div className={"tinkoff-first"}>
+
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            </div>
+
+            <div className={"tinkoff-second"}>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            
+            <div className={"tinkoff-third"}>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            </div>
+
+            <div className={"tinkoff-fourth"}>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            <div className={"tink-pic"}>
+                <img src={require("../../../assets/images/tinkoff.png")} width="250" height="150" alt="cannot display"></img>
+            </div>
+            </div>
+            </div>
+
         </section>
     )
+    
 }

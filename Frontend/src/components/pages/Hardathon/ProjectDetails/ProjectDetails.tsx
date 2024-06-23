@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 export const PartnersH = () => {
     return (
         <section className={"page-section"}>
-             <button className={"button-main2"}>
+             <button className={"button-main-back"}>
                     <Link className="link" to="">
                         <p className={"text-light text-uppercase fw-bold fs-6 m-0"}>назад</p>
                     </Link>
@@ -21,6 +21,7 @@ export const PartnersH = () => {
                     <p>Подведение итогов: xx.xx.20xx</p>
                     <p>Место проведения: <a className="link-place" href="#form">адрес/ссылка</a></p>
                 </div>
+                <div className = {"additional-container"}></div>
             </div>
             
             <div className={"buttons-group"}>
@@ -28,7 +29,7 @@ export const PartnersH = () => {
                         <a className="link-group" href="#form">УПОМИНАНИЯ В СМИ</a>
                     </button>
                     <button className={"button-gr"}>
-                        <Link className="link-group" to="">
+                        <Link className="link-group" to="/Hardathon/Projects">
                             <p className={"text-projects"}>ПРОЕКТЫ</p>
                      </Link>
                     </button>
