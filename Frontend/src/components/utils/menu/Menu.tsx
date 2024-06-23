@@ -50,7 +50,7 @@ const Menu = () => {
                             <div className={"list-group-item bg-transparent border-0 align-items-center d-flex justify-content-end my-auto ps-0"}>
                                 <p className={"text-item"}>
                                     <button className={"menu-button text-uppercase text-white "} data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-                                        <Link className={"link"} to="/hardathon" >хардатон</Link>
+                                        <Link className={"link"} to="/hardathons" >хардатоны</Link>
                                     </button>
                                 </p>
                                 <div className={"dot position-absolute start-100"}></div>
