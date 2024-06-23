@@ -1,80 +1,159 @@
-.achieve-card {
-  display: inline-block;
-  white-space: initial;
-  overflow: hidden;
-  margin: 20px;
-  width: 500px;
-  height: 570px;
-  background-color: black;
-  border: 5px solid #FF5C00;
-  border-radius: 70px;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+// --------------------MOBILE------------------------
 
-.achieve-photo {
-  width: 100%;
-  height: 100%;
+.mobile-carousel-achievements {
+  & .achieve-card-mobile {
+    display: flex;
+    background-color: transparent;
+    border: 2px solid var(--color-orange);
+    border-radius: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
+    user-select: none;
+    overflow: hidden;
+    -webkit-user-drag: none;
+    height: calc(clamp(100px, 30vw, 250px) * var(--scale-pixel-koef));
+    width: 100%;
+    flex-direction: row;
+    max-width: 650px;
+  }
 
-  & img {
-    object-fit: cover;
+  & .achieve-mobile {
     width: 100%;
     height: 100%;
-    user-select: none;
-    -webkit-user-drag: none;
+    justify-content: center;
   }
-}
 
-.achieve-title {
-  height: 60px;
-  width: 100%;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
-
-  & p {
-    width: 350px;
-    line-height: 100%;
-    text-align: center;
-    user-select: none;
-    -webkit-user-drag: none;
-    font-size: 25px;
+  & .achieve-mobile-text {
+    font-size: calc(clamp(14px, 2vw, 20px) * var(--scale-pixel-koef));
   }
-}
 
-.achieve-text {
-  height: 160px;
-  width: 90%;
-  margin: 20px auto 0;
-  overflow: auto;
-  text-align: left;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+  & .achieve-photo {
+    min-width: 30%;
+    max-width: 30%;
+    overflow: hidden;
 
-a {
-  user-select: none;
-  -webkit-user-drag: none;
-}
+    & img {
+      object-fit: cover;
+      object-position: center center;
+      -o-object-fit: cover;
+      -o-object-position: center center;
+      height: 100%;
+      width: 100%;
+    }
+  }
 
-.achieve-button {
-  border: solid 2px #FF5C00;
-  background: #FF5C00;
-  width: 360px;
-  height: 60px;
-  border-radius: 50px;
+  & .achieve-vertical-line {
+    max-height: 100%;
+    width: 8px;
+    background: var(--color-orange);
+  }
 
-  & a {
-    font-size: 28px;
+  & .achieve-horizontal-line {
+    height: 3px;
+    align-self: center;
+    width: 80%;
+    background: var(--color-orange);
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  & .achieve-title {
+    width: 100%;
     text-transform: uppercase;
+    align-content: center;
+    height: auto;
+
+    & p {
+      text-align: center;
+      // line-height: calc(clamp(14px, 6vw, 30px) * var(--scale-pixel-koef));
+      user-select: none;
+      font-weight: 900;
+      -webkit-user-drag: none;
+      font-size: calc(clamp(12px, 4.5vw, 30px) * var(--scale-pixel-koef));
+      color: var(--color-text-white);
+    }
+
   }
+
+  & .achieve-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    a {
+      font-size: calc(clamp(12px, 4.5vw, 30px) * var(--scale-pixel-koef));
+    }
+  }
+
+  & .achieve-more::after {
+    content: "";
+    background: url("../../assets/icons/arrow_more_inf_tiny.svg") no-repeat;
+    width: calc(clamp(5px, 2vw, 12px) * var(--scale-pixel-koef));
+    height: calc(clamp(5px, 2vw, 12px) * var(--scale-pixel-koef));
+    object-fit: contain;
+    transform: translate(50%, -50%);
+  }
+
+  & .achieve-vertical-group {
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+  }
+
 }
 
-.achieve-button:hover p {
-  color: #FF5C00;
-  transition: .1s linear;
+//-----------------------------DESKTOP--------------------------
+
+.desktop-carousel-achievements {
+  & .achieve-card {
+    width: 33.3%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding-right: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
+    // padding-top: calc(clamp(10px, 1vw, 30px) * var(--scale-pixel-koef));
+  }
+
+  & .achieve-card-desktop {
+    display: flex;
+    border-radius: calc(clamp(30px, 3vw, 40px) * var(--scale-pixel-koef));
+    width: 100%;
+
+    user-select: none;
+    overflow: hidden;
+    -webkit-user-drag: none;
+    // aspect-ratio: 2.4/1;
+
+    flex-direction: row;
+    border: 2px solid var(--color-orange);
+  }
+
+  & .achieve-photo {
+    object-fit: cover;
+    object-position: center center;
+    -o-object-fit: cover;
+    -o-object-position: center center;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  & .card-title {
+    color: var(--color-text-white) !important;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    font-size: calc(var(--scale-pixel-koef) * clamp(24px, 2.5vw, 36px));
+  }
+
+  & .first-card {
+    display: none;
+  }
 }
 
 .overlay-gradient {
@@ -83,27 +162,158 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 45.83%, rgba(0, 0, 0, 0) 100%);
+
 }
 
-@media (max-width: 540px) {
-  .achieve-card {
-    width: 90%;
-    height: 350px;
-  }
-  .achieve-photo {
-    height: 200px;
-  }
-  .achieve-text {
-    display: none;
-  }
-  .achieve-about {
-    margin-top: 10px;
+
+
+.achieve-desktop {
+  width: 90%;
+  height: 90%;
+  display: none !important;
+}
+
+p {
+  color: var(--color-text-white);
+  font-weight: 400;
+}
+
+a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.achieve-card:nth-child(even) .achieve-mobile {
+  .achieve-card-mobile {
+    flex-direction: row-reverse;
   }
 }
 
-@media (max-width: 1100px) {
-  .achieve-card {
-    margin: 15px 30px 15px 30px;
+
+.desktop-carousel-achievements .achieve-card {
+  display: none;
+}
+
+.desktop-carousel-achievements {
+
+  & .achieve-card:nth-child(1),
+  .achieve-card:nth-child(2),
+  .achieve-card:nth-child(3),
+  .achieve-card:nth-child(4) {
+    display: inherit;
   }
+
+  &.achieve-card:nth-child(4) {
+    padding-right: 0;
+  }
+}
+
+.desktop-carousel-achievements .achieve-card:nth-child(1) {
+  min-width: 100%;
+  max-width: 100%;
+  height: 65%;
+
+
+  & .achieve-card-desktop {
+    max-height: 90%;
+    width: 100%;
+  }
+
+  & .achieve-desktop {
+    width: 97%;
+    height: 100%;
+  }
+
+  & .overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+  }
+
+  & .first-card {
+    display: inherit;
+    height: fit-content;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    justify-content: space-between;
+    padding-bottom: 2%;
+
+    & .flex-row {
+      gap: clamp(10px, 2vw, 15px);
+      height: 18%;
+    }
+  }
+
+  & .achieve-button-f-card {
+    background: var(--color-orange);
+    border-radius: 60px;
+    height: 100%;
+    line-height: 100%;
+    aspect-ratio: 2.5/1;
+    font-size: calc(var(--scale-pixel-koef)* clamp(25px, 1.5vw, 35px));
+    color: white;
+    margin-top: auto;
+    text-align: baseline;
+    font-weight: 400;
+    transition: all 1s;
+
+    &:hover {
+      background: white;
+      color: var(--color-orange);
+    }
+  }
+
+  & .achieve-photo {
+    max-width: 55%;
+    min-width: 55%;
+    position: absolute;
+    right: 0;
+  }
+
+  & .card-title {
+    text-align: center;
+    font-size: clamp(30px, 2.1vw, 45px);
+    padding-left: 4%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    height: auto;
+    width: fit-content;
+    text-wrap: nowrap;
+  }
+
+  & .card-img-overlay {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-bottom: 1%;
+    padding-left: 2%;
+  }
+
+  & .achieve-description {
+    font-size: calc(var(--scale-pixel-koef) * clamp(20px, 1.4vw, 40px));
+    text-align: left;
+    height: auto;
+  }
+}
+
+
+@media (min-width: 1100px) {
+  .achieve-mobile {
+    display: none !important;
+  }
+
+  .achieve-desktop {
+    display: unset !important;
+  }
+
 }

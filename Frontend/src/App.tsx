@@ -22,7 +22,6 @@ function App() {
     return (
     <Router>
         <Menu />
-        <main>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/news" element={<News/>} />
@@ -36,7 +35,6 @@ function App() {
                 <Route path="/hardathons/:id/details" element={<ProjectDetails/>} />
                 
             </Routes>
-        </main>
     </Router>
   );
 }

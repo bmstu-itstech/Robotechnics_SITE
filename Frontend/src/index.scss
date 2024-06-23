@@ -2,26 +2,89 @@
 
 body {
   margin: 0;
-  font-family: ALS Sector Regular Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "ALS Sector Regular Regular", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: rgb(193 49 0 / 80%) rgb(5, 2, 14);
+
+
+  &::-webkit-scrollbar-thumb {
+    /* плашка-бегунок */
+    background: rgb(193 49 0 / 80%);
+  }
+
+  &::-webkit-scrollbar-track {
+    /* фон */
+    background: rgb(5, 2, 14);
+  }
+
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+}
+
+.text-weight-bold {
+  font-weight: 900;
+}
+
+.text-weight-normal {
+  font-weight: 400;
+}
+
+.pages-group {
+  scroll-behavior: smooth;
+}
+
+.page {
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  padding-block: calc(45px *var(--scale-pixel-koef));
+}
+
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  :root {
+    --display-ration: 1.5;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  :root {
+    --display-ration: 1.25;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.75) {
+  :root {
+    --display-ration: 1.75;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 2) {
+  :root {
+    --display-ration: 2;
+  }
 }
