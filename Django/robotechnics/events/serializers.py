@@ -49,4 +49,4 @@ class QuestionnairesSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Questionnaire
-        fields = ('id', 'searcher_fio',)
+        fields = ('id', 'searcher_fio', 'classic_event')
