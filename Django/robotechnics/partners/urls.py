@@ -1,7 +1,7 @@
-from django.urls import include, path
-from partners.router import router
+from django.urls import path
+from partners.router import PartnerViewSet
 
 app_name = 'partners'
 urlpatterns = [
-    path('', include(router.urls))
+    path('', PartnerViewSet.as_view())
 ]

@@ -1,16 +1,14 @@
-from django.urls import path, include
-from hardathon.router import (hardatons_router,
-                              detail_project_router,
-                              projects_router,
-                              partners_router,
-                              detail_hardaton_router)
+from django.urls import path
+from hardathon.router import (HardathonViewSet,
+                              HardathonProjectsViewSet,
+                              HardathonPartnersViewSet)
 
 
 app_name = 'hardathon'
 urlpatterns = [
-    path('hardatons/', include(hardatons_router.urls)),
-    path('hardaton/', include(detail_hardaton_router.urls)),
-    path('project/', include(detail_project_router.urls)),
-    path('projects/', include(projects_router.urls)),
-    path('get_event_partners/', include(partners_router.urls)),
+    path('hardathons/', HardathonViewSet.as_view()),
+    path('hardathons/<int:pk>/', HardathonViewSet.as_view()),
+    path('project/<int:pk>/', HardathonProjectsViewSet.as_view()),
+    path('projects/', HardathonProjectsViewSet.as_view()),
+    path('get_event_partners/<int:pk>/', HardathonPartnersViewSet.as_view()),
 ]
