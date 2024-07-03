@@ -1,12 +1,15 @@
 import React from "react";
+import closeIcon from "../../../../assets/icons/close.svg";
+import backIcon from "../../../../assets/icons/back.svg";
 
 interface ListPopupProps {
-    onClose?: () => void
+    onClose?: () => void,
+    onBack?: () => void
     title?: React.ReactNode,
     children?: React.ReactNode,
 }
 
-export const ListPopup = ({onClose, title, children}: ListPopupProps) => {
+export const ListPopup = ({onClose, title, children, onBack}: ListPopupProps) => {
     return (
         <div
             style={{
@@ -18,6 +21,31 @@ export const ListPopup = ({onClose, title, children}: ListPopupProps) => {
                 zIndex: 200,
             }}
         >
+            {onBack !== undefined ? <button
+                style={{
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    position: 'absolute',
+                    top: 80 / 1080 * window?.innerHeight,
+                    left: 1023 / 1900 * window?.innerWidth,
+                    zIndex: 500,
+                    width: 100,
+                    height: 100,
+                    justifyContent: 'end',
+                }}
+                onClick={onBack}
+            >
+                <img
+                    style={{
+                        width: 70,
+                        height: 70,
+                        // objectFit: 'cover',
+                        userSelect: 'none',
+                    }}
+                    src={backIcon}
+                    alt='menu'
+                />
+            </button> : null}
             <button
                 style={{
                     position: 'absolute',
@@ -64,6 +92,30 @@ export const ListPopup = ({onClose, title, children}: ListPopupProps) => {
                     {children}
                 </div>
             </div>
+            <button
+                style={{
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    position: 'absolute',
+                    top: 80 / 1080 * window?.innerHeight,
+                    right: 100 / 1900 * window?.innerWidth,
+                    zIndex: 500,
+                    width: 100,
+                    height: 100,
+                    justifyContent: 'end',
+                }}
+                onClick={onClose}
+            >
+                <img
+                    style={{
+                        objectFit: 'none',
+                        userSelect: 'none',
+                    }}
+                    src={closeIcon}
+                    alt='menu'
+                />
+            </button>
+
         </div>
     );
 }
