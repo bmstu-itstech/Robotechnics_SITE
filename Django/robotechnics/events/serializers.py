@@ -9,7 +9,7 @@ class ClassicEventsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = ClassicEvent
-        fields = ('title', 'photo')
+        fields = ('id', 'title', 'photo')
 
 
 class ClassicEventByIdSerializer(serializers.ModelSerializer):
@@ -20,7 +20,7 @@ class ClassicEventByIdSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClassicEvent
         fields = (
-            'title', 'description',
+            'id', 'title', 'description',
             'photo', 'photo_album_url',
             'documents_url', 'location',
             'event_date', 'social_media_mention',
@@ -36,7 +36,7 @@ class QuestionnaireByIdSerializer(serializers.ModelSerializer):
     class Meta:
         model = Questionnaire
         fields = (
-            'searcher_fio', 'searcher_bmstu_group',
+            'id', 'searcher_fio', 'searcher_bmstu_group',
             'participants_count', 'required_competencies',
             'seacher_VK', 'additional',
             )
@@ -49,4 +49,4 @@ class QuestionnairesSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Questionnaire
-        fields = ('searcher_fio',)
+        fields = ('id', 'searcher_fio', 'classic_event')

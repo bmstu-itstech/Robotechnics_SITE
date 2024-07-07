@@ -73,5 +73,9 @@ class Questionnaire(models.Model):
         verbose_name_plural = 'анкеты'
         ordering = ['-id']
 
+    @staticmethod
+    def get_all_objects_by_id():
+        return Questionnaire.objects.order_by('-id')
+
     def __str__(self):
         return self.searcher_fio

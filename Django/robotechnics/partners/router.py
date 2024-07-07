@@ -1,20 +1,19 @@
 from partners.models import Partner  # noqa: F401
-from partners.pagination import PartnersPagination  # noqa: F401
 from partners.serializers import PartnerSerializer  # noqa: F401
-from rest_framework import routers, viewsets
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 
-class PartnerViewSet(viewsets.ModelViewSet):
+class PartnerViewSet(APIView):
     """!
-    @brief Роутер для партнёров
-    @details Нужен для автоматической маршрутизации
-    @param queryset Список всех объектов из базы данных
-    @param serializer_class Сериализатор
+    @brief API view для партнёров
+    @details Возвращает json всех партнёров в порядке их создания
     """
-    queryset = Partner.get_all_objects_by_id()
-    serializer_class = PartnerSerializer
-    pagination_class = PartnersPagination
-
-
-router = routers.DefaultRouter()
-router.register(r'', PartnerViewSet)
+    def get(self, request, format=None):
+        partners = Partner.get_all_objects_by_id()
+        serializer = PartnerSerializer(instance=partners, many=True)
+        data = {
+            'count': len(partners),
+            'partners': serializer.data
+        }
+        return Response(data)
