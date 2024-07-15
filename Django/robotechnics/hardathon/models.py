@@ -25,6 +25,7 @@ class Hardathon(EventBaseModel):
     summing_up_date = models.DateField(
         'дата подведения итогов',
         blank=True,
+        null=True,
     )
     main_organizer_photo = models.ImageField(
         'фотография главного организатора',
