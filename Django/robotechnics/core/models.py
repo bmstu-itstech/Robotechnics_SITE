@@ -109,9 +109,11 @@ class EventBaseModel(ImageBaseModel):
     )
     photo_album_url = models.URLField(
         'ссылка на фото-альбом',
+        blank=True,
     )
     documents_url = models.URLField(
         'ссылка на документы',
+        blank=True,
     )
     location = models.URLField(
         'место проведения',
@@ -121,6 +123,7 @@ class EventBaseModel(ImageBaseModel):
     )
     social_media_mention = models.URLField(
         'упоминание в сми',
+        blank=True,
     )
 
     class Meta:

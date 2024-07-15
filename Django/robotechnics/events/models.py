@@ -16,6 +16,7 @@ class ClassicEvent(EventBaseModel):
     partners = models.ManyToManyField(
         Partner,
         verbose_name='партнёры классического мероприятия',
+        blank=True,
     )
 
     class Meta:
@@ -61,6 +62,7 @@ class Questionnaire(models.Model):
     )
     additional = models.TextField(
         'дополнительная информация',
+        blank=True,
     )
     classic_event = models.ForeignKey(
         'ClassicEvent',

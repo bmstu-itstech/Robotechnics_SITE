@@ -19,9 +19,11 @@ class Achievement(ImageBaseModel):
     )
     photo_album_url = models.URLField(
         'ссылка на фото-альбом',
+        blank=True,
     )
     link_to_media = models.URLField(
         'ссылка на СМИ',
+        blank=True,
     )
 
     class Meta:

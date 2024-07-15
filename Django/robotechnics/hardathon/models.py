@@ -24,6 +24,7 @@ class Hardathon(EventBaseModel):
     )
     summing_up_date = models.DateField(
         'дата подведения итогов',
+        blank=True,
     )
     main_organizer_photo = models.ImageField(
         'фотография главного организатора',
@@ -39,6 +40,7 @@ class Hardathon(EventBaseModel):
     partners = models.ManyToManyField(
         Partner,
         verbose_name='партнёры хардатона',
+        blank=True,
     )
 
     class Meta:

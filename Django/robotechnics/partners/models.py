@@ -15,6 +15,7 @@ class Partner(ImageBaseModel):
     )
     link = models.URLField(
         'ссылка на сайт',
+        blank=True,
     )
 
     class Meta:
